@@ -45,14 +45,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="environments.html">Environment Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envs.html">Environment Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agents.html">Agent Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Simulator Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#emflow.simulator.Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.simulator.Simulator.reset"><code class="docutils literal notranslate"><span class="pre">Simulator.reset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#emflow.simulator.Simulator.step"><code class="docutils literal notranslate"><span class="pre">Simulator.step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.simulator.Simulator.reset"><code class="docutils literal notranslate"><span class="pre">Simulator.reset()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -90,17 +90,6 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.simulator.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.simulator.Simulator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="emflow.simulator.Simulator.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.simulator.Simulator.reset" title="Link to this definition"></a></dt>
-<dd><p>Reset the simulator to the initial state or a new start state.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The reset state.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="emflow.simulator.Simulator.step">
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.simulator.Simulator.step" title="Link to this definition"></a></dt>
 <dd><p>Update the simulator’s state based on an action.</p>
@@ -110,6 +99,17 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A tuple containing the next state and any additional info.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.simulator.Simulator.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.simulator.Simulator.reset" title="Link to this definition"></a></dt>
+<dd><p>Reset the simulator to the initial state or a new start state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The reset state.</p>
 </dd>
 </dl>
 </dd></dl>

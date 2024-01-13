@@ -43,7 +43,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="environments.html">Environment Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envs.html">Environment Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agents.html">Agent Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
@@ -78,8 +78,12 @@
 
 <div class="genindex-jumpbox">
  <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
@@ -87,6 +91,8 @@
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -97,15 +103,37 @@
   </ul></td>
 </tr></table>
 
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.battery_storage">battery_storage (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.battery_storage">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="agents.html#emflow.agents.Agent.choose_action">choose_action() (emflow.agents.Agent method)</a>
 </li>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv.close">close() (emflow.envs.building.MicroGridEnv method)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv.close">(emflow.envs.microgrid.MicroGridEnv method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="environments.html#emflow.environments.Environment.close">close() (emflow.environments.Environment method)</a>
+      <li><a href="environments/building.html#emflow.envs.building.State.consumption">consumption (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.consumption">(emflow.envs.microgrid.State attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -120,12 +148,21 @@
 </li>
       </ul></li>
       <li>
-    emflow.environments
+    emflow.envs.building
 
       <ul>
-        <li><a href="environments.html#module-emflow.environments">module</a>
+        <li><a href="environments/building.html#module-emflow.envs.building">module</a>
 </li>
       </ul></li>
+      <li>
+    emflow.envs.microgrid
+
+      <ul>
+        <li><a href="environments/microgrid.html#module-emflow.envs.microgrid">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     emflow.optimizer
 
@@ -133,8 +170,6 @@
         <li><a href="optimizer.html#module-emflow.optimizer">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     emflow.predictor
 
@@ -149,8 +184,50 @@
         <li><a href="simulator.html#module-emflow.simulator">module</a>
 </li>
       </ul></li>
-      <li><a href="environments.html#emflow.environments.Environment">Environment (class in emflow.environments)</a>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.from_vector">from_vector() (emflow.envs.building.State class method)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.from_vector">(emflow.envs.microgrid.State class method)</a>
 </li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.grid_import">grid_import (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.grid_import">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.grid_import_peak">grid_import_peak (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.grid_import_peak">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.hydrogen_storage">hydrogen_storage (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.hydrogen_storage">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -165,13 +242,27 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv.metadata">metadata (emflow.envs.building.MicroGridEnv attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv.metadata">(emflow.envs.microgrid.MicroGridEnv attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv">MicroGridEnv (class in emflow.envs.building)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv">(class in emflow.envs.microgrid)</a>
+</li>
+      </ul></li>
       <li>
     module
 
       <ul>
         <li><a href="agents.html#module-emflow.agents">emflow.agents</a>
 </li>
-        <li><a href="environments.html#module-emflow.environments">emflow.environments</a>
+        <li><a href="environments/building.html#module-emflow.envs.building">emflow.envs.building</a>
+</li>
+        <li><a href="environments/microgrid.html#module-emflow.envs.microgrid">emflow.envs.microgrid</a>
 </li>
         <li><a href="optimizer.html#module-emflow.optimizer">emflow.optimizer</a>
 </li>
@@ -200,23 +291,35 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="predictor.html#emflow.predictor.Predictor.predict">predict() (emflow.predictor.Predictor method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="predictor.html#emflow.predictor.Predictor">Predictor (class in emflow.predictor)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.pv_production">pv_production (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.pv_production">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="environments.html#emflow.environments.Environment.render">render() (emflow.environments.Environment method)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="environments.html#emflow.environments.Environment.reset">reset() (emflow.environments.Environment method)</a>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv.render">render() (emflow.envs.building.MicroGridEnv method)</a>
 
       <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv.render">(emflow.envs.microgrid.MicroGridEnv method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv.reset">reset() (emflow.envs.building.MicroGridEnv method)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv.reset">(emflow.envs.microgrid.MicroGridEnv method)</a>
+</li>
         <li><a href="simulator.html#emflow.simulator.Simulator.reset">(emflow.simulator.Simulator method)</a>
 </li>
       </ul></li>
@@ -228,11 +331,25 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="simulator.html#emflow.simulator.Simulator">Simulator (class in emflow.simulator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="environments.html#emflow.environments.Environment.step">step() (emflow.environments.Environment method)</a>
+      <li><a href="environments/building.html#emflow.envs.building.State.spot_market_price">spot_market_price (emflow.envs.building.State attribute)</a>
 
       <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.spot_market_price">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="environments/building.html#emflow.envs.building.State">State (class in emflow.envs.building)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State">(class in emflow.envs.microgrid)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.MicroGridEnv.step">step() (emflow.envs.building.MicroGridEnv method)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.MicroGridEnv.step">(emflow.envs.microgrid.MicroGridEnv method)</a>
+</li>
         <li><a href="simulator.html#emflow.simulator.Simulator.step">(emflow.simulator.Simulator method)</a>
 </li>
       </ul></li>
@@ -244,6 +361,30 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="predictor.html#emflow.predictor.Predictor.train">train() (emflow.predictor.Predictor method)</a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.vector">vector (emflow.envs.building.State property)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.vector">(emflow.envs.microgrid.State property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="environments/building.html#emflow.envs.building.State.wind_production">wind_production (emflow.envs.building.State attribute)</a>
+
+      <ul>
+        <li><a href="environments/microgrid.html#emflow.envs.microgrid.State.wind_production">(emflow.envs.microgrid.State attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 

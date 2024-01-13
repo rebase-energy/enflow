@@ -46,12 +46,12 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="environments.html">Environment Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envs.html">Environment Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agents.html">Agent Module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#emflow.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#emflow.predictor.Predictor.train"><code class="docutils literal notranslate"><span class="pre">Predictor.train()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -91,6 +91,16 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.predictor.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><a class="headerlink" href="#emflow.predictor.Predictor" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
+<dt class="sig sig-object py" id="emflow.predictor.Predictor.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.predictor.Predictor.train" title="Link to this definition"></a></dt>
+<dd><p>Train the predictor with the given data.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>training_data: Data used for training the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="emflow.predictor.Predictor.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.predictor.Predictor.predict" title="Link to this definition"></a></dt>
 <dd><p>Make a prediction based on the input data.</p>
@@ -98,16 +108,6 @@
 <dt>Parameters:</dt><dd><p>input_data: Data on which prediction is to be made.</p>
 </dd>
 <dt>Returns:</dt><dd><p>prediction: The output of the model.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.predictor.Predictor.train">
-<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.predictor.Predictor.train" title="Link to this definition"></a></dt>
-<dd><p>Train the predictor with the given data.</p>
-<dl class="simple">
-<dt>Parameters:</dt><dd><p>training_data: Data used for training the model.</p>
 </dd>
 </dl>
 </dd></dl>
