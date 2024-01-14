@@ -1,7 +1,7 @@
 Container classes
 ===================
 
-.. automodule:: energydatamodel.container
+.. automodule:: energydatamodel.energydatamodel.container
    :members:
    :undoc-members:
    :show-inheritance:
