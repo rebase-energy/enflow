@@ -1,0 +1,3 @@
+[submodule "energydatamodel"]
+	path = energydatamodel
+	url = https://github.com/rebase-energy/EnergyDataModel

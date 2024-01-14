@@ -15,7 +15,7 @@ import sphinx_rtd_theme  # If you're using the ReadTheDocs theme
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../../EnergyDataModel'))
+sys.path.insert(0, os.path.abspath('../energydatamodel'))
 
 
 # -- Project information -----------------------------------------------------
