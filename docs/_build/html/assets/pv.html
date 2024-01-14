@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PV classes &mdash; emflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Wind classes" href="wind.html" />
+    <link rel="prev" title="Geospatial classes" href="geospatial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            emflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Welcome to the emflow Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../assets.html">Energy assets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="geospatial.html">Geospatial classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PV classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#energydatamodel.pv.FixedMount"><code class="docutils literal notranslate"><span class="pre">FixedMount</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.FixedMount.surface_tilt"><code class="docutils literal notranslate"><span class="pre">FixedMount.surface_tilt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.FixedMount.surface_azimuth"><code class="docutils literal notranslate"><span class="pre">FixedMount.surface_azimuth</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.axis_tilt"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.axis_tilt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.axis_azimuth"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.axis_azimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.max_angle"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.max_angle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.backtrack"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.backtrack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.gcr"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.gcr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.cross_axis_tilt"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.cross_axis_tilt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.racking_model"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.racking_model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.SingleAxisTrackerMount.module_height"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.module_height</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#energydatamodel.pv.PVArray"><code class="docutils literal notranslate"><span class="pre">PVArray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.rated_power"><code class="docutils literal notranslate"><span class="pre">PVArray.rated_power</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.efficiency"><code class="docutils literal notranslate"><span class="pre">PVArray.efficiency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.area"><code class="docutils literal notranslate"><span class="pre">PVArray.area</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.module"><code class="docutils literal notranslate"><span class="pre">PVArray.module</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.module_type"><code class="docutils literal notranslate"><span class="pre">PVArray.module_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.module_parameters"><code class="docutils literal notranslate"><span class="pre">PVArray.module_parameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVArray.temperature_model_parameters"><code class="docutils literal notranslate"><span class="pre">PVArray.temperature_model_parameters</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#energydatamodel.pv.PVSystem"><code class="docutils literal notranslate"><span class="pre">PVSystem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVSystem.arrays"><code class="docutils literal notranslate"><span class="pre">PVSystem.arrays</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVSystem.surface_tilt"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_tilt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVSystem.surface_azimuth"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_azimuth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVSystem.albedo"><code class="docutils literal notranslate"><span class="pre">PVSystem.albedo</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#energydatamodel.pv.PVSystem.surface_type"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wind.html">Wind classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydro.html">Hydro classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heatpump.html">HeatPump classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="powergrid.html">Power grid classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../assets.html">Energy assets</a></li>
+      <li class="breadcrumb-item active">PV classes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/assets/pv.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-energydatamodel.pv">
+<span id="pv-classes"></span><h1>PV classes<a class="headerlink" href="#module-energydatamodel.pv" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="energydatamodel.pv.FixedMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">energydatamodel.pv.</span></span><span class="sig-name descname"><span class="pre">FixedMount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#energydatamodel.pv.FixedMount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.FixedMount.surface_tilt">
+<span class="sig-name descname"><span class="pre">surface_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.FixedMount.surface_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.FixedMount.surface_azimuth">
+<span class="sig-name descname"><span class="pre">surface_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.FixedMount.surface_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">energydatamodel.pv.</span></span><span class="sig-name descname"><span class="pre">SingleAxisTrackerMount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backtrack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gcr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2857142857142857</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cross_axis_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">racking_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.axis_tilt">
+<span class="sig-name descname"><span class="pre">axis_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.axis_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.axis_azimuth">
+<span class="sig-name descname"><span class="pre">axis_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.axis_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.max_angle">
+<span class="sig-name descname"><span class="pre">max_angle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">90.0</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.max_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.backtrack">
+<span class="sig-name descname"><span class="pre">backtrack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.backtrack" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.gcr">
+<span class="sig-name descname"><span class="pre">gcr</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.2857142857142857</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.gcr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.cross_axis_tilt">
+<span class="sig-name descname"><span class="pre">cross_axis_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.cross_axis_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.racking_model">
+<span class="sig-name descname"><span class="pre">racking_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.racking_model" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.SingleAxisTrackerMount.module_height">
+<span class="sig-name descname"><span class="pre">module_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.SingleAxisTrackerMount.module_height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">energydatamodel.pv.</span></span><span class="sig-name descname"><span class="pre">PVArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rated_power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'glass_polymer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">pandas.core.series.Series</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_model_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">pandas.core.series.Series</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="geospatial.html#energydatamodel.geospatial.Location" title="energydatamodel.geospatial.Location"><span class="pre">energydatamodel.geospatial.Location</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#energydatamodel.pv.PVArray" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.rated_power">
+<span class="sig-name descname"><span class="pre">rated_power</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.rated_power" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.efficiency">
+<span class="sig-name descname"><span class="pre">efficiency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.efficiency" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.area">
+<span class="sig-name descname"><span class="pre">area</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.area" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.module">
+<span class="sig-name descname"><span class="pre">module</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.module" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.module_type">
+<span class="sig-name descname"><span class="pre">module_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'glass_polymer'</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.module_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.module_parameters">
+<span class="sig-name descname"><span class="pre">module_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Series</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.module_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVArray.temperature_model_parameters">
+<span class="sig-name descname"><span class="pre">temperature_model_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Series</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVArray.temperature_model_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">energydatamodel.pv.</span></span><span class="sig-name descname"><span class="pre">PVSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arrays</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#energydatamodel.pv.PVArray" title="energydatamodel.pv.PVArray"><span class="pre">PVArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">albedo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="geospatial.html#energydatamodel.geospatial.Location" title="energydatamodel.geospatial.Location"><span class="pre">Location</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#energydatamodel.pv.PVSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
+<p>The PVSystem class defines a standard set of PV system attributes
+and modeling functions. This class describes the collection and
+interactions of PV system components rather than an installed system
+on the ground. It is typically used in combination with
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Location</span></code> and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChain</span></code>
+objects.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem.arrays">
+<span class="sig-name descname"><span class="pre">arrays</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#energydatamodel.pv.PVArray" title="energydatamodel.pv.PVArray"><span class="pre">PVArray</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVSystem.arrays" title="Link to this definition"></a></dt>
+<dd><p>testing here</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem.surface_tilt">
+<span class="sig-name descname"><span class="pre">surface_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#energydatamodel.pv.PVSystem.surface_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem.surface_azimuth">
+<span class="sig-name descname"><span class="pre">surface_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">180.0</span></em><a class="headerlink" href="#energydatamodel.pv.PVSystem.surface_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem.albedo">
+<span class="sig-name descname"><span class="pre">albedo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVSystem.albedo" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="energydatamodel.pv.PVSystem.surface_type">
+<span class="sig-name descname"><span class="pre">surface_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#energydatamodel.pv.PVSystem.surface_type" title="Link to this definition"></a></dt>
+<dd><p>The class supports basic system topologies consisting of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>N</cite> total modules arranged in series
+(<cite>modules_per_string=N</cite>, <cite>strings_per_inverter=1</cite>).</p></li>
+<li><p><cite>M</cite> total modules arranged in parallel
+(<cite>modules_per_string=1</cite>, <cite>strings_per_inverter=M</cite>).</p></li>
+<li><p><cite>NxM</cite> total modules arranged in <cite>M</cite> strings of <cite>N</cite> modules each
+(<cite>modules_per_string=N</cite>, <cite>strings_per_inverter=M</cite>).</p></li>
+</ul>
+</div></blockquote>
+<p>The class is complementary to the module-level functions.</p>
+<p>The attributes should generally be things that don’t change about
+the system, such the type of module and the inverter. The instance
+methods accept arguments for things that do change, such as
+irradiance and temperature.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>arrays<span class="classifier">Array or iterable of Array, optional</span></dt><dd><p>An Array or list of arrays that are part of the system. If not
+specified a single array is created from the other parameters (e.g.
+<cite>surface_tilt</cite>, <cite>surface_azimuth</cite>). If specified as a list, the list
+must contain at least one Array;
+if length of arrays is 0 a ValueError is raised. If <cite>arrays</cite> is
+specified the following PVSystem parameters are ignored:</p>
+<ul class="simple">
+<li><p><cite>surface_tilt</cite></p></li>
+<li><p><cite>surface_azimuth</cite></p></li>
+<li><p><cite>albedo</cite></p></li>
+<li><p><cite>surface_type</cite></p></li>
+<li><p><cite>module</cite></p></li>
+<li><p><cite>module_type</cite></p></li>
+<li><p><cite>module_parameters</cite></p></li>
+<li><p><cite>temperature_model_parameters</cite></p></li>
+<li><p><cite>modules_per_string</cite></p></li>
+<li><p><cite>strings_per_inverter</cite></p></li>
+</ul>
+</dd>
+<dt>surface_tilt: float or array-like, default 0</dt><dd><p>Surface tilt angles in decimal degrees.
+The tilt angle is defined as degrees from horizontal
+(e.g. surface facing up = 0, surface facing horizon = 90)</p>
+</dd>
+<dt>surface_azimuth: float or array-like, default 180</dt><dd><p>Azimuth angle of the module surface.
+North=0, East=90, South=180, West=270.</p>
+</dd>
+<dt>albedo<span class="classifier">float, optional</span></dt><dd><p>Ground surface albedo. If not supplied, then <code class="docutils literal notranslate"><span class="pre">surface_type</span></code> is used
+to look up a value in <code class="docutils literal notranslate"><span class="pre">irradiance.SURFACE_ALBEDOS</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">surface_type</span></code> is also not supplied then a ground surface albedo
+of 0.25 is used.</p>
+</dd>
+<dt>surface_type<span class="classifier">string, optional</span></dt><dd><p>The ground surface type. See <code class="docutils literal notranslate"><span class="pre">irradiance.SURFACE_ALBEDOS</span></code> for
+valid values.</p>
+</dd>
+<dt>module<span class="classifier">string, optional</span></dt><dd><p>The model name of the modules.
+May be used to look up the module_parameters dictionary
+via some other method.</p>
+</dd>
+<dt>module_type<span class="classifier">string, default ‘glass_polymer’</span></dt><dd><p>Describes the module’s construction. Valid strings are ‘glass_polymer’
+and ‘glass_glass’. Used for cell and module temperature calculations.</p>
+</dd>
+<dt>module_parameters<span class="classifier">dict or Series, optional</span></dt><dd><p>Module parameters as defined by the SAPM, CEC, or other.</p>
+</dd>
+<dt>temperature_model_parameters<span class="classifier">dict or Series, optional</span></dt><dd><p>Temperature model parameters as required by one of the models in
+pvlib.temperature (excluding poa_global, temp_air and wind_speed).</p>
+</dd>
+<dt>modules_per_string: int or float, default 1</dt><dd><p>See system topology discussion above.</p>
+</dd>
+<dt>strings_per_inverter: int or float, default 1</dt><dd><p>See system topology discussion above.</p>
+</dd>
+<dt>inverter<span class="classifier">string, optional</span></dt><dd><p>The model name of the inverters.
+May be used to look up the inverter_parameters dictionary
+via some other method.</p>
+</dd>
+<dt>inverter_parameters<span class="classifier">dict or Series, optional</span></dt><dd><p>Inverter parameters as defined by the SAPM, CEC, or other.</p>
+</dd>
+<dt>racking_model<span class="classifier">string, default ‘open_rack’</span></dt><dd><p>Valid strings are ‘open_rack’, ‘close_mount’, and ‘insulated_back’.
+Used to identify a parameter set for the SAPM cell temperature model.</p>
+</dd>
+<dt>losses_parameters<span class="classifier">dict or Series, optional</span></dt><dd><p>Losses parameters as defined by PVWatts or other.</p>
+</dd>
+</dl>
+<p>name : string, optional</p>
+<dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs</dt><dd><p>Arbitrary keyword arguments.
+Included for compatibility, but not used.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h2>Raises<a class="headerlink" href="#raises" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If <cite>arrays</cite> is not None and has length 0.</p>
+</dd>
+</dl>
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<p>pvlib.location.Location</p>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geospatial.html" class="btn btn-neutral float-left" title="Geospatial classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wind.html" class="btn btn-neutral float-right" title="Wind classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian Haglund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

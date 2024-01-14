@@ -1,8 +1,0 @@
-Environment Module
-==================
-
-.. toctree::
-   :maxdepth: 2
-
-   environments/microgrid
-   environments/building

@@ -3,18 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to emflow's documentation!
+emflow: Open-source energy modelling framework
 ==================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   envs
-   agents
-   predictor
-   optimizer
-   simulator
+   introduction
+   walkthrough
+   assets
+   models
+   examples
 
 
 Indices and tables

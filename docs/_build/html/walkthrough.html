@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walkthrough of the emflow framework &mdash; emflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Energy assets" href="assets.html" />
+    <link rel="prev" title="Welcome to the emflow Project" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            emflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome to the emflow Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Walkthrough of the <cite>emflow</cite> framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assets.html">Energy assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">emflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Walkthrough of the <cite>emflow</cite> framework</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/walkthrough.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="walkthrough-of-the-emflow-framework">
+<h1>Walkthrough of the <cite>emflow</cite> framework<a class="headerlink" href="#walkthrough-of-the-emflow-framework" title="Link to this heading"></a></h1>
+<p>This guide provides a step-by-step approach to setting up and running a simulation using the <cite>emflow</cite> library. Follow these steps to create a comprehensive energy resource simulation.</p>
+<section id="step-1-define-your-energy-assets">
+<h2>Step 1: Define Your Energy Assets<a class="headerlink" href="#step-1-define-your-energy-assets" title="Link to this heading"></a></h2>
+<p>Begin by defining the energy assets in your simulation. This includes any resources, facilities, equipment, or other entities involved in your energy model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define your energy assets</span>
+<span class="n">assets</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">define_assets</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># Add more details specific to your energy assets.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-specify-dynamic-state-variables">
+<h2>Step 2: Specify Dynamic State Variables<a class="headerlink" href="#step-2-specify-dynamic-state-variables" title="Link to this heading"></a></h2>
+<p>Next, outline the dynamic state variables. These are the variables that represent the state of your energy system and will change over time during the simulation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define state variables</span>
+<span class="n">state_variables</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">define_state</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># Provide more specifics about your state variables.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-3-define-action-variables">
+<h2>Step 3: Define Action Variables<a class="headerlink" href="#step-3-define-action-variables" title="Link to this heading"></a></h2>
+<p>Now, define the action variables. These are the variables that represent the actions or decisions that can be made in your environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define action variables</span>
+<span class="n">actions</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">define_actions</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># Elaborate on the possible actions in your simulation.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-4-create-the-environment">
+<h2>Step 4: Create the Environment<a class="headerlink" href="#step-4-create-the-environment" title="Link to this heading"></a></h2>
+<p>Create the simulation environment. This includes defining the transition function, which describes how the state of the system changes in response to actions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the environment</span>
+<span class="n">environment</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">create_environment</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">state_variables</span><span class="p">,</span> <span class="n">actions</span><span class="p">)</span>
+<span class="c1"># Further details on setting up the environment.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-5-establish-the-objective-function">
+<h2>Step 5: Establish the Objective Function<a class="headerlink" href="#step-5-establish-the-objective-function" title="Link to this heading"></a></h2>
+<p>Define the objective function. This function should quantify the goal of the simulation, such as minimizing costs or maximizing efficiency.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the objective function</span>
+<span class="n">objective</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">define_objective</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># Additional information on your specific objective function.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-6-design-agents-policies">
+<h2>Step 6: Design Agents’ Policies<a class="headerlink" href="#step-6-design-agents-policies" title="Link to this heading"></a></h2>
+<p>Design the policy for your agents. This involves specifying the strategy that the agents will use to make decisions in the environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Design agent policies</span>
+<span class="n">agent_policy</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">design_policy</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># More details on how to design and implement these policies.</span>
+</pre></div>
+</div>
+</section>
+<section id="step-7-run-the-simulated-environment">
+<h2>Step 7: Run the Simulated Environment<a class="headerlink" href="#step-7-run-the-simulated-environment" title="Link to this heading"></a></h2>
+<p>Finally, run the simulation with the defined assets, environment, and agent policies. Analyze the output to evaluate the performance of your model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the simulation</span>
+<span class="n">simulation_results</span> <span class="o">=</span> <span class="n">emflow</span><span class="o">.</span><span class="n">run_simulation</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">agent_policy</span><span class="p">)</span>
+<span class="c1"># Instructions on how to run and what to expect from the simulation.</span>
+</pre></div>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Following these steps will allow you to create a detailed and functional simulation using the <cite>emflow</cite> library. Explore different configurations and policies to fully understand the capabilities and dynamics of your energy resource model.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Welcome to the emflow Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assets.html" class="btn btn-neutral float-right" title="Energy assets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian Haglund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

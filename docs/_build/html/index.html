@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to emflow’s documentation! &mdash; emflow  documentation</title>
+  <title>emflow: Open-source energy modelling framework &mdash; emflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Environment Module" href="envs.html" /> 
+    <link rel="next" title="Welcome to the emflow Project" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,11 +45,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="envs.html">Environment Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">Agent Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome to the emflow Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets.html">Energy assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 
         </div>
@@ -66,7 +66,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to emflow’s documentation!</li>
+      <li class="breadcrumb-item active">emflow: Open-source energy modelling framework</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -76,30 +76,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-emflow-s-documentation">
-<h1>Welcome to emflow’s documentation!<a class="headerlink" href="#welcome-to-emflow-s-documentation" title="Link to this heading"></a></h1>
+  <section id="emflow-open-source-energy-modelling-framework">
+<h1>emflow: Open-source energy modelling framework<a class="headerlink" href="#emflow-open-source-energy-modelling-framework" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="envs.html">Environment Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="environments/microgrid.html">MicroGrid Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environments/building.html">Building Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome to the emflow Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support-and-contact">Support and Contact</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="agents.html">Agent Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="agents.html#emflow.agents.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="predictor.html#emflow.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets.html">Energy assets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assets/geospatial.html">Geospatial classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/pv.html">PV classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/wind.html">Wind classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/hydro.html">Hydro classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/heatpump.html">HeatPump classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/powergrid.html">Power grid classes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="optimizer.html#emflow.optimizer.Optimizer"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/agent.html">Agent Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/predictor.html">Predictor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/simulator.html">Simulator Module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulator.html#emflow.simulator.Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/microgrid.html">MicroGrid Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/building.html">Building Environment</a></li>
 </ul>
 </li>
 </ul>
@@ -118,7 +138,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="envs.html" class="btn btn-neutral float-right" title="Environment Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Welcome to the emflow Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
