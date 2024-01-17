@@ -12,10 +12,8 @@ emflow: Open-source energy modelling framework
 
    introduction
    walkthrough
-   assets
    models
    examples
-
 
 Indices and tables
 ==================

@@ -1,4 +1,4 @@
-MicroGrid Environment
+MicroGrid
 =====================
 
 .. automodule:: emflow.examples.microgrid

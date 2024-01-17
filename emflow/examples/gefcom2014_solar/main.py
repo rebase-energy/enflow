@@ -1,4 +1,4 @@
-"""This module contains the MicroGrid environment for OpenAI Gym."""
+"""This example showcases how to use emflow for the solar forecasting task of GEFCom2014."""
 
 import gym
 from gym import spaces
@@ -10,22 +10,10 @@ class State:
     """The state vector.
 
     Args:
-        consumption [kWh/h]: Consumption in the microgrid.
-        wind_production [kWh/h]: Power production from solar used in the microgrid.
         pv_production [kWh/h]: Power production from solar wind used in the microgrid.
-        battery_storage [kWh]: Potential energy stored in the battery.
-        hydrogen_storage [kWh]: Potential energy stored in the hydrogen.
-        grid_import [kWh/h]: Power imported from the grid to the microgrid.
-        grid_import_peak [kWh/h]: Peak power imported from the grid to the microgrid.
-        spot_market_price [NOK/kWh]: The spot market price for Trondheim.
     """
 
-    consumption: float
-    pv_production: float
-    wind_production: float
-    battery_storage: float
-    hydrogen_storage: float
-    grid_import: float
+    pv_production: float #: testing to write something here
     grid_import_peak: float
     spot_market_price: float
 
@@ -59,16 +47,17 @@ class State:
         )
 
 
-class MicroGridEnv(gym.Env):
-    """Custom Environment for a Microgrid simulation"""
+class GEFCom2014SolarEnv(gym.Env):
+    """An Environment for GEFCom2014 Solar Competition."""
     metadata = {'render.modes': ['human']}
 
     def __init__(self):
-        super(MicroGridEnv, self).__init__()
+        super(GEFCom2014SolarEnv, self).__init__()
         # Define action and observation space
         # They must be gym.spaces objects
         # Example: self.action_space = spaces.Discrete(2)
         # Example: self.observation_space = spaces.Box(low=0, high=255, shape=(...), dtype=np.float32)
+        pass
 
     def step(self, action):
         # Execute one time step within the environment
@@ -86,5 +75,6 @@ class MicroGridEnv(gym.Env):
     def close(self):
         # Clean up resources
         pass
+
 # Test your environment
-env = MicroGridEnv()
+env = GEFCom2014SolarEnv()

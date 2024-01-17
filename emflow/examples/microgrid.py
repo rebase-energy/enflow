@@ -73,7 +73,7 @@ class MicroGridEnv(gym.Env):
     def step(self, action):
         # Execute one time step within the environment
         # return observation, reward, done, info
-        pass
+        return 0
 
     def reset(self):
         # Reset the state of the environment to an initial state

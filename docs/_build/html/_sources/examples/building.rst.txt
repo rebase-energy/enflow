@@ -1,4 +1,4 @@
-Building Environment
+Building
 =====================
 
 .. automodule:: emflow.examples.building
