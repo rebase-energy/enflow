@@ -1,5 +1,5 @@
 Walkthrough of the `emflow` framework
-============================
+---------------------------------
 
 This guide provides a step-by-step approach to setting up and running a simulation using the `emflow` library. Follow these steps to create a comprehensive energy resource simulation.
 

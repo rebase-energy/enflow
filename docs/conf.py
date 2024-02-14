@@ -15,9 +15,6 @@ import sphinx_rtd_theme  # If you're using the ReadTheDocs theme
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../energydatamodel'))
-sys.path.insert(0, os.path.abspath('../energydatamodel/energydatamodel'))
-
 
 # -- Project information -----------------------------------------------------
 
@@ -33,10 +30,19 @@ author = 'Sebastian Haglund'
 # ones.
 extensions = ['sphinx.ext.autodoc',
               'nbsphinx',
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.viewcode',
            #   'sphinx_rtd_theme',
 ]
 autodoc_member_order = 'bysource'
 
+intersphinx_mapping = {
+    'pandas': ('https://pandas.pydata.org/pandas-docs/stable/', None),
+    'matplotlib': ('https://matplotlib.org/stable/', None),
+    'energydatamodel': ('https://docs.energydatamodel.org/en/latest/', None),
+}
+
+#autodoc_mock_imports = ["energydatamodel"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

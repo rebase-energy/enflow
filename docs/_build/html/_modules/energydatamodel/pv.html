@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>energydatamodel.pv &mdash; emflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            emflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html#support-and-contact">Support and Contact</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../assets/pv.html">PV Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assets/wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../problems/scores.html">Scores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../problems/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../problems/checks.html">Checks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../models/agent.html">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/predictor.html">Predictor Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/simulator.html">Simulator Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">emflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">energydatamodel.pv</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for energydatamodel.pv</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+<span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid4</span>
+
+<span class="kn">from</span> <span class="nn">energydatamodel</span> <span class="kn">import</span> <span class="n">EnergyAsset</span>
+
+
+<div class="viewcode-block" id="FixedMount">
+<a class="viewcode-back" href="../../assets/pv.html#emflow.assets.pv.FixedMount">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">FixedMount</span><span class="p">:</span>
+    <span class="n">surface_tilt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">surface_azimuth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span></div>
+
+
+
+<div class="viewcode-block" id="SingleAxisTrackerMount">
+<a class="viewcode-back" href="../../assets/pv.html#emflow.assets.pv.SingleAxisTrackerMount">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">SingleAxisTrackerMount</span><span class="p">:</span> 
+    <span class="n">axis_tilt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">axis_azimuth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span> 
+    <span class="n">max_angle</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">]</span> <span class="o">=</span> <span class="mf">90.0</span> 
+    <span class="n">backtrack</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span> 
+    <span class="n">gcr</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2857142857142857</span> 
+    <span class="n">cross_axis_tilt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span> 
+    <span class="n">racking_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">module_height</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="PVArray">
+<a class="viewcode-back" href="../../assets/pv.html#emflow.assets.pv.PVArray">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">PVArray</span><span class="p">(</span><span class="n">EnergyAsset</span><span class="p">):</span>
+    <span class="n">capacity</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="n">surface_azimuth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="n">surface_tilt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="n">surface_area</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>        <span class="c1"># Area in square meters</span>
+    <span class="n">efficiency</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Efficiency in percentage</span>
+    <span class="n">module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">module_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;glass_polymer&quot;</span>
+    <span class="n">module_parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">temperature_model_parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="PVArray.get_timeseries">
+<a class="viewcode-back" href="../../assets/pv.html#emflow.assets.pv.PVArray.get_timeseries">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_timeseries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeseries_df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">column_df</span><span class="p">]</span></div>
+</div>
+
+
+<div class="viewcode-block" id="PVSystem">
+<a class="viewcode-back" href="../../assets/pv.html#emflow.assets.pv.PVSystem">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">PVSystem</span><span class="p">(</span><span class="n">EnergyAsset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The PVSystem class defines a standard set of PV system attributes</span>
+<span class="sd">    and modeling functions. This class describes the collection and</span>
+<span class="sd">    interactions of PV system components rather than an installed system</span>
+<span class="sd">    on the ground. It is typically used in combination with</span>
+<span class="sd">    :py:class:`~pvlib.location.Location` and</span>
+<span class="sd">    :py:class:`~pvlib.modelchain.ModelChain`</span>
+<span class="sd">    objects.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">pv_arrays</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PVArray</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1">#: testing here</span>
+    <span class="n">capacity</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">surface_azimuth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">180.0</span>
+    <span class="n">surface_tilt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">albedo</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">surface_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># If no PVArray list is provided, but capacity, azimuth, and tilt are,</span>
+        <span class="c1"># create a PVArray and add it to the list.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pv_arrays</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_azimuth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_tilt</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pv_arrays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PVArray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">capacity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_azimuth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_tilt</span><span class="p">))</span>
+
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    The class supports basic system topologies consisting of:</span>
+
+<span class="sd">        * `N` total modules arranged in series</span>
+<span class="sd">          (`modules_per_string=N`, `strings_per_inverter=1`).</span>
+<span class="sd">        * `M` total modules arranged in parallel</span>
+<span class="sd">          (`modules_per_string=1`, `strings_per_inverter=M`).</span>
+<span class="sd">        * `NxM` total modules arranged in `M` strings of `N` modules each</span>
+<span class="sd">          (`modules_per_string=N`, `strings_per_inverter=M`).</span>
+
+<span class="sd">    The class is complementary to the module-level functions.</span>
+
+<span class="sd">    The attributes should generally be things that don&#39;t change about</span>
+<span class="sd">    the system, such the type of module and the inverter. The instance</span>
+<span class="sd">    methods accept arguments for things that do change, such as</span>
+<span class="sd">    irradiance and temperature.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arrays : Array or iterable of Array, optional</span>
+<span class="sd">        An Array or list of arrays that are part of the system. If not</span>
+<span class="sd">        specified a single array is created from the other parameters (e.g.</span>
+<span class="sd">        `surface_tilt`, `surface_azimuth`). If specified as a list, the list</span>
+<span class="sd">        must contain at least one Array;</span>
+<span class="sd">        if length of arrays is 0 a ValueError is raised. If `arrays` is</span>
+<span class="sd">        specified the following PVSystem parameters are ignored:</span>
+
+<span class="sd">        - `surface_tilt`</span>
+<span class="sd">        - `surface_azimuth`</span>
+<span class="sd">        - `albedo`</span>
+<span class="sd">        - `surface_type`</span>
+<span class="sd">        - `module`</span>
+<span class="sd">        - `module_type`</span>
+<span class="sd">        - `module_parameters`</span>
+<span class="sd">        - `temperature_model_parameters`</span>
+<span class="sd">        - `modules_per_string`</span>
+<span class="sd">        - `strings_per_inverter`</span>
+
+<span class="sd">    surface_tilt: float or array-like, default 0</span>
+<span class="sd">        Surface tilt angles in decimal degrees.</span>
+<span class="sd">        The tilt angle is defined as degrees from horizontal</span>
+<span class="sd">        (e.g. surface facing up = 0, surface facing horizon = 90)</span>
+
+<span class="sd">    surface_azimuth: float or array-like, default 180</span>
+<span class="sd">        Azimuth angle of the module surface.</span>
+<span class="sd">        North=0, East=90, South=180, West=270.</span>
+
+<span class="sd">    albedo : float, optional</span>
+<span class="sd">        Ground surface albedo. If not supplied, then ``surface_type`` is used</span>
+<span class="sd">        to look up a value in ``irradiance.SURFACE_ALBEDOS``.</span>
+<span class="sd">        If ``surface_type`` is also not supplied then a ground surface albedo</span>
+<span class="sd">        of 0.25 is used.</span>
+
+<span class="sd">    surface_type : string, optional</span>
+<span class="sd">        The ground surface type. See ``irradiance.SURFACE_ALBEDOS`` for</span>
+<span class="sd">        valid values.</span>
+
+<span class="sd">    module : string, optional</span>
+<span class="sd">        The model name of the modules.</span>
+<span class="sd">        May be used to look up the module_parameters dictionary</span>
+<span class="sd">        via some other method.</span>
+
+<span class="sd">    module_type : string, default &#39;glass_polymer&#39;</span>
+<span class="sd">         Describes the module&#39;s construction. Valid strings are &#39;glass_polymer&#39;</span>
+<span class="sd">         and &#39;glass_glass&#39;. Used for cell and module temperature calculations.</span>
+
+<span class="sd">    module_parameters : dict or Series, optional</span>
+<span class="sd">        Module parameters as defined by the SAPM, CEC, or other.</span>
+
+<span class="sd">    temperature_model_parameters : dict or Series, optional</span>
+<span class="sd">        Temperature model parameters as required by one of the models in</span>
+<span class="sd">        pvlib.temperature (excluding poa_global, temp_air and wind_speed).</span>
+
+<span class="sd">    modules_per_string: int or float, default 1</span>
+<span class="sd">        See system topology discussion above.</span>
+
+<span class="sd">    strings_per_inverter: int or float, default 1</span>
+<span class="sd">        See system topology discussion above.</span>
+
+<span class="sd">    inverter : string, optional</span>
+<span class="sd">        The model name of the inverters.</span>
+<span class="sd">        May be used to look up the inverter_parameters dictionary</span>
+<span class="sd">        via some other method.</span>
+
+<span class="sd">    inverter_parameters : dict or Series, optional</span>
+<span class="sd">        Inverter parameters as defined by the SAPM, CEC, or other.</span>
+
+<span class="sd">    racking_model : string, default &#39;open_rack&#39;</span>
+<span class="sd">        Valid strings are &#39;open_rack&#39;, &#39;close_mount&#39;, and &#39;insulated_back&#39;.</span>
+<span class="sd">        Used to identify a parameter set for the SAPM cell temperature model.</span>
+
+<span class="sd">    losses_parameters : dict or Series, optional</span>
+<span class="sd">        Losses parameters as defined by PVWatts or other.</span>
+
+<span class="sd">    name : string, optional</span>
+
+<span class="sd">    **kwargs</span>
+<span class="sd">        Arbitrary keyword arguments.</span>
+<span class="sd">        Included for compatibility, but not used.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If `arrays` is not None and has length 0.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    pvlib.location.Location</span>
+
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian Haglund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

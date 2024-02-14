@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PV Assets &mdash; emflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Wind Assets" href="wind.html" />
+    <link rel="prev" title="Walkthrough of the emflow framework" href="../walkthrough.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            emflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#support-and-contact">Support and Contact</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PV Assets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.pv.FixedMount"><code class="docutils literal notranslate"><span class="pre">FixedMount</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.FixedMount.surface_tilt"><code class="docutils literal notranslate"><span class="pre">FixedMount.surface_tilt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.FixedMount.surface_azimuth"><code class="docutils literal notranslate"><span class="pre">FixedMount.surface_azimuth</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.axis_tilt"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.axis_tilt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.axis_azimuth"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.axis_azimuth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.max_angle"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.max_angle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.backtrack"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.backtrack</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.gcr"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.gcr</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.cross_axis_tilt"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.cross_axis_tilt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.racking_model"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.racking_model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.SingleAxisTrackerMount.module_height"><code class="docutils literal notranslate"><span class="pre">SingleAxisTrackerMount.module_height</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.pv.PVArray"><code class="docutils literal notranslate"><span class="pre">PVArray</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.capacity"><code class="docutils literal notranslate"><span class="pre">PVArray.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.surface_azimuth"><code class="docutils literal notranslate"><span class="pre">PVArray.surface_azimuth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.surface_tilt"><code class="docutils literal notranslate"><span class="pre">PVArray.surface_tilt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.surface_area"><code class="docutils literal notranslate"><span class="pre">PVArray.surface_area</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.efficiency"><code class="docutils literal notranslate"><span class="pre">PVArray.efficiency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.module"><code class="docutils literal notranslate"><span class="pre">PVArray.module</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.module_type"><code class="docutils literal notranslate"><span class="pre">PVArray.module_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.module_parameters"><code class="docutils literal notranslate"><span class="pre">PVArray.module_parameters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.temperature_model_parameters"><code class="docutils literal notranslate"><span class="pre">PVArray.temperature_model_parameters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.get_timeseries"><code class="docutils literal notranslate"><span class="pre">PVArray.get_timeseries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.altitude"><code class="docutils literal notranslate"><span class="pre">PVArray.altitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.geometry_to_geojson"><code class="docutils literal notranslate"><span class="pre">PVArray.geometry_to_geojson()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.latitude"><code class="docutils literal notranslate"><span class="pre">PVArray.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.location"><code class="docutils literal notranslate"><span class="pre">PVArray.location</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.longitude"><code class="docutils literal notranslate"><span class="pre">PVArray.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.name"><code class="docutils literal notranslate"><span class="pre">PVArray.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.plot_timeseries"><code class="docutils literal notranslate"><span class="pre">PVArray.plot_timeseries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.timeseries"><code class="docutils literal notranslate"><span class="pre">PVArray.timeseries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.to_dataframe"><code class="docutils literal notranslate"><span class="pre">PVArray.to_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.to_geojson"><code class="docutils literal notranslate"><span class="pre">PVArray.to_geojson()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.to_json"><code class="docutils literal notranslate"><span class="pre">PVArray.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVArray.tz"><code class="docutils literal notranslate"><span class="pre">PVArray.tz</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.pv.PVSystem"><code class="docutils literal notranslate"><span class="pre">PVSystem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.pv_arrays"><code class="docutils literal notranslate"><span class="pre">PVSystem.pv_arrays</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.capacity"><code class="docutils literal notranslate"><span class="pre">PVSystem.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.surface_azimuth"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_azimuth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.surface_tilt"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_tilt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.albedo"><code class="docutils literal notranslate"><span class="pre">PVSystem.albedo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.surface_type"><code class="docutils literal notranslate"><span class="pre">PVSystem.surface_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.altitude"><code class="docutils literal notranslate"><span class="pre">PVSystem.altitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.geometry_to_geojson"><code class="docutils literal notranslate"><span class="pre">PVSystem.geometry_to_geojson()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.latitude"><code class="docutils literal notranslate"><span class="pre">PVSystem.latitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.location"><code class="docutils literal notranslate"><span class="pre">PVSystem.location</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.longitude"><code class="docutils literal notranslate"><span class="pre">PVSystem.longitude</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.name"><code class="docutils literal notranslate"><span class="pre">PVSystem.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.plot_timeseries"><code class="docutils literal notranslate"><span class="pre">PVSystem.plot_timeseries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.timeseries"><code class="docutils literal notranslate"><span class="pre">PVSystem.timeseries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.to_dataframe"><code class="docutils literal notranslate"><span class="pre">PVSystem.to_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.to_geojson"><code class="docutils literal notranslate"><span class="pre">PVSystem.to_geojson()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.to_json"><code class="docutils literal notranslate"><span class="pre">PVSystem.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.pv.PVSystem.tz"><code class="docutils literal notranslate"><span class="pre">PVSystem.tz</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../problems/scores.html">Scores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/checks.html">Checks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/agent.html">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/predictor.html">Predictor Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/simulator.html">Simulator Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PV Assets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/assets/pv.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-emflow.assets.pv">
+<span id="pv-assets"></span><h1>PV Assets<a class="headerlink" href="#module-emflow.assets.pv" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="emflow.assets.pv.FixedMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.pv.</span></span><span class="sig-name descname"><span class="pre">FixedMount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/pv.html#FixedMount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.pv.FixedMount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.FixedMount.surface_tilt">
+<span class="sig-name descname"><span class="pre">surface_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.FixedMount.surface_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.FixedMount.surface_azimuth">
+<span class="sig-name descname"><span class="pre">surface_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.FixedMount.surface_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.pv.</span></span><span class="sig-name descname"><span class="pre">SingleAxisTrackerMount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backtrack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gcr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2857142857142857</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cross_axis_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">racking_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/pv.html#SingleAxisTrackerMount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.axis_tilt">
+<span class="sig-name descname"><span class="pre">axis_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.axis_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.axis_azimuth">
+<span class="sig-name descname"><span class="pre">axis_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.axis_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.max_angle">
+<span class="sig-name descname"><span class="pre">max_angle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">90.0</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.max_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.backtrack">
+<span class="sig-name descname"><span class="pre">backtrack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.backtrack" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.gcr">
+<span class="sig-name descname"><span class="pre">gcr</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.2857142857142857</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.gcr" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.cross_axis_tilt">
+<span class="sig-name descname"><span class="pre">cross_axis_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.cross_axis_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.racking_model">
+<span class="sig-name descname"><span class="pre">racking_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.racking_model" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.SingleAxisTrackerMount.module_height">
+<span class="sig-name descname"><span class="pre">module_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.SingleAxisTrackerMount.module_height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.pv.</span></span><span class="sig-name descname"><span class="pre">PVArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'glass_polymer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.0)"><span class="pre">pandas.core.series.Series</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_model_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.0)"><span class="pre">pandas.core.series.Series</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.geospatial.GeoLocation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timezone</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeseries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.abstract.TimeSeries</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/pv.html#PVArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.pv.PVArray" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.capacity" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.surface_azimuth">
+<span class="sig-name descname"><span class="pre">surface_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.surface_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.surface_tilt">
+<span class="sig-name descname"><span class="pre">surface_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.surface_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.surface_area">
+<span class="sig-name descname"><span class="pre">surface_area</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.surface_area" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.efficiency">
+<span class="sig-name descname"><span class="pre">efficiency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.efficiency" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.module">
+<span class="sig-name descname"><span class="pre">module</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.module" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.module_type">
+<span class="sig-name descname"><span class="pre">module_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'glass_polymer'</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.module_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.module_parameters">
+<span class="sig-name descname"><span class="pre">module_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.0)"><span class="pre">Series</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.module_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.temperature_model_parameters">
+<span class="sig-name descname"><span class="pre">temperature_model_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.0)"><span class="pre">Series</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.temperature_model_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.get_timeseries">
+<span class="sig-name descname"><span class="pre">get_timeseries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/pv.html#PVArray.get_timeseries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.pv.PVArray.get_timeseries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.altitude">
+<span class="sig-name descname"><span class="pre">altitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.altitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.geometry_to_geojson">
+<span class="sig-name descname"><span class="pre">geometry_to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVArray.geometry_to_geojson" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.latitude">
+<span class="sig-name descname"><span class="pre">latitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.latitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Location</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.location" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.longitude">
+<span class="sig-name descname"><span class="pre">longitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.longitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.plot_timeseries">
+<span class="sig-name descname"><span class="pre">plot_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.0)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.0)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#emflow.assets.pv.PVArray.plot_timeseries" title="Link to this definition"></a></dt>
+<dd><p>Plots a pandas Series using its built-in plot method.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>start_date: The start date for the plot. 
+end_date: The end date for the plot.</p>
+</dd>
+<dt>Returns:</dt><dd><p>The Matplotlib Axes object of the plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.timeseries">
+<span class="sig-name descname"><span class="pre">timeseries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">TimeSeries</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.timeseries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVArray.to_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Convert data class to a pandas DataFrame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.to_geojson">
+<span class="sig-name descname"><span class="pre">to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exclude_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVArray.to_geojson" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_none</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#emflow.assets.pv.PVArray.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVArray.tz">
+<span class="sig-name descname"><span class="pre">tz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pytz.timezone</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVArray.tz" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.pv.</span></span><span class="sig-name descname"><span class="pre">PVSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pv_arrays</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.pv.PVArray" title="energydatamodel.pv.PVArray"><span class="pre">PVArray</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_azimuth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_tilt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">albedo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">GeoLocation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timezone</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeseries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TimeSeries</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/pv.html#PVSystem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.pv.PVSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
+<p>The PVSystem class defines a standard set of PV system attributes
+and modeling functions. This class describes the collection and
+interactions of PV system components rather than an installed system
+on the ground. It is typically used in combination with
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Location</span></code> and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ModelChain</span></code>
+objects.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.pv_arrays">
+<span class="sig-name descname"><span class="pre">pv_arrays</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.pv.PVArray" title="energydatamodel.pv.PVArray"><span class="pre">PVArray</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.pv_arrays" title="Link to this definition"></a></dt>
+<dd><p>testing here</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.capacity" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.surface_azimuth">
+<span class="sig-name descname"><span class="pre">surface_azimuth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">180.0</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.surface_azimuth" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.surface_tilt">
+<span class="sig-name descname"><span class="pre">surface_tilt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.surface_tilt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.albedo">
+<span class="sig-name descname"><span class="pre">albedo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.albedo" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.surface_type">
+<span class="sig-name descname"><span class="pre">surface_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.surface_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.altitude">
+<span class="sig-name descname"><span class="pre">altitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.altitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.geometry_to_geojson">
+<span class="sig-name descname"><span class="pre">geometry_to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVSystem.geometry_to_geojson" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.latitude">
+<span class="sig-name descname"><span class="pre">latitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.latitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Location</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.location" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.longitude">
+<span class="sig-name descname"><span class="pre">longitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.longitude" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.plot_timeseries">
+<span class="sig-name descname"><span class="pre">plot_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.0)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.0)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#emflow.assets.pv.PVSystem.plot_timeseries" title="Link to this definition"></a></dt>
+<dd><p>Plots a pandas Series using its built-in plot method.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>start_date: The start date for the plot. 
+end_date: The end date for the plot.</p>
+</dd>
+<dt>Returns:</dt><dd><p>The Matplotlib Axes object of the plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.timeseries">
+<span class="sig-name descname"><span class="pre">timeseries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">TimeSeries</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.timeseries" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVSystem.to_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Convert data class to a pandas DataFrame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.to_geojson">
+<span class="sig-name descname"><span class="pre">to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exclude_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.pv.PVSystem.to_geojson" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_none</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#emflow.assets.pv.PVSystem.to_json" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.assets.pv.PVSystem.tz">
+<span class="sig-name descname"><span class="pre">tz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pytz.timezone</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.pv.PVSystem.tz" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../walkthrough.html" class="btn btn-neutral float-left" title="Walkthrough of the emflow framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wind.html" class="btn btn-neutral float-right" title="Wind Assets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian Haglund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

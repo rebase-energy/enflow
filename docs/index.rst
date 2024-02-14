@@ -1,19 +1,47 @@
-.. emflow documentation master file, created by
-   sphinx-quickstart on Wed Jan 10 18:45:25 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 emflow: Open-source energy modelling framework
-==================================
+===============================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: ▶️ Introduction
 
    introduction
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🪜 Walkthrough
+
    walkthrough
-   models
-   examples
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🔋 Energy Assets
+
+   assets/pv
+   assets/wind
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🧩 Energy Problems
+
+   problems/scores
+   problems/environments
+   problems/checks
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🤖 Energy Models
+
+   models/agent
+   models/predictor
+   models/optimizer
+   models/simulator
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 📝 Notebook Examples
+
+   notebooks/gefcom2014_solar
 
 Indices and tables
 ==================

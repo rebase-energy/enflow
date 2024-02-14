@@ -1,4 +1,4 @@
-Agent Module
+Agent
 ============
 
 .. automodule:: emflow.models.agent

@@ -45,12 +45,48 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome to the emflow Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#support-and-contact">Support and Contact</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="assets/pv.html">PV Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="problems/scores.html">Scores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/checks.html">Checks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="models/agent.html">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/predictor.html">Predictor Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/simulator.html">Simulator Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -96,17 +132,12 @@
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="examples/building.html#module-emflow.examples.building"><code class="xref">emflow.examples.building</code></a></td><td>
+       <a href="assets/pv.html#module-emflow.assets.pv"><code class="xref">emflow.assets.pv</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="examples/test.html#module-emflow.examples.gefcom2014_solar.main"><code class="xref">emflow.examples.gefcom2014_solar.main</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="examples/microgrid.html#module-emflow.examples.microgrid"><code class="xref">emflow.examples.microgrid</code></a></td><td>
+       <a href="assets/wind.html#module-emflow.assets.wind"><code class="xref">emflow.assets.wind</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
@@ -127,6 +158,21 @@
        <td></td>
        <td>&#160;&#160;&#160;
        <a href="models/simulator.html#module-emflow.models.simulator"><code class="xref">emflow.models.simulator</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-1">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="problems/checks.html#module-emflow.problems.checks"><code class="xref">emflow.problems.checks</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-1">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="problems/environments.html#module-emflow.problems.environments"><code class="xref">emflow.problems.environments</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-1">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="problems/scores.html#module-emflow.problems.scores"><code class="xref">emflow.problems.scores</code></a></td><td>
        <em></em></td></tr>
    </table>
 

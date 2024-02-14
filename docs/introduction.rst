@@ -1,7 +1,3 @@
-==============================
-Welcome to the emflow Project
-==============================
-
 Introduction
 ============
 
@@ -9,6 +5,16 @@ The `emflow` project is a cutting-edge framework designed for the modeling and a
 
 Purpose
 =======
+
+Philosophy
+- Python-first
+- Problem-centric
+- Reusable and modular
+- Verification and validation
+- Enables benchmarking
+- Model-first approach is the Mantra
+- Model agnostic
+- 
 
 The core objective of `emflow` is to facilitate research and development in the field of energy resources. By providing a standardized and extensible platform, it allows researchers, engineers, and data scientists to:
 

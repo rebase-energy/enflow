@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent Module &mdash; emflow  documentation</title>
+  <title>Agent &mdash; emflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Predictor Module" href="predictor.html" />
-    <link rel="prev" title="Models" href="../models.html" /> 
+    <link rel="prev" title="Checks" href="../problems/checks.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,25 +45,55 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Welcome to the emflow Project</a></li>
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#support-and-contact">Support and Contact</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../models.html">Models</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Agent Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.models.agent.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#emflow.models.agent.Agent.choose_action"><code class="docutils literal notranslate"><span class="pre">Agent.choose_action()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#emflow.models.agent.Agent.learn"><code class="docutils literal notranslate"><span class="pre">Agent.learn()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../problems/scores.html">Scores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/checks.html">Checks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Agent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.models.agent.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.models.agent.Agent.choose_action"><code class="docutils literal notranslate"><span class="pre">Agent.choose_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.models.agent.Agent.learn"><code class="docutils literal notranslate"><span class="pre">Agent.learn()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="predictor.html">Predictor Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Module</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -80,8 +110,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../models.html">Models</a></li>
-      <li class="breadcrumb-item active">Agent Module</li>
+      <li class="breadcrumb-item active">Agent</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/models/agent.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,14 +121,14 @@
            <div itemprop="articleBody">
              
   <section id="module-emflow.models.agent">
-<span id="agent-module"></span><h1>Agent Module<a class="headerlink" href="#module-emflow.models.agent" title="Link to this heading"></a></h1>
+<span id="agent"></span><h1>Agent<a class="headerlink" href="#module-emflow.models.agent" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="emflow.models.agent.Agent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.models.agent.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><a class="headerlink" href="#emflow.models.agent.Agent" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.models.agent.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><a class="reference internal" href="../_modules/emflow/models/agent.html#Agent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.agent.Agent" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="emflow.models.agent.Agent.choose_action">
-<span class="sig-name descname"><span class="pre">choose_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.models.agent.Agent.choose_action" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">choose_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/agent.html#Agent.choose_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.agent.Agent.choose_action" title="Link to this definition"></a></dt>
 <dd><p>Choose an action based on the given state.</p>
 <dl class="simple">
 <dt>Parameters:</dt><dd><p>state: The current state of the environment.</p>
@@ -111,7 +140,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="emflow.models.agent.Agent.learn">
-<span class="sig-name descname"><span class="pre">learn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.models.agent.Agent.learn" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">learn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/agent.html#Agent.learn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.agent.Agent.learn" title="Link to this definition"></a></dt>
 <dd><p>Learn from the experience (used in training).</p>
 <dl class="simple">
 <dt>Parameters:</dt><dd><p>state: The current state of the environment.
@@ -130,7 +159,7 @@ next_state: The next state of the environment.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../models.html" class="btn btn-neutral float-left" title="Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../problems/checks.html" class="btn btn-neutral float-left" title="Checks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="predictor.html" class="btn btn-neutral float-right" title="Predictor Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

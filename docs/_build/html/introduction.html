@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to the emflow Project &mdash; emflow  documentation</title>
+  <title>Introduction &mdash; emflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -45,20 +45,48 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to the emflow Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#support-and-contact">Support and Contact</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#support-and-contact">Support and Contact</a></li>
 </ul>
-</li>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="assets/pv.html">PV Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="problems/scores.html">Scores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems/checks.html">Checks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="models/agent.html">Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/predictor.html">Predictor Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/optimizer.html">Optimizer Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/simulator.html">Simulator Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -75,7 +103,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to the emflow Project</li>
+      <li class="breadcrumb-item active">Introduction</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,14 +113,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-the-emflow-project">
-<h1>Welcome to the emflow Project<a class="headerlink" href="#welcome-to-the-emflow-project" title="Link to this heading"></a></h1>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
 <p>The <cite>emflow</cite> project is a cutting-edge framework designed for the modeling and analysis of energy resources. Utilizing the principles of the OpenAI Gym API, it offers a flexible and interactive environment where various approaches to energy management and optimization can be tested and benchmarked.</p>
 </section>
 <section id="purpose">
-<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h2>
+<h1>Purpose<a class="headerlink" href="#purpose" title="Link to this heading"></a></h1>
 <p>The core objective of <cite>emflow</cite> is to facilitate research and development in the field of energy resources. By providing a standardized and extensible platform, it allows researchers, engineers, and data scientists to:</p>
 <ul class="simple">
 <li><p>Model diverse energy resources and systems.</p></li>
@@ -102,7 +128,7 @@
 </ul>
 </section>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<h1>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p><strong>OpenAI Gym API Integration</strong>: Leverages the familiar and robust OpenAI Gym API for defining and managing simulation environments, ensuring ease of use and broad compatibility with existing tools and methods.</p></li>
 <li><p><strong>Modular Design</strong>: Built with modularity in mind, enabling users to easily customize and extend the framework to suit specific needs and scenarios.</p></li>
@@ -111,7 +137,7 @@
 </ul>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
 <p>To begin using <cite>emflow</cite>, first install the package:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>emflow
 </pre></div>
@@ -119,14 +145,13 @@
 <p>Then, explore the documentation to learn more about setting up your environment, creating models, and running simulations.</p>
 </section>
 <section id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h2>
+<h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h1>
 <p>We welcome contributions to the <cite>emflow</cite> project! Whether it’s improving the documentation, adding new features, or fixing bugs, your input is valuable. See our contribution guidelines for more information on how to get involved.</p>
 </section>
 <section id="support-and-contact">
-<h2>Support and Contact<a class="headerlink" href="#support-and-contact" title="Link to this heading"></a></h2>
+<h1>Support and Contact<a class="headerlink" href="#support-and-contact" title="Link to this heading"></a></h1>
 <p>For support, questions, or feedback, please visit our [GitHub Issues](<a class="reference external" href="https://github.com/yourusername/emflow/issues">https://github.com/yourusername/emflow/issues</a>) page or contact us directly through our project website.</p>
 <p>Thank you for your interest in <cite>emflow</cite>, and we look forward to seeing the innovative ways in which you use this framework!</p>
-</section>
 </section>
 
 
