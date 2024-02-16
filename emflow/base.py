@@ -1,6 +1,6 @@
 import typing as t
-import gym
-from gym import spaces
+import gymnasium as gym
+from gymnasium import spaces
 from dataclasses import dataclass, fields
 import numpy as np
 
