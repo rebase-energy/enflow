@@ -1,4 +1,4 @@
-Optimizer Module
+Optimizer Class
 ============
 
 .. automodule:: emflow.models.optimizer

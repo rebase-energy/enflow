@@ -70,16 +70,30 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/scores.html">Scores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/output.html">Output Space</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/scenarios.html">Scenarios</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
@@ -111,39 +125,70 @@
            <div itemprop="articleBody">
              
   <h1>Source code for emflow.models.predictor</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
 <div class="viewcode-block" id="Predictor">
 <a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor">[docs]</a>
-<span></span><span class="k">class</span> <span class="nc">Predictor</span><span class="p">:</span>
+<span class="k">class</span> <span class="nc">Predictor</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Initialize any properties or models</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the predictor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="Predictor.train">
-<a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor.train">[docs]</a>
-    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">training_data</span><span class="p">):</span>
+<div class="viewcode-block" id="Predictor.load_data">
+<a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor.load_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Train the predictor with the given data.</span>
+<span class="sd">        Load data used for training the predictor. </span>
 
-<span class="sd">        Parameters:</span>
-<span class="sd">            training_data: Data used for training the model.</span>
+<span class="sd">        This is a recommended method, but not mandatory. Subclasses may override it.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># Implement training logic</span>
+        <span class="c1"># Implement data loading method here. </span>
         <span class="k">pass</span></div>
 
 
+<div class="viewcode-block" id="Predictor.create_features">
+<a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor.create_features">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create features from the loaded data used for training the predictor.</span>
+<span class="sd">        Load data used for training sthe predictor. </span>
+
+<span class="sd">        This is a recommended method, but not mandatory. Subclasses may override it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Implement feature creation method here.</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Predictor.train">
+<a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor.train">[docs]</a>
+    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train the predictor from the training data.</span>
+
+<span class="sd">        This is a recommended method, but not mandatory. Subclasses may override it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Implement model training method here.</span>
+        <span class="k">pass</span></div>
+
+    
 <div class="viewcode-block" id="Predictor.predict">
 <a class="viewcode-back" href="../../../models/predictor.html#emflow.models.predictor.Predictor.predict">[docs]</a>
-    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Make a prediction based on the input data.</span>
 
+<span class="sd">        This is a mandatory method that must be implemented by subclasses</span>
+
 <span class="sd">        Parameters:</span>
-<span class="sd">            input_data: Data on which prediction is to be made.</span>
+<span class="sd">            input: Data on which prediction is to be made.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            prediction: The output of the model.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># Implement prediction logic</span>
+        <span class="c1"># Implement prediction method here. </span>
         <span class="k">pass</span></div>
 </div>
 

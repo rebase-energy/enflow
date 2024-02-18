@@ -1,4 +1,4 @@
-Predictor Module
+Predictor Class
 ============
 
 .. automodule:: emflow.models.predictor

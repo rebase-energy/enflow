@@ -1,27 +1,52 @@
-class Predictor:
+from abc import ABC, abstractmethod
+
+class Predictor(ABC):
     def __init__(self):
-        # Initialize any properties or models
+        """
+        Initialize the predictor.
+        """
         pass
 
-    def train(self, training_data):
+    def load_data(self):
         """
-        Train the predictor with the given data.
+        Load data used for training the predictor. 
 
-        Parameters:
-            training_data: Data used for training the model.
+        This is a recommended method, but not mandatory. Subclasses may override it.
         """
-        # Implement training logic
+        # Implement data loading method here. 
         pass
 
-    def predict(self, input_data):
+    def create_features(self):
+        """
+        Create features from the loaded data used for training the predictor.
+        Load data used for training sthe predictor. 
+
+        This is a recommended method, but not mandatory. Subclasses may override it.
+        """
+        # Implement feature creation method here.
+        pass
+
+    def train(self):
+        """
+        Train the predictor from the training data.
+
+        This is a recommended method, but not mandatory. Subclasses may override it.
+        """
+        # Implement model training method here.
+        pass
+    
+    @abstractmethod
+    def predict(self, input):
         """
         Make a prediction based on the input data.
 
+        This is a mandatory method that must be implemented by subclasses
+
         Parameters:
-            input_data: Data on which prediction is to be made.
+            input: Data on which prediction is to be made.
 
         Returns:
             prediction: The output of the model.
         """
-        # Implement prediction logic
+        # Implement prediction method here. 
         pass

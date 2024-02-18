@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Predictor Module &mdash; emflow  documentation</title>
+  <title>Predictor Class &mdash; emflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Optimizer Module" href="optimizer.html" />
-    <link rel="prev" title="Agent" href="agent.html" /> 
+    <link rel="next" title="Optimizer Class" href="optimizer.html" />
+    <link rel="prev" title="Simulator Class" href="simulator.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -73,23 +73,39 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../problems/scores.html">Scores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../problems/environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../problems/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spaces/output.html">Output Space</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="agent.html">Agent</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Module</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Class</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Class</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#emflow.models.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.load_data"><code class="docutils literal notranslate"><span class="pre">Predictor.load_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.create_features"><code class="docutils literal notranslate"><span class="pre">Predictor.create_features()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.train"><code class="docutils literal notranslate"><span class="pre">Predictor.train()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
@@ -110,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Predictor Module</li>
+      <li class="breadcrumb-item active">Predictor Class</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/models/predictor.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -120,28 +136,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="predictor-module">
-<h1>Predictor Module<a class="headerlink" href="#predictor-module" title="Link to this heading"></a></h1>
+  <section id="predictor-class">
+<h1>Predictor Class<a class="headerlink" href="#predictor-class" title="Link to this heading"></a></h1>
 <dl class="py class" id="module-emflow.models.predictor">
 <dt class="sig sig-object py" id="emflow.models.predictor.Predictor">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.models.predictor.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.load_data" title="Link to this definition"></a></dt>
+<dd><p>Load data used for training the predictor.</p>
+<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.create_features">
+<span class="sig-name descname"><span class="pre">create_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.create_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.create_features" title="Link to this definition"></a></dt>
+<dd><p>Create features from the loaded data used for training the predictor.
+Load data used for training sthe predictor.</p>
+<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emflow.models.predictor.Predictor.train">
-<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.train" title="Link to this definition"></a></dt>
-<dd><p>Train the predictor with the given data.</p>
-<dl class="simple">
-<dt>Parameters:</dt><dd><p>training_data: Data used for training the model.</p>
-</dd>
-</dl>
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.train" title="Link to this definition"></a></dt>
+<dd><p>Train the predictor from the training data.</p>
+<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="emflow.models.predictor.Predictor.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.predict" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.predict" title="Link to this definition"></a></dt>
 <dd><p>Make a prediction based on the input data.</p>
+<p>This is a mandatory method that must be implemented by subclasses</p>
 <dl class="simple">
-<dt>Parameters:</dt><dd><p>input_data: Data on which prediction is to be made.</p>
+<dt>Parameters:</dt><dd><p>input: Data on which prediction is to be made.</p>
 </dd>
 <dt>Returns:</dt><dd><p>prediction: The output of the model.</p>
 </dd>
@@ -156,8 +185,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="agent.html" class="btn btn-neutral float-left" title="Agent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="optimizer.html" class="btn btn-neutral float-right" title="Optimizer Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="simulator.html" class="btn btn-neutral float-left" title="Simulator Class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="optimizer.html" class="btn btn-neutral float-right" title="Optimizer Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

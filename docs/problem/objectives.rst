@@ -1,7 +1,7 @@
-Scores
+Objectives
 ============
 
-.. automodule:: emflow.problems.scores
+.. automodule:: emflow.problems.objectives
     :members:
     :undoc-members:
     :show-inheritance:

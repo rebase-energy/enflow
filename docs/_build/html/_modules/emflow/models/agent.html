@@ -70,16 +70,30 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/scores.html">Scores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/output.html">Output Space</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/scenarios.html">Scenarios</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
@@ -111,16 +125,18 @@
            <div itemprop="articleBody">
              
   <h1>Source code for emflow.models.agent</h1><div class="highlight"><pre>
-<span></span>
+<span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
 <div class="viewcode-block" id="Agent">
 <a class="viewcode-back" href="../../../models/agent.html#emflow.models.agent.Agent">[docs]</a>
-<span class="k">class</span> <span class="nc">Agent</span><span class="p">:</span>
+<span class="k">class</span> <span class="nc">Agent</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Initialize agent properties</span>
         <span class="k">pass</span>
-
+    
 <div class="viewcode-block" id="Agent.choose_action">
 <a class="viewcode-back" href="../../../models/agent.html#emflow.models.agent.Agent.choose_action">[docs]</a>
+    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">choose_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Choose an action based on the given state.</span>

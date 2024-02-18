@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scores &mdash; emflow  documentation</title>
+  <title>Output Space &mdash; emflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Environments" href="environments.html" />
-    <link rel="prev" title="Wind Assets" href="../assets/wind.html" /> 
+    <link rel="next" title="Simulator Class" href="../models/simulator.html" />
+    <link rel="prev" title="Input Space" href="input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -72,17 +72,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Scores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Input Space</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Output Space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.spaces.output.OutputSpace"><code class="docutils literal notranslate"><span class="pre">OutputSpace</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#emflow.spaces.output.ActionSpace"><code class="docutils literal notranslate"><span class="pre">ActionSpace</span></code></a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/agent.html">Agent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/predictor.html">Predictor Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
@@ -103,9 +121,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Scores</li>
+      <li class="breadcrumb-item active">Output Space</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/problems/scores.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/spaces/output.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -113,16 +131,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="scores">
-<h1>Scores<a class="headerlink" href="#scores" title="Link to this heading"></a></h1>
+  <section id="module-emflow.spaces.output">
+<span id="output-space"></span><h1>Output Space<a class="headerlink" href="#module-emflow.spaces.output" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="emflow.spaces.output.OutputSpace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.spaces.output.</span></span><span class="sig-name descname"><span class="pre">OutputSpace</span></span><a class="reference internal" href="../_modules/emflow/spaces/output.html#OutputSpace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.spaces.output.OutputSpace" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#emflow.spaces.base.BaseSpace" title="emflow.spaces.base.BaseSpace"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSpace</span></code></a></p>
+<p>The output space for the energy model.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emflow.spaces.output.ActionSpace">
+<span class="sig-prename descclassname"><span class="pre">emflow.spaces.output.</span></span><span class="sig-name descname"><span class="pre">ActionSpace</span></span><a class="headerlink" href="#emflow.spaces.output.ActionSpace" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#emflow.spaces.output.OutputSpace" title="emflow.spaces.output.OutputSpace"><code class="xref py py-class docutils literal notranslate"><span class="pre">OutputSpace</span></code></a></p>
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../assets/wind.html" class="btn btn-neutral float-left" title="Wind Assets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="environments.html" class="btn btn-neutral float-right" title="Environments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="input.html" class="btn btn-neutral float-left" title="Input Space" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../models/simulator.html" class="btn btn-neutral float-right" title="Simulator Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

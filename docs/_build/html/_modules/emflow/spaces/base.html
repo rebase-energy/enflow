@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>emflow.spaces.base &mdash; emflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            emflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">▶️ Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html#purpose">Purpose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html#support-and-contact">Support and Contact</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-4-create-the-environment">Step 4: Create the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-5-establish-the-objective-function">Step 5: Establish the Objective Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-6-design-agents-policies">Step 6: Design Agents’ Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthrough.html#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../assets/pv.html">PV Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../assets/wind.html">Wind Assets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/output.html">Output Space</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/scenarios.html">Scenarios</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">emflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">emflow.spaces.base</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for emflow.spaces.base</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">fields</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="BaseSpace">
+<a class="viewcode-back" href="../../../spaces/base.html#emflow.spaces.base.BaseSpace">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">BaseSpace</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A base space with methods for converting data formats.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BaseSpace.from_array">
+<a class="viewcode-back" href="../../../spaces/base.html#emflow.spaces.base.BaseSpace.from_array">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_array</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;BaseSpace&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the action from a numpy array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">input_array</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">action</span></div>
+
+
+<div class="viewcode-block" id="BaseSpace.to_array">
+<a class="viewcode-back" href="../../../spaces/base.html#emflow.spaces.base.BaseSpace.to_array">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_array</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the action to a numpy array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">all_fields</span> <span class="o">=</span> <span class="n">fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>        
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">all_fields</span><span class="p">]</span>
+        <span class="n">output_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_array</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_array</span><span class="p">()</span>
+
+<div class="viewcode-block" id="BaseSpace.from_tuple">
+<a class="viewcode-back" href="../../../spaces/base.html#emflow.spaces.base.BaseSpace.from_tuple">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_tuple</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_tuple</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the action from a tuple.</span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">input_tuple</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseSpace.to_tuple">
+<a class="viewcode-back" href="../../../spaces/base.html#emflow.spaces.base.BaseSpace.to_tuple">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the action to a tuple.</span>
+<span class="sd">        &quot;&quot;&quot;</span>       
+        <span class="n">all_fields</span> <span class="o">=</span> <span class="n">fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>        
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">all_fields</span><span class="p">]</span>
+        <span class="n">output_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_tuple</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_tuple</span><span class="p">()</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian Haglund.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

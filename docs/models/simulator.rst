@@ -1,4 +1,4 @@
-Simulator Module
+Simulator Class
 ============
 
 .. automodule:: emflow.models.simulator

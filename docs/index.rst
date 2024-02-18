@@ -15,6 +15,12 @@ emflow: Open-source energy modelling framework
 
 .. toctree::
    :maxdepth: 2
+   :caption: 📝 Notebook Examples
+
+   notebooks/gefcom2014_solar
+
+.. toctree::
+   :maxdepth: 2
    :caption: 🔋 Energy Assets
 
    assets/pv
@@ -24,24 +30,36 @@ emflow: Open-source energy modelling framework
    :maxdepth: 2
    :caption: 🧩 Energy Problems
 
-   problems/scores
-   problems/environments
-   problems/checks
+   problem/dataset
+   problem/environments
+   problem/objectives
+   problem/checks
+   problem/problem
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 📦 Spaces
+
+   spaces/base
+   spaces/input
+   spaces/output
 
 .. toctree::
    :maxdepth: 2
    :caption: 🤖 Energy Models
 
-   models/agent
+   models/simulator
    models/predictor
    models/optimizer
-   models/simulator
+   models/agent
 
 .. toctree::
    :maxdepth: 2
-   :caption: 📝 Notebook Examples
+   :caption: ♻️ Runners
 
-   notebooks/gefcom2014_solar
+   runners/experiment
+   runners/benchmark
+   runners/scenarios
 
 Indices and tables
 ==================

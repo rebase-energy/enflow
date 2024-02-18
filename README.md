@@ -1,4 +1,5 @@
-# emflow
+# emflow: Energy Modelling Flow
+### Enabling flow of mind to model flow of energy
 
 As energy systems world-wide continue to decarbonise through deployment of renewable and fossil-free energy, they are also becoming more intermittent and complex. We need better data-driven methods to handle this complexity, with `python` rapidly becoming the tool-of-choice for energy modellers. 
 

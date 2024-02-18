@@ -70,16 +70,30 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/scores.html">Scores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/environments.html">Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../problems/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/checks.html">Checks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problem/problem.html">Problem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spaces/output.html">Output Space</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/agent.html">Agent Class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../runners/scenarios.html">Scenarios</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
@@ -111,9 +125,14 @@
            <div itemprop="articleBody">
              
   <h1>Source code for emflow.models.simulator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">from</span> <span class="nn">emflow.spaces</span> <span class="kn">import</span> <span class="n">StateSpace</span>
+
 <div class="viewcode-block" id="Simulator">
 <a class="viewcode-back" href="../../../models/simulator.html#emflow.models.simulator.Simulator">[docs]</a>
-<span></span><span class="k">class</span> <span class="nc">Simulator</span><span class="p">:</span>
+<span class="k">class</span> <span class="nc">Simulator</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the Simulator with a given initial state.</span>
@@ -123,23 +142,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">initial_state</span>
         <span class="c1"># Initialize other necessary properties</span>
 
-<div class="viewcode-block" id="Simulator.step">
-<a class="viewcode-back" href="../../../models/simulator.html#emflow.models.simulator.Simulator.step">[docs]</a>
-    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Update the simulator&#39;s state based on an action.</span>
-
-<span class="sd">        :param action: The action to be applied to the state.</span>
-<span class="sd">        :return: A tuple containing the next state and any additional info.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">next_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transition_logic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
-        <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gather_info</span><span class="p">()</span>
-
-        <span class="k">return</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">info</span></div>
-
-
-    <span class="k">def</span> <span class="nf">_transition_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_transition_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Define the state transition logic.</span>
 
@@ -151,6 +155,7 @@
         <span class="c1"># This is where the core simulation logic is defined</span>
         <span class="k">pass</span>
 
+    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">_gather_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Gather additional information about the current state, if necessary.</span>
@@ -162,6 +167,7 @@
 
 <div class="viewcode-block" id="Simulator.reset">
 <a class="viewcode-back" href="../../../models/simulator.html#emflow.models.simulator.Simulator.reset">[docs]</a>
+    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reset the simulator to the initial state or a new start state.</span>
@@ -170,7 +176,26 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Reset the state to its initial configuration or a new state</span>
         <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Simulator.step">
+<a class="viewcode-back" href="../../../models/simulator.html#emflow.models.simulator.Simulator.step">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="n">StateSpace</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Update the simulator&#39;s state based on an action.</span>
+
+<span class="sd">        :param action: The action to be applied to the state.</span>
+<span class="sd">        :return: A tuple containing the next state and any additional info.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">next_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state_transition_function</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">next_state</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gather_info</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">info</span></div>
 </div>
+
+
 
 </pre></div>
 

@@ -1,9 +1,11 @@
+from abc import ABC, abstractmethod
 
-class Agent:
+class Agent(ABC):
     def __init__(self):
         # Initialize agent properties
         pass
-
+    
+    @abstractmethod
     def choose_action(self, state):
         """
         Choose an action based on the given state.

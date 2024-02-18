@@ -1,10 +1,13 @@
-class Optimizer:
+from abc import ABC, abstractmethod
+
+class Optimizer(ABC):
     def __init__(self):
         """
         Initialize the Optimizer.
         """
         # Initialization code here
 
+    @abstractmethod
     def optimize(self, objective_function, constraints=None):
         """
         Perform the optimization.
