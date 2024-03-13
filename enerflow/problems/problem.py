@@ -2,7 +2,7 @@ from dataclasses import dataclass
 import typing as t
 
 import energydatamodel as edm
-import emflow as ef
+import enerflow as ef
 
 @dataclass
 class Problem:

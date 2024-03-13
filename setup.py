@@ -1,12 +1,9 @@
 from setuptools import setup, find_packages
 
-def read_requirements():
-    with open('requirements.txt', 'r') as file:
-        return file.read().splitlines()
 
 setup(
     name='enerflow',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     license='MIT',
     description='⚡ Open-source framework for sequential decision problems in the energy domain',
@@ -15,5 +12,10 @@ setup(
     author='rebase.energy',
     author_email='hello@rebase.energy',
     url='https://github.com/rebase-energy/enerflow',
-    install_requires=read_requirements()
+    install_requires=[
+        "pandas",
+        "pytz",
+        "energydatamodel",
+        "gymnasium",
+    ]
 )

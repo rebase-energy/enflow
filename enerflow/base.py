@@ -6,7 +6,6 @@ import numpy as np
 
 import pandas as pd
 import energydatamodel as edm
-from emflow.models import Agent, Optimizer, Predictor, Simulator
 
 
 @dataclass
@@ -69,6 +68,4 @@ class BaseProblem:
     action: BaseAction
     environment: BaseEnvironment
     objective: BaseObjective
-    model: t.Union[Agent, Optimizer, Predictor, Simulator]
-
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, fields
 import numpy as np
 
-from emflow.spaces import BaseSpace
+from enerflow.spaces import BaseSpace
 
 
 @dataclass

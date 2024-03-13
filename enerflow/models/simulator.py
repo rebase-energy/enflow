@@ -1,7 +1,7 @@
 import typing as t
 from abc import ABC, abstractmethod
 
-from emflow.spaces import StateSpace
+from ..spaces import StateSpace
 
 class Simulator(ABC):
     def __init__(self, initial_state):

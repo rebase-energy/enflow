@@ -6,7 +6,7 @@ class Agent(ABC):
         pass
     
     @abstractmethod
-    def choose_action(self, state):
+    def act(self, state):
         """
         Choose an action based on the given state.
 
