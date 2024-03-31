@@ -5,5 +5,7 @@ from .models.optimizer import Optimizer
 from .models.predictor import Predictor
 from .models.simulator import Simulator
 
+from .problems.dataset import Dataset
+
 from .problems.objectives import PinballLoss
 #from energydatamodel.pv import PVArray
