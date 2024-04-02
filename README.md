@@ -1,4 +1,10 @@
+<h1 align="center">
+	<img width="300" src="https://github.com/rebase-energy/enerflow/blob/main/assets/enerflow-logo.png?raw=true" alt="MindsDB">
+	<br>
+</h1>
+
 # enerflow: modeling the flow of energy 
+
 ## Python framework for sequential decision problems in the energy sector
 
 **enerflow** is a Python framework for modeling sequential decision problems in the energy sector. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's decision framework](https://castle.princeton.edu/rlso/). enerflow enables you to: 
