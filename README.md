@@ -1,7 +1,9 @@
-<h1 align="center">
-	<img width="300" src="https://github.com/rebase-energy/enerflow/blob/main/assets/enerflow-logo.png?raw=true" alt="MindsDB">
-	<br>
-</h1>
+<div align="center">
+	<img width="300" src="https://github.com/rebase-energy/enerflow/blob/main/assets/enerflow-logo.png?raw=true" alt="enerflow">
+<h2 style="margin-top: 0px;">
+    ⚡ Open-source Python framework for modelling sequential decision problems in the energy sector
+</h2>
+</div>
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/enerflow.svg)](https://badge.fury.io/py/enerflow) 
