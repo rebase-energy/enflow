@@ -1,7 +1,7 @@
 Wind Assets
 ============
 
-.. automodule:: emflow.assets.wind
+.. automodule:: enerflow.assets.wind
     :members:
     :undoc-members:
     :show-inheritance:

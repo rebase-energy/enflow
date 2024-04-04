@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Environments &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
@@ -66,6 +66,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
@@ -75,9 +79,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Environments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.environments.MicroGridEnv"><code class="docutils literal notranslate"><span class="pre">MicroGridEnv</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.environments.HybridPowerPlantEnv"><code class="docutils literal notranslate"><span class="pre">HybridPowerPlantEnv</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.environments.EnergyCommunityEnv"><code class="docutils literal notranslate"><span class="pre">EnergyCommunityEnv</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.environments.MicroGridEnv"><code class="docutils literal notranslate"><span class="pre">MicroGridEnv</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.environments.HybridPowerPlantEnv"><code class="docutils literal notranslate"><span class="pre">HybridPowerPlantEnv</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.environments.EnergyCommunityEnv"><code class="docutils literal notranslate"><span class="pre">EnergyCommunityEnv</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="objectives.html">Objectives</a></li>
@@ -102,10 +106,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -132,23 +132,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-emflow.problems.environments">
-<span id="environments"></span><h1>Environments<a class="headerlink" href="#module-emflow.problems.environments" title="Link to this heading"></a></h1>
+  <section id="module-enerflow.problems.environments">
+<span id="environments"></span><h1>Environments<a class="headerlink" href="#module-enerflow.problems.environments" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.environments.MicroGridEnv">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">MicroGridEnv</span></span><a class="reference internal" href="../_modules/emflow/problems/environments.html#MicroGridEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.environments.MicroGridEnv" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.environments.MicroGridEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">MicroGridEnv</span></span><a class="reference internal" href="../_modules/enerflow/problems/environments.html#MicroGridEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.environments.MicroGridEnv" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.environments.HybridPowerPlantEnv">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">HybridPowerPlantEnv</span></span><a class="reference internal" href="../_modules/emflow/problems/environments.html#HybridPowerPlantEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.environments.HybridPowerPlantEnv" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.environments.HybridPowerPlantEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">HybridPowerPlantEnv</span></span><a class="reference internal" href="../_modules/enerflow/problems/environments.html#HybridPowerPlantEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.environments.HybridPowerPlantEnv" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.environments.EnergyCommunityEnv">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">EnergyCommunityEnv</span></span><a class="reference internal" href="../_modules/emflow/problems/environments.html#EnergyCommunityEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.environments.EnergyCommunityEnv" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.environments.EnergyCommunityEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.environments.</span></span><span class="sig-name descname"><span class="pre">EnergyCommunityEnv</span></span><a class="reference internal" href="../_modules/enerflow/problems/environments.html#EnergyCommunityEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.environments.EnergyCommunityEnv" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 

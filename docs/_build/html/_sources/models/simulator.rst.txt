@@ -1,7 +1,7 @@
 Simulator Class
 ============
 
-.. automodule:: emflow.models.simulator
+.. automodule:: enerflow.models.simulator
    :members:
    :undoc-members:
    :show-inheritance:

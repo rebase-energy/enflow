@@ -1,7 +1,7 @@
 PV Assets
 ============
 
-.. automodule:: emflow.assets.pv
+.. automodule:: enerflow.assets.pv
     :members:
     :undoc-members:
     :show-inheritance:

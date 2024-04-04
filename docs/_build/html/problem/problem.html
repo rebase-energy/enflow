@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Problem &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
@@ -66,6 +66,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
@@ -78,11 +82,11 @@
 <li class="toctree-l1"><a class="reference internal" href="objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="checks.html">Checks</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Problem</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.problems.problem.Problem.name"><code class="docutils literal notranslate"><span class="pre">Problem.name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.problems.problem.Problem.description"><code class="docutils literal notranslate"><span class="pre">Problem.description</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.problems.problem.Problem.energy_system"><code class="docutils literal notranslate"><span class="pre">Problem.energy_system</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.problems.problem.Problem.dataset"><code class="docutils literal notranslate"><span class="pre">Problem.dataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.problem.Problem.name"><code class="docutils literal notranslate"><span class="pre">Problem.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.problem.Problem.description"><code class="docutils literal notranslate"><span class="pre">Problem.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.problem.Problem.energy_system"><code class="docutils literal notranslate"><span class="pre">Problem.energy_system</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.problem.Problem.dataset"><code class="docutils literal notranslate"><span class="pre">Problem.dataset</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -106,10 +110,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -136,31 +136,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-emflow.problems.problem">
-<span id="problem"></span><h1>Problem<a class="headerlink" href="#module-emflow.problems.problem" title="Link to this heading"></a></h1>
+  <section id="module-enerflow.problems.problem">
+<span id="problem"></span><h1>Problem<a class="headerlink" href="#module-enerflow.problems.problem" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.problem.Problem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.problem.</span></span><span class="sig-name descname"><span class="pre">Problem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">EnergySystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/problems/problem.html#Problem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.problem.Problem" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.problem.Problem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.problem.</span></span><span class="sig-name descname"><span class="pre">Problem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">EnergySystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/problems/problem.html#Problem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.problem.Problem" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A problem to be solved by the energy model.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.problems.problem.Problem.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emflow.problems.problem.Problem.name" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.problem.Problem.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enerflow.problems.problem.Problem.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.problems.problem.Problem.description">
-<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emflow.problems.problem.Problem.description" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.problem.Problem.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enerflow.problems.problem.Problem.description" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.problems.problem.Problem.energy_system">
-<span class="sig-name descname"><span class="pre">energy_system</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">EnergySystem</span></a></em><a class="headerlink" href="#emflow.problems.problem.Problem.energy_system" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.problem.Problem.energy_system">
+<span class="sig-name descname"><span class="pre">energy_system</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">EnergySystem</span></a></em><a class="headerlink" href="#enerflow.problems.problem.Problem.energy_system" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.problems.problem.Problem.dataset">
-<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><a class="headerlink" href="#emflow.problems.problem.Problem.dataset" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.problem.Problem.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><a class="headerlink" href="#enerflow.problems.problem.Problem.dataset" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

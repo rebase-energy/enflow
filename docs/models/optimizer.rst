@@ -1,7 +1,7 @@
 Optimizer Class
 ============
 
-.. automodule:: emflow.models.optimizer
+.. automodule:: enerflow.models.optimizer
    :members:
    :undoc-members:
    :show-inheritance:

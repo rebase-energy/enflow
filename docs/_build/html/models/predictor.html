@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Predictor Class &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
@@ -66,6 +66,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
@@ -89,11 +93,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Class</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.models.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.load_data"><code class="docutils literal notranslate"><span class="pre">Predictor.load_data()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.create_features"><code class="docutils literal notranslate"><span class="pre">Predictor.create_features()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.train"><code class="docutils literal notranslate"><span class="pre">Predictor.train()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.models.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.models.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.load_data"><code class="docutils literal notranslate"><span class="pre">Predictor.load_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.create_features"><code class="docutils literal notranslate"><span class="pre">Predictor.create_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.train"><code class="docutils literal notranslate"><span class="pre">Predictor.train()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -106,10 +110,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -138,35 +138,35 @@
              
   <section id="predictor-class">
 <h1>Predictor Class<a class="headerlink" href="#predictor-class" title="Link to this heading"></a></h1>
-<dl class="py class" id="module-emflow.models.predictor">
-<dt class="sig sig-object py" id="emflow.models.predictor.Predictor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.models.predictor.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor" title="Link to this definition"></a></dt>
+<dl class="py class" id="module-enerflow.models.predictor">
+<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.models.predictor.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.load_data">
-<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.load_data" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.load_data" title="Link to this definition"></a></dt>
 <dd><p>Load data used for training the predictor.</p>
 <p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.create_features">
-<span class="sig-name descname"><span class="pre">create_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.create_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.create_features" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.create_features">
+<span class="sig-name descname"><span class="pre">create_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.create_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.create_features" title="Link to this definition"></a></dt>
 <dd><p>Create features from the loaded data used for training the predictor.
 Load data used for training sthe predictor.</p>
 <p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.train">
-<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.train" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.train" title="Link to this definition"></a></dt>
 <dd><p>Train the predictor from the training data.</p>
 <p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="emflow.models.predictor.Predictor.predict">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/emflow/models/predictor.html#Predictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.models.predictor.Predictor.predict" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.predict">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.predict" title="Link to this definition"></a></dt>
 <dd><p>Make a prediction based on the input data.</p>
 <p>This is a mandatory method that must be implemented by subclasses</p>
 <dl class="simple">

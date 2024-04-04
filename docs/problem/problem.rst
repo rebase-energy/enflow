@@ -1,7 +1,7 @@
 Problem
 ============
 
-.. automodule:: emflow.problems.problem
+.. automodule:: enerflow.problems.problem
     :members:
     :undoc-members:
     :show-inheritance:

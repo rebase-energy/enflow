@@ -1,7 +1,7 @@
 Environments
 ============
 
-.. automodule:: emflow.problems.environments
+.. automodule:: enerflow.problems.environments
     :members:
     :undoc-members:
     :show-inheritance:

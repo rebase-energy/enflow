@@ -1,7 +1,7 @@
 Objectives
 ============
 
-.. automodule:: emflow.problems.objectives
+.. automodule:: enerflow.problems.objectives
     :members:
     :undoc-members:
     :show-inheritance:

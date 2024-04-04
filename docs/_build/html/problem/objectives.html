@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Objectives &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
@@ -66,6 +66,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
@@ -76,9 +80,13 @@
 <li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Objectives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.objectives.BaseScore"><code class="docutils literal notranslate"><span class="pre">BaseScore</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.objectives.MeanSquaredError"><code class="docutils literal notranslate"><span class="pre">MeanSquaredError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.problems.objectives.MeanAbsoluteError"><code class="docutils literal notranslate"><span class="pre">MeanAbsoluteError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.objectives.BaseScore"><code class="docutils literal notranslate"><span class="pre">BaseScore</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.objectives.MeanSquaredError"><code class="docutils literal notranslate"><span class="pre">MeanSquaredError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.objectives.MeanAbsoluteError"><code class="docutils literal notranslate"><span class="pre">MeanAbsoluteError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.objectives.PinballLoss"><code class="docutils literal notranslate"><span class="pre">PinballLoss</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.objectives.PinballLoss.score"><code class="docutils literal notranslate"><span class="pre">PinballLoss.score()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="checks.html">Checks</a></li>
@@ -102,10 +110,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -132,24 +136,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-emflow.problems.objectives">
-<span id="objectives"></span><h1>Objectives<a class="headerlink" href="#module-emflow.problems.objectives" title="Link to this heading"></a></h1>
+  <section id="module-enerflow.problems.objectives">
+<span id="objectives"></span><h1>Objectives<a class="headerlink" href="#module-enerflow.problems.objectives" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.objectives.BaseScore">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">BaseScore</span></span><a class="reference internal" href="../_modules/emflow/problems/objectives.html#BaseScore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.objectives.BaseScore" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="enerflow.problems.objectives.BaseScore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">BaseScore</span></span><a class="reference internal" href="../_modules/enerflow/problems/objectives.html#BaseScore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.objectives.BaseScore" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.objectives.MeanSquaredError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">MeanSquaredError</span></span><a class="reference internal" href="../_modules/emflow/problems/objectives.html#MeanSquaredError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.objectives.MeanSquaredError" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#emflow.problems.objectives.BaseScore" title="emflow.problems.objectives.BaseScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScore</span></code></a></p>
+<dt class="sig sig-object py" id="enerflow.problems.objectives.MeanSquaredError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">MeanSquaredError</span></span><a class="reference internal" href="../_modules/enerflow/problems/objectives.html#MeanSquaredError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.objectives.MeanSquaredError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#enerflow.problems.objectives.BaseScore" title="enerflow.problems.objectives.BaseScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScore</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="emflow.problems.objectives.MeanAbsoluteError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">MeanAbsoluteError</span></span><a class="reference internal" href="../_modules/emflow/problems/objectives.html#MeanAbsoluteError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.problems.objectives.MeanAbsoluteError" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#emflow.problems.objectives.BaseScore" title="emflow.problems.objectives.BaseScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScore</span></code></a></p>
+<dt class="sig sig-object py" id="enerflow.problems.objectives.MeanAbsoluteError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">MeanAbsoluteError</span></span><a class="reference internal" href="../_modules/enerflow/problems/objectives.html#MeanAbsoluteError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.objectives.MeanAbsoluteError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#enerflow.problems.objectives.BaseScore" title="enerflow.problems.objectives.BaseScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScore</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enerflow.problems.objectives.PinballLoss">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.objectives.</span></span><span class="sig-name descname"><span class="pre">PinballLoss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantiles</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/problems/objectives.html#PinballLoss"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.objectives.PinballLoss" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#enerflow.problems.objectives.BaseScore" title="enerflow.problems.objectives.BaseScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScore</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="enerflow.problems.objectives.PinballLoss.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_preds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/problems/objectives.html#PinballLoss.score"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.objectives.PinballLoss.score" title="Link to this definition"></a></dt>
+<dd><p>Compute the pinball loss between true values and multiple sets of predictions.
+Each set of predictions corresponds to a specific quantile.
+:param y_true: array-like, true values.
+:param y_preds: 2D array-like, predicted values for each quantile. Shape: (n_samples, n_quantiles).
+:return: numpy array, the pinball losses for each quantile.</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>

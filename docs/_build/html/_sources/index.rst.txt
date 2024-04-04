@@ -18,6 +18,7 @@ emflow: Open-source energy modelling framework
    :caption: 📝 Notebook Examples
 
    notebooks/gefcom2014_solar
+   notebooks/notebook
 
 .. toctree::
    :maxdepth: 2

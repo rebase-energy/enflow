@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wind Assets &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
   
@@ -69,59 +69,17 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html"><strong>Load data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html#Create-and-plot-energy-system"><strong>Create and plot energy system</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html#Create-Environment"><strong>Create Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html#Create-Objective"><strong>Create Objective</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html#Create-Predictor"><strong>Create Predictor</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/notebook.html#Create-Agent"><strong>Create Agent</strong></a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pv.html">PV Assets</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Wind Assets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.wind.WindTurbine"><code class="docutils literal notranslate"><span class="pre">WindTurbine</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.capacity"><code class="docutils literal notranslate"><span class="pre">WindTurbine.capacity</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.hub_height"><code class="docutils literal notranslate"><span class="pre">WindTurbine.hub_height</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.rotor_diameter"><code class="docutils literal notranslate"><span class="pre">WindTurbine.rotor_diameter</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.turbine_model"><code class="docutils literal notranslate"><span class="pre">WindTurbine.turbine_model</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.power_curve"><code class="docutils literal notranslate"><span class="pre">WindTurbine.power_curve</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.power_coefficient_curve"><code class="docutils literal notranslate"><span class="pre">WindTurbine.power_coefficient_curve</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.create_table_representation"><code class="docutils literal notranslate"><span class="pre">WindTurbine.create_table_representation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.altitude"><code class="docutils literal notranslate"><span class="pre">WindTurbine.altitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.geometry_to_geojson"><code class="docutils literal notranslate"><span class="pre">WindTurbine.geometry_to_geojson()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.latitude"><code class="docutils literal notranslate"><span class="pre">WindTurbine.latitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.location"><code class="docutils literal notranslate"><span class="pre">WindTurbine.location</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.longitude"><code class="docutils literal notranslate"><span class="pre">WindTurbine.longitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.name"><code class="docutils literal notranslate"><span class="pre">WindTurbine.name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.plot_timeseries"><code class="docutils literal notranslate"><span class="pre">WindTurbine.plot_timeseries()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.timeseries"><code class="docutils literal notranslate"><span class="pre">WindTurbine.timeseries</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.to_dataframe"><code class="docutils literal notranslate"><span class="pre">WindTurbine.to_dataframe()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.to_geojson"><code class="docutils literal notranslate"><span class="pre">WindTurbine.to_geojson()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.to_json"><code class="docutils literal notranslate"><span class="pre">WindTurbine.to_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindTurbine.tz"><code class="docutils literal notranslate"><span class="pre">WindTurbine.tz</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.wind.WindFarm"><code class="docutils literal notranslate"><span class="pre">WindFarm</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.wind_turbines"><code class="docutils literal notranslate"><span class="pre">WindFarm.wind_turbines</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.farm_efficiency"><code class="docutils literal notranslate"><span class="pre">WindFarm.farm_efficiency</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.altitude"><code class="docutils literal notranslate"><span class="pre">WindFarm.altitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.geometry_to_geojson"><code class="docutils literal notranslate"><span class="pre">WindFarm.geometry_to_geojson()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.latitude"><code class="docutils literal notranslate"><span class="pre">WindFarm.latitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.location"><code class="docutils literal notranslate"><span class="pre">WindFarm.location</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.longitude"><code class="docutils literal notranslate"><span class="pre">WindFarm.longitude</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.name"><code class="docutils literal notranslate"><span class="pre">WindFarm.name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.plot_timeseries"><code class="docutils literal notranslate"><span class="pre">WindFarm.plot_timeseries()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.timeseries"><code class="docutils literal notranslate"><span class="pre">WindFarm.timeseries</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.to_dataframe"><code class="docutils literal notranslate"><span class="pre">WindFarm.to_dataframe()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.to_geojson"><code class="docutils literal notranslate"><span class="pre">WindFarm.to_geojson()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.to_json"><code class="docutils literal notranslate"><span class="pre">WindFarm.to_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindFarm.tz"><code class="docutils literal notranslate"><span class="pre">WindFarm.tz</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#emflow.assets.wind.WindPowerArea"><code class="docutils literal notranslate"><span class="pre">WindPowerArea</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindPowerArea.capacity"><code class="docutils literal notranslate"><span class="pre">WindPowerArea.capacity</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindPowerArea.area"><code class="docutils literal notranslate"><span class="pre">WindPowerArea.area</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindPowerArea.wind_turbines"><code class="docutils literal notranslate"><span class="pre">WindPowerArea.wind_turbines</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#emflow.assets.wind.WindPowerArea.farm_efficiency"><code class="docutils literal notranslate"><span class="pre">WindPowerArea.farm_efficiency</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Wind Assets</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
@@ -175,229 +133,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-emflow.assets.wind">
-<span id="wind-assets"></span><h1>Wind Assets<a class="headerlink" href="#module-emflow.assets.wind" title="Link to this heading"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.wind.</span></span><span class="sig-name descname"><span class="pre">WindTurbine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">hub_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotor_diameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turbine_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_curve</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">NoneType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_coefficient_curve</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">NoneType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.geospatial.GeoLocation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timezone</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeseries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.abstract.TimeSeries</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/wind.html#WindTurbine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.wind.WindTurbine" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.capacity" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.hub_height">
-<span class="sig-name descname"><span class="pre">hub_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.hub_height" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.rotor_diameter">
-<span class="sig-name descname"><span class="pre">rotor_diameter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.rotor_diameter" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.turbine_model">
-<span class="sig-name descname"><span class="pre">turbine_model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.turbine_model" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.power_curve">
-<span class="sig-name descname"><span class="pre">power_curve</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.power_curve" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.power_coefficient_curve">
-<span class="sig-name descname"><span class="pre">power_coefficient_curve</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.power_coefficient_curve" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.create_table_representation">
-<span class="sig-name descname"><span class="pre">create_table_representation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/wind.html#WindTurbine.create_table_representation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.wind.WindTurbine.create_table_representation" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.altitude">
-<span class="sig-name descname"><span class="pre">altitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.altitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.geometry_to_geojson">
-<span class="sig-name descname"><span class="pre">geometry_to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindTurbine.geometry_to_geojson" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.latitude">
-<span class="sig-name descname"><span class="pre">latitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.latitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.location">
-<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Location</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.location" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.longitude">
-<span class="sig-name descname"><span class="pre">longitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.longitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.plot_timeseries">
-<span class="sig-name descname"><span class="pre">plot_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.1)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.1)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#emflow.assets.wind.WindTurbine.plot_timeseries" title="Link to this definition"></a></dt>
-<dd><p>Plots a pandas Series using its built-in plot method.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>start_date: The start date for the plot. 
-end_date: The end date for the plot.</p>
-</dd>
-<dt>Returns:</dt><dd><p>The Matplotlib Axes object of the plot.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.timeseries">
-<span class="sig-name descname"><span class="pre">timeseries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">TimeSeries</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.timeseries" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.to_dataframe">
-<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindTurbine.to_dataframe" title="Link to this definition"></a></dt>
-<dd><p>Convert data class to a pandas DataFrame.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.to_geojson">
-<span class="sig-name descname"><span class="pre">to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exclude_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindTurbine.to_geojson" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.to_json">
-<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_none</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#emflow.assets.wind.WindTurbine.to_json" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindTurbine.tz">
-<span class="sig-name descname"><span class="pre">tz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pytz.timezone</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindTurbine.tz" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.wind.</span></span><span class="sig-name descname"><span class="pre">WindFarm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wind_turbines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindTurbine" title="energydatamodel.wind.WindTurbine"><span class="pre">energydatamodel.wind.WindTurbine</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">farm_efficiency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.geospatial.GeoLocation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tz</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timezone</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeseries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">energydatamodel.abstract.TimeSeries</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/wind.html#WindFarm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.wind.WindFarm" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnergyAsset</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.wind_turbines">
-<span class="sig-name descname"><span class="pre">wind_turbines</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindTurbine" title="energydatamodel.wind.WindTurbine"><span class="pre">WindTurbine</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.wind_turbines" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.farm_efficiency">
-<span class="sig-name descname"><span class="pre">farm_efficiency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.farm_efficiency" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.altitude">
-<span class="sig-name descname"><span class="pre">altitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.altitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.geometry_to_geojson">
-<span class="sig-name descname"><span class="pre">geometry_to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindFarm.geometry_to_geojson" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.latitude">
-<span class="sig-name descname"><span class="pre">latitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.latitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.location">
-<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Location</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.location" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.longitude">
-<span class="sig-name descname"><span class="pre">longitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.longitude" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.plot_timeseries">
-<span class="sig-name descname"><span class="pre">plot_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.1)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.1)"><span class="pre">DatetimeIndex</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#emflow.assets.wind.WindFarm.plot_timeseries" title="Link to this definition"></a></dt>
-<dd><p>Plots a pandas Series using its built-in plot method.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>start_date: The start date for the plot. 
-end_date: The end date for the plot.</p>
-</dd>
-<dt>Returns:</dt><dd><p>The Matplotlib Axes object of the plot.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.timeseries">
-<span class="sig-name descname"><span class="pre">timeseries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">TimeSeries</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.timeseries" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.to_dataframe">
-<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindFarm.to_dataframe" title="Link to this definition"></a></dt>
-<dd><p>Convert data class to a pandas DataFrame.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.to_geojson">
-<span class="sig-name descname"><span class="pre">to_geojson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exclude_none</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emflow.assets.wind.WindFarm.to_geojson" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.to_json">
-<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_none</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#emflow.assets.wind.WindFarm.to_json" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindFarm.tz">
-<span class="sig-name descname"><span class="pre">tz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pytz.timezone</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindFarm.tz" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindPowerArea">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emflow.assets.wind.</span></span><span class="sig-name descname"><span class="pre">WindPowerArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">area</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wind_turbines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindTurbine" title="energydatamodel.wind.WindTurbine"><span class="pre">energydatamodel.wind.WindTurbine</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindFarm" title="energydatamodel.wind.WindFarm"><span class="pre">energydatamodel.wind.WindFarm</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">NoneType</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">farm_efficiency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/energydatamodel/wind.html#WindPowerArea"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#emflow.assets.wind.WindPowerArea" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindPowerArea.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a></em><a class="headerlink" href="#emflow.assets.wind.WindPowerArea.capacity" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindPowerArea.area">
-<span class="sig-name descname"><span class="pre">area</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#emflow.assets.wind.WindPowerArea.area" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindPowerArea.wind_turbines">
-<span class="sig-name descname"><span class="pre">wind_turbines</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindTurbine" title="energydatamodel.wind.WindTurbine"><span class="pre">WindTurbine</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emflow.assets.wind.WindFarm" title="energydatamodel.wind.WindFarm"><span class="pre">WindFarm</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindPowerArea.wind_turbines" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="emflow.assets.wind.WindPowerArea.farm_efficiency">
-<span class="sig-name descname"><span class="pre">farm_efficiency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emflow.assets.wind.WindPowerArea.farm_efficiency" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="wind-assets">
+<h1>Wind Assets<a class="headerlink" href="#wind-assets" title="Link to this heading"></a></h1>
 </section>
 
 

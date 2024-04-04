@@ -1,7 +1,7 @@
 Benchmark
 ============
 
-.. automodule:: emflow.runners.benchmark
+.. automodule:: enerflow.runners.benchmark
    :members:
    :undoc-members:
    :show-inheritance:
