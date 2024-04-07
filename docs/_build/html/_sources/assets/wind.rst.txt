@@ -1,5 +1,5 @@
-Wind Assets
-============
+Wind
+=============
 
 .. automodule:: enerflow.assets.wind
     :members:

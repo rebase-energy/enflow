@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>energydatamodel.wind &mdash; emflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
 
   
@@ -63,6 +63,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#step-7-run-the-simulated-environment">Step 7: Run the Simulated Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../walkthrough.html#conclusion">Conclusion</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html"><strong>Load data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html#Create-and-plot-energy-system"><strong>Create and plot energy system</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html#Create-Environment"><strong>Create Environment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html#Create-Objective"><strong>Create Objective</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html#Create-Predictor"><strong>Create Predictor</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/notebook.html#Create-Agent"><strong>Create Agent</strong></a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../assets/pv.html">PV Assets</a></li>
@@ -94,10 +104,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../runners/scenarios.html">Scenarios</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
 </ul>
 
         </div>
@@ -131,11 +137,11 @@
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
 
-<span class="kn">from</span> <span class="nn">energydatamodel</span> <span class="kn">import</span> <span class="n">EnergyAsset</span>
+<span class="kn">from</span> <span class="nn">energydatamodel</span> <span class="kn">import</span> <span class="n">EnergyAsset</span><span class="p">,</span> <span class="n">GeoPolygon</span>
 
 
 <div class="viewcode-block" id="WindTurbine">
-<a class="viewcode-back" href="../../assets/wind.html#emflow.assets.wind.WindTurbine">[docs]</a>
+<a class="viewcode-back" href="../../assets/wind.html#enerflow.assets.wind.WindTurbine">[docs]</a>
 <span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">WindTurbine</span><span class="p">(</span><span class="n">EnergyAsset</span><span class="p">):</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span>
@@ -146,7 +152,7 @@
     <span class="n">power_coefficient_curve</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="WindTurbine.create_table_representation">
-<a class="viewcode-back" href="../../assets/wind.html#emflow.assets.wind.WindTurbine.create_table_representation">[docs]</a>
+<a class="viewcode-back" href="../../assets/wind.html#enerflow.assets.wind.WindTurbine.create_table_representation">[docs]</a>
     <span class="k">def</span> <span class="nf">create_table_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Create and return widgets to represent the WindTurbine&#39;s data</span>
         <span class="n">name_label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Name: &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -157,10 +163,11 @@
 
 
 <div class="viewcode-block" id="WindFarm">
-<a class="viewcode-back" href="../../assets/wind.html#emflow.assets.wind.WindFarm">[docs]</a>
-<span class="nd">@dataclass</span>
+<a class="viewcode-back" href="../../assets/wind.html#enerflow.assets.wind.WindFarm">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="nb">repr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">WindFarm</span><span class="p">(</span><span class="n">EnergyAsset</span><span class="p">):</span> 
-    <span class="n">wind_turbines</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">WindTurbine</span><span class="p">]</span>
+    <span class="n">wind_turbines</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">WindTurbine</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">capacity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">farm_efficiency</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -168,9 +175,10 @@
 
 
 <div class="viewcode-block" id="WindPowerArea">
-<a class="viewcode-back" href="../../assets/wind.html#emflow.assets.wind.WindPowerArea">[docs]</a>
+<a class="viewcode-back" href="../../assets/wind.html#enerflow.assets.wind.WindPowerArea">[docs]</a>
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">WindPowerArea</span><span class="p">:</span> 
+<span class="k">class</span> <span class="nc">WindPowerArea</span><span class="p">:</span>
+    <span class="n">geopolygon</span><span class="p">:</span> <span class="n">GeoPolygon</span> 
     <span class="n">capacity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span>
     <span class="n">area</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">wind_turbines</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">WindTurbine</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">WindFarm</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>

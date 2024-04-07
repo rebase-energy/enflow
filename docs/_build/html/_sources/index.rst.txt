@@ -21,11 +21,19 @@ emflow: Open-source energy modelling framework
    notebooks/notebook
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 🔋 Energy Assets
 
-   assets/pv
+   assets/base
+   assets/geospatial
+   assets/timeseries
+   assets/solar
    assets/wind
+   assets/battery
+   assets/hydro
+   assets/heatpump
+   assets/powergrid
+   assets/energysystem
 
 .. toctree::
    :maxdepth: 2
@@ -35,7 +43,6 @@ emflow: Open-source energy modelling framework
    problem/environments
    problem/objectives
    problem/checks
-   problem/problem
 
 .. toctree::
    :maxdepth: 2

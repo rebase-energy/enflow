@@ -75,8 +75,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="assets/pv.html">PV Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assets/wind.html">Wind Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/geospatial.html">Geospatial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/timeseries.html">Timeseries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/solar.html">Solar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/wind.html">Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/battery.html">Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/hydro.html">Hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/heatpump.html">Heatpump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/powergrid.html">Power Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assets/energysystem.html">Energy System</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
@@ -84,7 +92,6 @@
 <li class="toctree-l1"><a class="reference internal" href="problem/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problem/objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problem/checks.html">Checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problem/problem.html">Problem</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul>
@@ -139,6 +146,7 @@
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -149,7 +157,10 @@
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -157,11 +168,75 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="models/agent.html#enerflow.models.agent.Agent.act">act() (enerflow.models.agent.Agent method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="spaces/output.html#enerflow.spaces.output.ActionSpace">ActionSpace (in module enerflow.spaces.output)</a>
 </li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.add_assets">add_assets() (enerflow.assets.energysystem.Site method)</a>
+</li>
       <li><a href="models/agent.html#enerflow.models.agent.Agent">Agent (class in enerflow.models.agent)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.albedo">albedo (enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.almost_equals">almost_equals() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.almost_equals">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.altitude">altitude (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.altitude">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.altitude">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.altitude">(enerflow.assets.geospatial.GeoLocation attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.altitude">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.altitude">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.altitude">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.altitude">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.altitude">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.altitude">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.annual_output">annual_output (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.annual_output">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.area">area (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.area">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.area">(enerflow.assets.timeseries.ElectricityAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.area">(enerflow.assets.timeseries.ElectricityAreaSupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.area">(enerflow.assets.timeseries.HeatingAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea.area">(enerflow.assets.wind.WindPowerArea attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.assets">assets (enerflow.assets.energysystem.Site attribute)</a>
+</li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.Reservoir.average_depth">average_depth (enerflow.assets.hydro.Reservoir attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.Reservoir.average_depth">(enerflow.assets.powergrid.Reservoir attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.axis_azimuth">axis_azimuth (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.axis_tilt">axis_tilt (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -169,20 +244,144 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.backtrack">backtrack (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
       <li><a href="problem/objectives.html#enerflow.problems.objectives.BaseScore">BaseScore (class in enerflow.problems.objectives)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace">BaseSpace (class in enerflow.spaces.base)</a>
 </li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery">Battery (class in enerflow.assets.battery)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.boundary">boundary (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.boundary">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.bounds">bounds (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.bounds">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.buffer">buffer() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.buffer">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.capacity">capacity (enerflow.assets.heatpump.HeatPump attribute)</a>
+
+      <ul>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.capacity">(enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroTurbine.capacity">(enerflow.assets.hydro.HydroTurbine attribute)</a>
+</li>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.Reservoir.capacity">(enerflow.assets.hydro.Reservoir attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.capacity">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroTurbine.capacity">(enerflow.assets.powergrid.HydroTurbine attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.Reservoir.capacity">(enerflow.assets.powergrid.Reservoir attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.capacity">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.capacity">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.capacity">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.capacity">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea.capacity">(enerflow.assets.wind.WindPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.capacity">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.centroid">centroid (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.centroid">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.charge_efficiency">charge_efficiency (enerflow.assets.battery.Battery attribute)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.column_names">column_names (enerflow.assets.base.TimeSeries attribute)</a>
+
+      <ul>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.column_names">(enerflow.assets.timeseries.ElectricityAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.column_names">(enerflow.assets.timeseries.ElectricityAreaSupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.column_names">(enerflow.assets.timeseries.ElectricityDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.column_names">(enerflow.assets.timeseries.ElectricitySupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.column_names">(enerflow.assets.timeseries.HeatingAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.column_names">(enerflow.assets.timeseries.HeatingDemand attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.contains">contains() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.contains">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.contains_properly">contains_properly() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.contains_properly">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.convex_hull">convex_hull (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.convex_hull">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.coords">coords (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.coords">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.cop">cop (enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.covered_by">covered_by() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.covered_by">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.covers">covers() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.covers">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
       <li><a href="models/predictor.html#enerflow.models.predictor.Predictor.create_features">create_features() (enerflow.models.predictor.Predictor method)</a>
 </li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.create_table_representation">create_table_representation() (enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.cross_axis_tilt">cross_axis_tilt (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.crosses">crosses() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.crosses">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -193,14 +392,50 @@
 </li>
       <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset">Dataset (class in enerflow.problems.dataset)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="problem/problem.html#enerflow.problems.problem.Problem.dataset">dataset (enerflow.problems.problem.Problem attribute)</a>
-</li>
       <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset.description">description (enerflow.problems.dataset.Dataset attribute)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.df">df (enerflow.assets.base.TimeSeries attribute)</a>
 
       <ul>
-        <li><a href="problem/problem.html#enerflow.problems.problem.Problem.description">(enerflow.problems.problem.Problem attribute)</a>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.df">(enerflow.assets.timeseries.ElectricityAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.df">(enerflow.assets.timeseries.ElectricityAreaSupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.df">(enerflow.assets.timeseries.ElectricityDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.df">(enerflow.assets.timeseries.ElectricitySupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.df">(enerflow.assets.timeseries.HeatingAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.df">(enerflow.assets.timeseries.HeatingDemand attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.difference">difference() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.difference">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.discharge_efficiency">discharge_efficiency (enerflow.assets.battery.Battery attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.disjoint">disjoint() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.disjoint">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.distance">distance() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.distance">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.dwithin">dwithin() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.dwithin">(enerflow.assets.geospatial.LineString method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -209,6 +444,100 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroTurbine.efficiency">efficiency (enerflow.assets.hydro.HydroTurbine attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroTurbine.efficiency">(enerflow.assets.powergrid.HydroTurbine attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.efficiency">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaConsumption">ElectricityAreaConsumption (in module enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand">ElectricityAreaDemand (class in enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaProduction">ElectricityAreaProduction (in module enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply">ElectricityAreaSupply (class in enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityConsumption">ElectricityConsumption (in module enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand">ElectricityDemand (class in enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityProduction">ElectricityProduction (in module enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply">ElectricitySupply (class in enerflow.assets.timeseries)</a>
+</li>
+      <li>
+    enerflow.assets.base
+
+      <ul>
+        <li><a href="assets/base.html#module-enerflow.assets.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.battery
+
+      <ul>
+        <li><a href="assets/battery.html#module-enerflow.assets.battery">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.energysystem
+
+      <ul>
+        <li><a href="assets/energysystem.html#module-enerflow.assets.energysystem">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.geospatial
+
+      <ul>
+        <li><a href="assets/geospatial.html#module-enerflow.assets.geospatial">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.heatpump
+
+      <ul>
+        <li><a href="assets/heatpump.html#module-enerflow.assets.heatpump">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.hydro
+
+      <ul>
+        <li><a href="assets/hydro.html#module-enerflow.assets.hydro">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.powergrid
+
+      <ul>
+        <li><a href="assets/powergrid.html#module-enerflow.assets.powergrid">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.solar
+
+      <ul>
+        <li><a href="assets/solar.html#module-enerflow.assets.solar">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.timeseries
+
+      <ul>
+        <li><a href="assets/timeseries.html#module-enerflow.assets.timeseries">module</a>
+</li>
+      </ul></li>
+      <li>
+    enerflow.assets.wind
+
+      <ul>
+        <li><a href="assets/wind.html#module-enerflow.assets.wind">module</a>
+</li>
+      </ul></li>
       <li>
     enerflow.models.agent
 
@@ -237,6 +566,8 @@
         <li><a href="models/simulator.html#module-enerflow.models.simulator">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     enerflow.problems.checks
 
@@ -265,15 +596,6 @@
         <li><a href="problem/objectives.html#module-enerflow.problems.objectives">module</a>
 </li>
       </ul></li>
-      <li>
-    enerflow.problems.problem
-
-      <ul>
-        <li><a href="problem/problem.html#module-enerflow.problems.problem">module</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     enerflow.runners.benchmark
 
@@ -316,17 +638,47 @@
         <li><a href="spaces/output.html#module-enerflow.spaces.output">module</a>
 </li>
       </ul></li>
-      <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset.energy_system">energy_system (enerflow.problems.dataset.Dataset attribute)</a>
-
-      <ul>
-        <li><a href="problem/problem.html#enerflow.problems.problem.Problem.energy_system">(enerflow.problems.problem.Problem attribute)</a>
+      <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.energy_source">energy_source (enerflow.assets.heatpump.HeatPump attribute)</a>
 </li>
-      </ul></li>
+      <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset.energy_system">energy_system (enerflow.problems.dataset.Dataset attribute)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset">EnergyAsset (class in enerflow.assets.base)</a>
+</li>
       <li><a href="problem/checks.html#enerflow.problems.checks.EnergyBalanceCheck">EnergyBalanceCheck (class in enerflow.problems.checks)</a>
+</li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity">EnergyCommunity (class in enerflow.assets.energysystem)</a>
 </li>
       <li><a href="problem/environments.html#enerflow.problems.environments.EnergyCommunityEnv">EnergyCommunityEnv (class in enerflow.problems.environments)</a>
 </li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergySystem">EnergySystem (class in enerflow.assets.base)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.envelope">envelope (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.envelope">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.environmental_impact">environmental_impact (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.environmental_impact">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.equals">equals() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.equals">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.equals_exact">equals_exact() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.equals_exact">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
       <li><a href="runners/experiment.html#enerflow.runners.experiment.Experiment">Experiment (class in enerflow.runners.experiment)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.exterior">exterior (enerflow.assets.geospatial.GeoPolygon property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -334,11 +686,149 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.from_array">from_array() (enerflow.spaces.base.BaseSpace class method)</a>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.farm_efficiency">farm_efficiency (enerflow.assets.wind.WindFarm attribute)</a>
+
+      <ul>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea.farm_efficiency">(enerflow.assets.wind.WindPowerArea attribute)</a>
 </li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.filename">filename (enerflow.assets.base.TimeSeries attribute)</a>
+
+      <ul>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.filename">(enerflow.assets.timeseries.ElectricityAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.filename">(enerflow.assets.timeseries.ElectricityAreaSupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.filename">(enerflow.assets.timeseries.ElectricityDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.filename">(enerflow.assets.timeseries.ElectricitySupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.filename">(enerflow.assets.timeseries.HeatingAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.filename">(enerflow.assets.timeseries.HeatingDemand attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.FixedMount">FixedMount (class in enerflow.assets.solar)</a>
+</li>
+      <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.from_array">from_array() (enerflow.spaces.base.BaseSpace class method)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.from_bounds">from_bounds() (enerflow.assets.geospatial.GeoPolygon class method)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.from_geojson">from_geojson() (enerflow.assets.geospatial.GeoMultiPolygon class method)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.from_point">from_point() (enerflow.assets.geospatial.GeoLocation class method)</a>
+</li>
       <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.from_tuple">from_tuple() (enerflow.spaces.base.BaseSpace class method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.gcr">gcr (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.geojson">geojson (enerflow.assets.geospatial.GeoMultiPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.geojson">(enerflow.assets.solar.SolarPowerArea property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation">GeoLocation (class in enerflow.assets.geospatial)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.geom_type">geom_type (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.geom_type">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.geometry_to_geojson">geometry_to_geojson() (enerflow.assets.base.EnergyAsset method)</a>
+
+      <ul>
+        <li><a href="assets/base.html#enerflow.assets.base.EnergySystem.geometry_to_geojson">(enerflow.assets.base.EnergySystem method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.geometry_to_geojson">(enerflow.assets.base.Sensor method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.geometry_to_geojson">(enerflow.assets.base.TimeSeries method)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.geometry_to_geojson">(enerflow.assets.battery.Battery method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity.geometry_to_geojson">(enerflow.assets.energysystem.EnergyCommunity method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.geometry_to_geojson">(enerflow.assets.energysystem.Portfolio method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.geometry_to_geojson">(enerflow.assets.energysystem.Site method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.geometry_to_geojson">(enerflow.assets.geospatial.GeoLocation method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.geometry_to_geojson">(enerflow.assets.geospatial.GeoMultiPolygon method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.geometry_to_geojson">(enerflow.assets.geospatial.GeoPolygon method)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.geometry_to_geojson">(enerflow.assets.heatpump.HeatPump method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.geometry_to_geojson">(enerflow.assets.solar.PVArray method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.geometry_to_geojson">(enerflow.assets.solar.PVSystem method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.geometry_to_geojson">(enerflow.assets.solar.SolarPowerArea method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.geometry_to_geojson">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.geometry_to_geojson">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.geometry_to_geojson">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.geometry_to_geojson">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.geometry_to_geojson">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.geometry_to_geojson">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.geometry_to_geojson">(enerflow.assets.wind.WindFarm method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.geometry_to_geojson">(enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.geometryType">geometryType() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.geometryType">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon">GeoMultiPolygon (class in enerflow.assets.geospatial)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon">GeoPolygon (class in enerflow.assets.geospatial)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.geopolygon">geopolygon (enerflow.assets.solar.SolarPowerArea attribute)</a>
+
+      <ul>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea.geopolygon">(enerflow.assets.wind.WindPowerArea attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.get_data">get_data() (enerflow.assets.base.TimeSeries method)</a>
+
+      <ul>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.get_data">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.get_data">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.get_data">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.get_data">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.get_data">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.get_data">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.get_summary">get_summary() (enerflow.assets.energysystem.Site method)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.get_timeseries">get_timeseries() (enerflow.assets.solar.PVArray method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -346,8 +836,44 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.has_z">has_z (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.has_z">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.hausdorff_distance">hausdorff_distance() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.hausdorff_distance">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand">HeatingAreaDemand (class in enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingConsumption">HeatingConsumption (in module enerflow.assets.timeseries)</a>
+</li>
+      <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand">HeatingDemand (class in enerflow.assets.timeseries)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump">HeatPump (class in enerflow.assets.heatpump)</a>
+</li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.hub_height">hub_height (enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
       <li><a href="problem/environments.html#enerflow.problems.environments.HybridPowerPlantEnv">HybridPowerPlantEnv (class in enerflow.problems.environments)</a>
 </li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant">HydroPowerPlant (class in enerflow.assets.hydro)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant">(class in enerflow.assets.powergrid)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroTurbine">HydroTurbine (class in enerflow.assets.hydro)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroTurbine">(class in enerflow.assets.powergrid)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -356,25 +882,193 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="spaces/input.html#enerflow.spaces.input.InputSpace">InputSpace (class in enerflow.spaces.input)</a>
 </li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.interiors">interiors (enerflow.assets.geospatial.GeoPolygon property)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.interpolate">interpolate() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.interpolate">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.intersection">intersection() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.intersection">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.intersects">intersects() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.intersects">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.is_closed">is_closed (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.is_closed">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.is_empty">is_empty (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.is_empty">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.is_ring">is_ring (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.is_ring">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.is_simple">is_simple (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.is_simple">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.is_valid">is_valid (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.is_valid">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.latitude">latitude (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.latitude">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.latitude">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.latitude">(enerflow.assets.geospatial.GeoLocation attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.latitude">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.latitude">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.latitude">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.latitude">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.latitude">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.latitude">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
       <li><a href="models/agent.html#enerflow.models.agent.Agent.learn">learn() (enerflow.models.agent.Agent method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.length">length (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.length">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.line_interpolate_point">line_interpolate_point() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.line_interpolate_point">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.line_locate_point">line_locate_point() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.line_locate_point">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString">LineString (class in enerflow.assets.geospatial)</a>
+</li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.list_assets">list_assets() (enerflow.assets.energysystem.Site method)</a>
+</li>
       <li><a href="models/predictor.html#enerflow.models.predictor.Predictor.load_data">load_data() (enerflow.models.predictor.Predictor method)</a>
 </li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.location">location (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.location">(enerflow.assets.base.Sensor attribute)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.location">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.location">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.location">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.location">(enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.Reservoir.location">(enerflow.assets.hydro.Reservoir attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.location">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.Reservoir.location">(enerflow.assets.powergrid.Reservoir attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.location">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.location">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.location">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.location">(enerflow.assets.timeseries.ElectricityDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.location">(enerflow.assets.timeseries.ElectricitySupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.location">(enerflow.assets.timeseries.HeatingDemand attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.location">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.location">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.Location">Location (in module enerflow.assets.geospatial)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.longitude">longitude (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.longitude">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.longitude">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.longitude">(enerflow.assets.geospatial.GeoLocation attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.longitude">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.longitude">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.longitude">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.longitude">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.longitude">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.longitude">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.maintenance_schedule">maintenance_schedule (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.maintenance_schedule">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+      </ul></li>
       <li><a href="problem/checks.html#enerflow.problems.checks.MassBalanceCheck">MassBalanceCheck (class in enerflow.problems.checks)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.max_angle">max_angle (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.max_charge">max_charge (enerflow.assets.battery.Battery attribute)</a>
+</li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.max_discharge">max_discharge (enerflow.assets.battery.Battery attribute)</a>
 </li>
       <li><a href="problem/objectives.html#enerflow.problems.objectives.MeanAbsoluteError">MeanAbsoluteError (class in enerflow.problems.objectives)</a>
 </li>
@@ -382,10 +1076,44 @@
 </li>
       <li><a href="problem/environments.html#enerflow.problems.environments.MicroGridEnv">MicroGridEnv (class in enerflow.problems.environments)</a>
 </li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.min_soc">min_soc (enerflow.assets.battery.Battery attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.minimum_clearance">minimum_clearance (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.minimum_clearance">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.minimum_rotated_rectangle">minimum_rotated_rectangle (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.minimum_rotated_rectangle">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
       <li>
     module
 
       <ul>
+        <li><a href="assets/base.html#module-enerflow.assets.base">enerflow.assets.base</a>
+</li>
+        <li><a href="assets/battery.html#module-enerflow.assets.battery">enerflow.assets.battery</a>
+</li>
+        <li><a href="assets/energysystem.html#module-enerflow.assets.energysystem">enerflow.assets.energysystem</a>
+</li>
+        <li><a href="assets/geospatial.html#module-enerflow.assets.geospatial">enerflow.assets.geospatial</a>
+</li>
+        <li><a href="assets/heatpump.html#module-enerflow.assets.heatpump">enerflow.assets.heatpump</a>
+</li>
+        <li><a href="assets/hydro.html#module-enerflow.assets.hydro">enerflow.assets.hydro</a>
+</li>
+        <li><a href="assets/powergrid.html#module-enerflow.assets.powergrid">enerflow.assets.powergrid</a>
+</li>
+        <li><a href="assets/solar.html#module-enerflow.assets.solar">enerflow.assets.solar</a>
+</li>
+        <li><a href="assets/timeseries.html#module-enerflow.assets.timeseries">enerflow.assets.timeseries</a>
+</li>
+        <li><a href="assets/wind.html#module-enerflow.assets.wind">enerflow.assets.wind</a>
+</li>
         <li><a href="models/agent.html#module-enerflow.models.agent">enerflow.models.agent</a>
 </li>
         <li><a href="models/optimizer.html#module-enerflow.models.optimizer">enerflow.models.optimizer</a>
@@ -402,8 +1130,6 @@
 </li>
         <li><a href="problem/objectives.html#module-enerflow.problems.objectives">enerflow.problems.objectives</a>
 </li>
-        <li><a href="problem/problem.html#module-enerflow.problems.problem">enerflow.problems.problem</a>
-</li>
         <li><a href="runners/benchmark.html#module-enerflow.runners.benchmark">enerflow.runners.benchmark</a>
 </li>
         <li><a href="runners/experiment.html#module-enerflow.runners.experiment">enerflow.runners.experiment</a>
@@ -418,15 +1144,79 @@
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.module">module (enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.module_height">module_height (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.module_parameters">module_parameters (enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.module_type">module_type (enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.multipolygon">multipolygon (enerflow.assets.geospatial.GeoMultiPolygon attribute)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset.name">name (enerflow.problems.dataset.Dataset attribute)</a>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.name">name (enerflow.assets.base.EnergyAsset attribute)</a>
 
       <ul>
-        <li><a href="problem/problem.html#enerflow.problems.problem.Problem.name">(enerflow.problems.problem.Problem attribute)</a>
+        <li><a href="assets/base.html#enerflow.assets.base.EnergySystem.name">(enerflow.assets.base.EnergySystem attribute)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.name">(enerflow.assets.base.Sensor attribute)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.name">(enerflow.assets.base.TimeSeries attribute)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.name">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity.name">(enerflow.assets.energysystem.EnergyCommunity attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.name">(enerflow.assets.energysystem.Portfolio attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.name">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.name">(enerflow.assets.geospatial.GeoLocation attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.name">(enerflow.assets.geospatial.GeoMultiPolygon attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.name">(enerflow.assets.geospatial.GeoPolygon attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.name">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.name">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.name">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.name">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.name">(enerflow.assets.timeseries.ElectricityAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.name">(enerflow.assets.timeseries.ElectricityAreaSupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.name">(enerflow.assets.timeseries.ElectricityDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.name">(enerflow.assets.timeseries.ElectricitySupply attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.name">(enerflow.assets.timeseries.HeatingAreaDemand attribute)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.name">(enerflow.assets.timeseries.HeatingDemand attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.name">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.name">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+        <li><a href="problem/dataset.html#enerflow.problems.dataset.Dataset.name">(enerflow.problems.dataset.Dataset attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.normalize">normalize() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.normalize">(enerflow.assets.geospatial.LineString method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -435,29 +1225,113 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.offset_curve">offset_curve() (enerflow.assets.geospatial.LineString method)</a>
+</li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.operational_since">operational_since (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroTurbine.operational_since">(enerflow.assets.hydro.HydroTurbine attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.operational_since">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroTurbine.operational_since">(enerflow.assets.powergrid.HydroTurbine attribute)</a>
+</li>
+      </ul></li>
       <li><a href="models/optimizer.html#enerflow.models.optimizer.Optimizer.optimize">optimize() (enerflow.models.optimizer.Optimizer method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="models/optimizer.html#enerflow.models.optimizer.Optimizer">Optimizer (class in enerflow.models.optimizer)</a>
 </li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.oriented_envelope">oriented_envelope (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.oriented_envelope">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
       <li><a href="spaces/output.html#enerflow.spaces.output.OutputSpace">OutputSpace (class in enerflow.spaces.output)</a>
 </li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.overlaps">overlaps() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.overlaps">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.parallel_offset">parallel_offset() (enerflow.assets.geospatial.LineString method)</a>
+</li>
       <li><a href="problem/objectives.html#enerflow.problems.objectives.PinballLoss">PinballLoss (class in enerflow.problems.objectives)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.plot">plot() (enerflow.assets.base.TimeSeries method)</a>
+
+      <ul>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.plot">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.plot">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.plot">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.plot">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.plot">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.plot">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.plot_timeseries">plot_timeseries() (enerflow.assets.base.EnergyAsset method)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.plot_timeseries">(enerflow.assets.battery.Battery method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.plot_timeseries">(enerflow.assets.energysystem.Portfolio method)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.plot_timeseries">(enerflow.assets.heatpump.HeatPump method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.plot_timeseries">(enerflow.assets.solar.PVArray method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.plot_timeseries">(enerflow.assets.solar.PVSystem method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.plot_timeseries">(enerflow.assets.solar.SolarPowerArea method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.plot_timeseries">(enerflow.assets.wind.WindFarm method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.plot_timeseries">(enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.point_on_surface">point_on_surface() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.point_on_surface">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio">Portfolio (class in enerflow.assets.energysystem)</a>
+</li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.power_coefficient_curve">power_coefficient_curve (enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.power_curve">power_curve (enerflow.assets.wind.WindTurbine attribute)</a>
 </li>
       <li><a href="models/predictor.html#enerflow.models.predictor.Predictor.predict">predict() (enerflow.models.predictor.Predictor method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="models/predictor.html#enerflow.models.predictor.Predictor">Predictor (class in enerflow.models.predictor)</a>
 </li>
-      <li><a href="problem/problem.html#enerflow.problems.problem.Problem">Problem (class in enerflow.problems.problem)</a>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.project">project() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.project">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.pv_arrays">pv_arrays (enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray">PVArray (class in enerflow.assets.solar)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem">PVSystem (class in enerflow.assets.solar)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -465,10 +1339,58 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="models/simulator.html#enerflow.models.simulator.Simulator.reset">reset() (enerflow.models.simulator.Simulator method)</a>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount.racking_model">racking_model (enerflow.assets.solar.SingleAxisTrackerMount attribute)</a>
 </li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.relate">relate() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.relate">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.relate_pattern">relate_pattern() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.relate_pattern">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.remove_asset">remove_asset() (enerflow.assets.energysystem.Site method)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.representative_point">representative_point() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.representative_point">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.Reservoir">Reservoir (class in enerflow.assets.hydro)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.Reservoir">(class in enerflow.assets.powergrid)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.reservoir_capacity">reservoir_capacity (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.reservoir_capacity">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="models/simulator.html#enerflow.models.simulator.Simulator.reset">reset() (enerflow.models.simulator.Simulator method)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.reverse">reverse() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.reverse">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.river">river (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.river">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.rotor_diameter">rotor_diameter (enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
       <li><a href="runners/experiment.html#enerflow.runners.experiment.Experiment.run">run() (enerflow.runners.experiment.Experiment method)</a>
 </li>
   </ul></td>
@@ -479,30 +1401,322 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="problem/objectives.html#enerflow.problems.objectives.PinballLoss.score">score() (enerflow.problems.objectives.PinballLoss method)</a>
 </li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.segmentize">segmentize() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.segmentize">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.Sensor">Sensor (class in enerflow.assets.base)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.simplify">simplify() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.simplify">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
       <li><a href="models/simulator.html#enerflow.models.simulator.Simulator">Simulator (class in enerflow.models.simulator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SingleAxisTrackerMount">SingleAxisTrackerMount (class in enerflow.assets.solar)</a>
+</li>
+      <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site">Site (class in enerflow.assets.energysystem)</a>
+</li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea">SolarPowerArea (class in enerflow.assets.solar)</a>
+</li>
       <li><a href="spaces/input.html#enerflow.spaces.input.StateSpace">StateSpace (in module enerflow.spaces.input)</a>
 </li>
       <li><a href="models/simulator.html#enerflow.models.simulator.Simulator.step">step() (enerflow.models.simulator.Simulator method)</a>
 </li>
+      <li><a href="assets/battery.html#enerflow.assets.battery.Battery.storage_capacity">storage_capacity (enerflow.assets.battery.Battery attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.Reservoir.surface_area">surface_area (enerflow.assets.hydro.Reservoir attribute)</a>
+
+      <ul>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.Reservoir.surface_area">(enerflow.assets.powergrid.Reservoir attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.surface_area">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.FixedMount.surface_azimuth">surface_azimuth (enerflow.assets.solar.FixedMount attribute)</a>
+
+      <ul>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.surface_azimuth">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.surface_azimuth">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.FixedMount.surface_tilt">surface_tilt (enerflow.assets.solar.FixedMount attribute)</a>
+
+      <ul>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.surface_tilt">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.surface_tilt">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.surface_type">surface_type (enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.svg">svg() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.svg">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.symmetric_difference">symmetric_difference() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.symmetric_difference">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.temperature_model_parameters">temperature_model_parameters (enerflow.assets.solar.PVArray attribute)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.TimeSeries">TimeSeries (class in enerflow.assets.base)</a>
+</li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.timeseries">timeseries (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.timeseries">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.timeseries">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.timeseries">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.timeseries">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.timeseries">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.timeseries">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.timeseries">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
       <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.to_array">to_array() (enerflow.spaces.base.BaseSpace method)</a>
 </li>
-      <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.to_tuple">to_tuple() (enerflow.spaces.base.BaseSpace method)</a>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.to_dataframe">to_dataframe() (enerflow.assets.base.EnergyAsset method)</a>
+
+      <ul>
+        <li><a href="assets/base.html#enerflow.assets.base.EnergySystem.to_dataframe">(enerflow.assets.base.EnergySystem method)</a>
 </li>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.to_dataframe">(enerflow.assets.base.Sensor method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.to_dataframe">(enerflow.assets.base.TimeSeries method)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.to_dataframe">(enerflow.assets.battery.Battery method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity.to_dataframe">(enerflow.assets.energysystem.EnergyCommunity method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.to_dataframe">(enerflow.assets.energysystem.Portfolio method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.to_dataframe">(enerflow.assets.energysystem.Site method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.to_dataframe">(enerflow.assets.geospatial.GeoLocation method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.to_dataframe">(enerflow.assets.geospatial.GeoMultiPolygon method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.to_dataframe">(enerflow.assets.geospatial.GeoPolygon method)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.to_dataframe">(enerflow.assets.heatpump.HeatPump method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.to_dataframe">(enerflow.assets.solar.PVArray method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.to_dataframe">(enerflow.assets.solar.PVSystem method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.to_dataframe">(enerflow.assets.solar.SolarPowerArea method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.to_dataframe">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.to_dataframe">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.to_dataframe">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.to_dataframe">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.to_dataframe">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.to_dataframe">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.to_dataframe">(enerflow.assets.wind.WindFarm method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.to_dataframe">(enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.to_geojson">to_geojson() (enerflow.assets.base.EnergyAsset method)</a>
+
+      <ul>
+        <li><a href="assets/base.html#enerflow.assets.base.EnergySystem.to_geojson">(enerflow.assets.base.EnergySystem method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.to_geojson">(enerflow.assets.base.Sensor method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.to_geojson">(enerflow.assets.base.TimeSeries method)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.to_geojson">(enerflow.assets.battery.Battery method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity.to_geojson">(enerflow.assets.energysystem.EnergyCommunity method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.to_geojson">(enerflow.assets.energysystem.Portfolio method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.to_geojson">(enerflow.assets.energysystem.Site method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.to_geojson">(enerflow.assets.geospatial.GeoLocation method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.to_geojson">(enerflow.assets.geospatial.GeoMultiPolygon method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.to_geojson">(enerflow.assets.geospatial.GeoPolygon method)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.to_geojson">(enerflow.assets.heatpump.HeatPump method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.to_geojson">(enerflow.assets.solar.PVArray method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.to_geojson">(enerflow.assets.solar.PVSystem method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.to_geojson">(enerflow.assets.solar.SolarPowerArea method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.to_geojson">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.to_geojson">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.to_geojson">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.to_geojson">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.to_geojson">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.to_geojson">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.to_geojson">(enerflow.assets.wind.WindFarm method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.to_geojson">(enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.to_json">to_json() (enerflow.assets.base.EnergyAsset method)</a>
+
+      <ul>
+        <li><a href="assets/base.html#enerflow.assets.base.EnergySystem.to_json">(enerflow.assets.base.EnergySystem method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.Sensor.to_json">(enerflow.assets.base.Sensor method)</a>
+</li>
+        <li><a href="assets/base.html#enerflow.assets.base.TimeSeries.to_json">(enerflow.assets.base.TimeSeries method)</a>
+</li>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.to_json">(enerflow.assets.battery.Battery method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.EnergyCommunity.to_json">(enerflow.assets.energysystem.EnergyCommunity method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Portfolio.to_json">(enerflow.assets.energysystem.Portfolio method)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.to_json">(enerflow.assets.energysystem.Site method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.to_json">(enerflow.assets.geospatial.GeoLocation method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoMultiPolygon.to_json">(enerflow.assets.geospatial.GeoMultiPolygon method)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.to_json">(enerflow.assets.geospatial.GeoPolygon method)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.to_json">(enerflow.assets.heatpump.HeatPump method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.to_json">(enerflow.assets.solar.PVArray method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.to_json">(enerflow.assets.solar.PVSystem method)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.to_json">(enerflow.assets.solar.SolarPowerArea method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaDemand.to_json">(enerflow.assets.timeseries.ElectricityAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityAreaSupply.to_json">(enerflow.assets.timeseries.ElectricityAreaSupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricityDemand.to_json">(enerflow.assets.timeseries.ElectricityDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.ElectricitySupply.to_json">(enerflow.assets.timeseries.ElectricitySupply method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingAreaDemand.to_json">(enerflow.assets.timeseries.HeatingAreaDemand method)</a>
+</li>
+        <li><a href="assets/timeseries.html#enerflow.assets.timeseries.HeatingDemand.to_json">(enerflow.assets.timeseries.HeatingDemand method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.to_json">(enerflow.assets.wind.WindFarm method)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.to_json">(enerflow.assets.wind.WindTurbine method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.to_tuple">to_tuple() (enerflow.assets.geospatial.GeoLocation method)</a>
+
+      <ul>
+        <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.to_tuple">(enerflow.spaces.base.BaseSpace method)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.touches">touches() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.touches">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
       <li><a href="models/predictor.html#enerflow.models.predictor.Predictor.train">train() (enerflow.models.predictor.Predictor method)</a>
 </li>
-      <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.tuple">tuple (enerflow.spaces.base.BaseSpace property)</a>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.tuple">tuple (enerflow.assets.geospatial.GeoLocation property)</a>
+
+      <ul>
+        <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.tuple">(enerflow.spaces.base.BaseSpace property)</a>
 </li>
+      </ul></li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.turbine_model">turbine_model (enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroPowerPlant.turbine_type">turbine_type (enerflow.assets.hydro.HydroPowerPlant attribute)</a>
+
+      <ul>
+        <li><a href="assets/hydro.html#enerflow.assets.hydro.HydroTurbine.turbine_type">(enerflow.assets.hydro.HydroTurbine attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroPowerPlant.turbine_type">(enerflow.assets.powergrid.HydroPowerPlant attribute)</a>
+</li>
+        <li><a href="assets/powergrid.html#enerflow.assets.powergrid.HydroTurbine.turbine_type">(enerflow.assets.powergrid.HydroTurbine attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.type">type (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.type">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/base.html#enerflow.assets.base.EnergyAsset.tz">tz (enerflow.assets.base.EnergyAsset attribute)</a>
+
+      <ul>
+        <li><a href="assets/battery.html#enerflow.assets.battery.Battery.tz">(enerflow.assets.battery.Battery attribute)</a>
+</li>
+        <li><a href="assets/energysystem.html#enerflow.assets.energysystem.Site.tz">(enerflow.assets.energysystem.Site attribute)</a>
+</li>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoLocation.tz">(enerflow.assets.geospatial.GeoLocation attribute)</a>
+</li>
+        <li><a href="assets/heatpump.html#enerflow.assets.heatpump.HeatPump.tz">(enerflow.assets.heatpump.HeatPump attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVArray.tz">(enerflow.assets.solar.PVArray attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.PVSystem.tz">(enerflow.assets.solar.PVSystem attribute)</a>
+</li>
+        <li><a href="assets/solar.html#enerflow.assets.solar.SolarPowerArea.tz">(enerflow.assets.solar.SolarPowerArea attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.tz">(enerflow.assets.wind.WindFarm attribute)</a>
+</li>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine.tz">(enerflow.assets.wind.WindTurbine attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.union">union() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.union">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -511,6 +1725,62 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="spaces/base.html#enerflow.spaces.base.BaseSpace.vector">vector (enerflow.spaces.base.BaseSpace property)</a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm.wind_turbines">wind_turbines (enerflow.assets.wind.WindFarm attribute)</a>
+
+      <ul>
+        <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea.wind_turbines">(enerflow.assets.wind.WindPowerArea attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindFarm">WindFarm (class in enerflow.assets.wind)</a>
+</li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindPowerArea">WindPowerArea (class in enerflow.assets.wind)</a>
+</li>
+      <li><a href="assets/wind.html#enerflow.assets.wind.WindTurbine">WindTurbine (class in enerflow.assets.wind)</a>
+</li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.within">within() (enerflow.assets.geospatial.GeoPolygon method)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.within">(enerflow.assets.geospatial.LineString method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.wkb">wkb (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.wkb">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.wkb_hex">wkb_hex (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.wkb_hex">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.wkt">wkt (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.wkt">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="assets/geospatial.html#enerflow.assets.geospatial.GeoPolygon.xy">xy (enerflow.assets.geospatial.GeoPolygon property)</a>
+
+      <ul>
+        <li><a href="assets/geospatial.html#enerflow.assets.geospatial.LineString.xy">(enerflow.assets.geospatial.LineString property)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
