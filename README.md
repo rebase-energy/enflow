@@ -28,16 +28,28 @@ As energy systems world-wide continue to decarbonise through deployment of renew
 ## Framework approach and example
 **enerflow** is about adopting a problem-centric approach that follows the "model first, then solve"-mantra. Concretely, this means that problems are solved through the following steps: 
 
-1. Define the considered energy system
-2. Define state, action and exogenous spaces
-3. Create the environment and the transition function
-4. Define the cost (or contribution)
-5. Create the agent to operate in environment
-6. Run the agent and evaluate performance
+1. Define the considered **energy system**
+2. Define **state**, **action** and **exogenous** spaces
+3. Create the **environment** and the transition function (step)
+4. Define the **objective** (cost or contribution)
+5. Create the **model** (simulator, predictor, optimizer or agent) to operate in environment
+6. Run the **model** and evaluate performance
+
+Given a defined `env` (environment), `agent` (model) and `scorer` (objective), the model evaluation loop is given by: 
+
+```python
+state = env.reset()
+while done is not True:
+    action = agent.act(state)
+    state, exogeneous, done, info = env.step(action)
+    score = scorer.calculate(state, action, exogeneous)
+
+env.close()
+```
 
 Following is an example pseudo-code outlining the steps of the framework: 
 
-```bash
+```python
 import pandas as pd
 import gymnasium as gym
 import enerflow as ef
@@ -82,6 +94,7 @@ class Agent(ef.Agent):
     ... 
 agent = Agent()
 
+# 6) Run the agent and evaluate performance
 state = env.reset()
 while done is not True:
     action = agent.act(state)
