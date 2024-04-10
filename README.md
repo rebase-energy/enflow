@@ -39,6 +39,7 @@ Given a defined `env` (environment), `agent` (model) and `scorer` (objective), t
 
 ```python
 state = env.reset()
+done = False
 while done is not True:
     action = agent.act(state)
     state, exogeneous, done, info = env.step(action)
