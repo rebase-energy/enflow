@@ -1,1 +1,0 @@
-print("heftcom2024")
