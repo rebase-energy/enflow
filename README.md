@@ -54,6 +54,7 @@ $$
 | 🧩&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
 | ➡️&nbsp;`experiment` | [`Experiment`]()| 
 
+![enerflow Framework Structure](assets/enerflow-framework-structure.png)
 
 ## Framework approach and example
 **enerflow** is about adopting a problem-centric approach that follows the "model first, then solve"-mantra. Concretely, this means that problems are solved through the following steps: 
@@ -155,8 +156,18 @@ pip install -e .
 ```
 
 ## Contributors
+This project uses [allcontributors.org](https://allcontributors.org/) to recognize all contributors, including those that don't push code. 
 
-* test
-* test 2
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Licence
+This project uses the [MIT Licence](LICENCE.md).  
 
 
