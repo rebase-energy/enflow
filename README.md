@@ -13,11 +13,11 @@
 
 **enerflow** is an open-source Python framework that enables energy data scientists and modellers write modular and reproducible energy models to solve sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's sequential decision framework](https://castle.princeton.edu/rlso/). **enerflow** lets you: 
 
-* 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra. 
-* 🌱 Forumate your problems with datasets, environments and objectives
-* 🏗️ Build agents, predictors, optimizers and simulators to solve sequential decision problems
-* 🧪 Run parametrized experiments that generate reproducible results (code, data and parameters)
-* ➿ Run sweeps for benchmarking, scenario analysis and parameter tuning
+* 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra;
+* 🌱 Forumate your problems with datasets, environments and objectives;
+* 🏗️ Build agents, predictors, optimizers and simulators to solve sequential decision problems;
+* 🧪 Run parametrized experiments that generate reproducible results (code, data and parameters); and
+* ➿ Run sweeps for benchmarking, scenario analysis and parameter tuning.
 
 **📖 [Documentation](https://docs.energydatamodel.org/en/latest/)**
 &ensp;|&ensp;
@@ -32,6 +32,7 @@
 
 The goal is to find an agent policy **$\pi$** that maximizes the contribution (or minimizes the cost) over the full time horizon **$t \in [0, T]$**. Mathematically formulated as: 
 
+<div style="font-size: 150%;">
 $$
 \begin{equation*}
 \begin{aligned}
@@ -40,6 +41,7 @@ $$
 \end{aligned}
 \end{equation*}
 $$
+</div>
 
 ## Modules and Concepts
 
