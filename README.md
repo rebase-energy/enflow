@@ -11,7 +11,7 @@
 [![Join us on Slack](https://img.shields.io/badge/Join%20us%20on%20Slack-%2362BEAF?style=flat&logo=slack&logoColor=white)](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA) 
 [![GitHub Repo stars](https://img.shields.io/github/stars/rebase-energy/enerflow?style=social)](https://github.com/rebase-energy/enerflow)
 
-**enerflow** is an open-source Python framework that enables energy data scientists and modellers write modular and reproducible energy models to solve sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's sequential decision framework](https://castle.princeton.edu/rlso/). **enerflow** lets you: 
+**enerflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's sequential decision framework](https://castle.princeton.edu/rlso/). **enerflow** lets you: 
 
 * 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra;
 * 🌱 Forumate your problems with datasets, environments and objectives;
@@ -43,16 +43,18 @@ $$
 \end{equation*}
 $$
 
-## Modules and Concepts
-**enerflow** consists of a set of modules and concepts that enables to create modular and reusable energy models. One of the main dependencies is [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) that provides functionality to represent energy systems. The table below gives a summary of the available modules and concepts.
+## Modules and Components
+**enerflow** consists of a set of components that serve as building blocks to create modular and reusable energy models. One of the main dependencies is [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) that provides functionality to represent energy systems. The table below gives a summary of the available modules and concepts.
 
-| Module         | Concepts     |
+| Module         | Components     |
 | :----          | :----            |
-| 🔋&nbsp;`energysystem` | All energy assets and concepts defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
+| 🔋&nbsp;`energysystem` | All energy asset and concept components defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
 | 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
 | 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
 | 🧩&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
 | ➡️&nbsp;`experiment` | [`Experiment`]()| 
+
+Below is a diagram of the components' relation to each other and how they together enable creation of reproducible results from energy models. 
 
 ![enerflow Framework Structure](assets/enerflow-framework-structure.png)
 
