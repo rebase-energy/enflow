@@ -51,7 +51,7 @@ $$
 | 🔋&nbsp;`energysystem` | All energy asset and concept components defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
 | 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
 | 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
-| 🧩&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
+| 🤖&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
 | ➡️&nbsp;`experiment` | [`Experiment`]()| 
 
 Below is a diagram of the components' relation to each other and how they together enable creation of reproducible results from energy models. 
@@ -107,6 +107,16 @@ git clone https://github.com/rebase-energy/enerflow.git
 cd enerflow
 pip install -e . 
 ```
+
+## Ways to Contribute
+We welcome contributions from anyone interested in this project! Here are some ways to contribute to **enerflow**:
+
+* Create a new environment; 
+* Create a new energy model (simulator, predictor, optimizer or agent); 
+* Create a new objective function; or
+* Create an integration with another energy modelling framework.
+
+If you are interested in contributing, then feel free to join our [Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA) so that we can discuss it. 
 
 ## Contributors
 This project uses [allcontributors.org](https://allcontributors.org/) to recognize all contributors, including those that don't push code. 
