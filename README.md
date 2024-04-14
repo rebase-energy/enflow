@@ -25,10 +25,25 @@
 &ensp;|&ensp;
 **👥 [Join Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA)**
 
-## Modules and Concepts
-**enerflow** allows to model sequential decison problems, where state information $S_t$ is provided, an action $a_t=A^{\pi}(S_t)$ is taken, exogenous information $W_{t+1}$ is revealed, whereby a new state $S_{t+w} = S^M(S_t, a_t, W_{t+1})$ is encountered and a cost/contribution $C(S_t,a_t,W_{t+1})$ can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
+## The Sequential Decision Loop
+**enerflow** allows to model sequential decison problems, where state information **$S_t$** is provided, an action **$a_t=A^{\pi}(S_t)$** is taken, exogenous information **$W_{t+1}$** is revealed, whereby a new state **$S_{t+1} = S^M(S_t, a_t, W_{t+1})$** is encountered and a cost/contribution **$C(S_t,a_t,W_{t+1})$** can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
 
 ![Sequential decision loop](assets/sequential-decision-loop.png)
+
+The goal is to find an agent policy **$\pi$** that maximizes the contribution (or minimizes the cost) over the full time horizon **$t \in [0, T]$**. Mathematically formulated as: 
+
+$$
+\begin{equation*}
+\begin{aligned}
+\max_{\pi \in \Pi} \quad & \mathbb{E}^{\pi} \bigg[ \sum_{t=0}^T C(S_t,A^{\pi}(S_t),W_{t+1}) \bigg| S_0 \bigg] \\
+\textrm{s.t.} \quad & S_{t+1} = S^M(S_t,a_t,W_{t+1})\\
+\end{aligned}
+\end{equation*}
+$$
+
+## Modules and Concepts
+
+
 
 ## Framework approach and example
 **enerflow** is about adopting a problem-centric approach that follows the "model first, then solve"-mantra. Concretely, this means that problems are solved through the following steps: 
