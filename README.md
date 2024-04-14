@@ -32,7 +32,6 @@
 
 The goal is to find an agent policy **$\pi$** that maximizes the contribution (or minimizes the cost) over the full time horizon **$t \in [0, T]$**. Mathematically formulated as: 
 
-<div style="font-size: 150%;">
 $$
 \begin{equation*}
 \begin{aligned}
@@ -41,10 +40,17 @@ $$
 \end{aligned}
 \end{equation*}
 $$
-</div>
 
 ## Modules and Concepts
+**enerflow** consists of a set of modules and concepts that enables to create modular and reusable energy models. One of the main dependencies is [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) that provides functionality to represent energy systems. The table below gives a summary of the available modules and concepts.
 
+| Module         | Concepts     |
+| :----          | :----            |
+| 🔋&nbsp;`energysystem` | All energy assets defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
+| 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
+| 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
+| 🧩&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
+| ➡️&nbsp;`experiment` | [`Experiment`]()| 
 
 
 ## Framework approach and example

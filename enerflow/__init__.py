@@ -18,5 +18,5 @@ from .models.simulator import Simulator
 
 from .problems.dataset import Dataset
 
-from .problems.objectives import PinballLoss
+from .problems.objective import PinballLoss
 #from energydatamodel.pv import PVArray

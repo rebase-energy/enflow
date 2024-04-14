@@ -1,3 +1,8 @@
+class Environment:
+    pass
+
+Env = Environment
+
 class MicroGridEnv:
     pass
 

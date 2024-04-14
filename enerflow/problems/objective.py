@@ -1,15 +1,15 @@
 import numpy as np
 
-class BaseScore:
+class Objective:
     pass
 
-class MeanSquaredError(BaseScore):
+class MeanSquaredError(Objective):
     pass
 
-class MeanAbsoluteError(BaseScore):
+class MeanAbsoluteError(Objective):
     pass
 
-class PinballLoss(BaseScore):
+class PinballLoss(Objective):
     def __init__(self, quantiles):
         """
         Initialize with multiple quantiles.
