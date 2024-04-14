@@ -58,17 +58,24 @@ Below is a diagram of the components' relation to each other and how they togeth
 
 ![enerflow Framework Structure](assets/enerflow-framework-structure.png)
 
-## Framework approach and example
-**enerflow** is about adopting a problem-centric approach that follows the "model first, then solve"-mantra. Concretely, this means that problems are solved through the following steps: 
+## Framework Stepwise Approach
+**enerflow** is about adopting a problem-centric, stepwise approach that follows the "model first, then solve"-mantra. The idea is to first gain a deep problem understanding before rushing to the solution. Or as Albert Einstien expressed it: 
 
-1. Define the considered **energy system**
-2. Define **state**, **action** and **exogenous** spaces
-3. Create the **environment** and the transition function (step)
-4. Define the **objective** (cost or contribution)
-5. Create the **model** (simulator, predictor, optimizer or agent) to operate in environment
-6. Run the **model** and evaluate performance
+> **"If I had an hour to solve a problem I'd spend 55 minutes thinking about the problem and five minutes thinking about solutions."**
 
-Given a defined `env` (environment), `agent` (model) and `obj` (objective), the model evaluation loop is given by: 
+Concretely, this means that problems are solved through the following steps: 
+
+1. Define the considered **energy system**;
+2. Define **state**, **action** and **exogenous** variables;
+3. Create the **environment** and the transition function;
+4. Define the **objective** (cost or contribution);
+5. Create the **model** (simulator, predictor, optimizer and/or agent) to operate in environment; and
+6. Run the **sequential decision loop** and model evaluate performance.
+
+Steps 1-4 are about understanding the **problem** and steps 5-6 are about creating and evaluating the **solution**. 
+
+## Basic Usage
+Given a defined `env` (environment), `agent` (model) and `obj` (objective), the sequential decision loop is given by: 
 
 ```python
 state = env.reset()
@@ -83,10 +90,7 @@ env.close()
 
 For a full walkthrough go to the [documentation](https://docs.enerflow.org/en/latest/walkthrough.html#) or open in [Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/walkthrough/notebook.ipynb). 
 
-Following is an example pseudo-code outlining the steps of the framework: 
-
 ## Installation
-
 Install the **stable** release: 
 ```bash
 pip install enerflow
