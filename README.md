@@ -11,19 +11,24 @@
 [![Join us on Slack](https://img.shields.io/badge/Join%20us%20on%20Slack-%2362BEAF?style=flat&logo=slack&logoColor=white)](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA) 
 [![GitHub Repo stars](https://img.shields.io/github/stars/rebase-energy/enerflow?style=social)](https://github.com/rebase-energy/enerflow)
 
-**enerflow** is a Python framework for modeling sequential decision problems in the energy sector. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's decision framework](https://castle.princeton.edu/rlso/). enerflow enables you to: 
+**enerflow** is an open-source Python framework that enables energy data scientists and modellers write modular and reproducible energy models to solve sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's sequential decision framework](https://castle.princeton.edu/rlso/). **enerflow** lets you: 
 
 * 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra. 
+* 🌱 Forumate your problems with datasets, environments and objectives
 * 🏗️ Build agents, predictors, optimizers and simulators to solve sequential decision problems
-* 🌱 Forumate your problems as environments and evalute pre-existing solutions
 * 🧪 Run parametrized experiments that generate reproducible results (code, data and parameters)
 * ➿ Run sweeps for benchmarking, scenario analysis and parameter tuning
 
 **📖 [Documentation](https://docs.energydatamodel.org/en/latest/)**
 &ensp;|&ensp;
-**🚀 [Quickstart - Try out now in Colab](-)**
+**🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/heftcom2024/notebook.ipynb)**
+&ensp;|&ensp;
+**👥 [Join Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA)**
 
-As energy systems world-wide continue to decarbonise through deployment of renewable and fossil-free energy, they are also becoming more intermittent and complex. We need better data-driven methods to handle this complexity, with `python` rapidly becoming the tool-of-choice for energy modellers. 
+## Modules and Concepts
+**enerflow** allows to model sequential decison problems, where state information $S_t$ is provided, an action $a_t=A^{\pi}(S_t)$ is taken, exogenous information $W_{t+1}$ is revealed, whereby a new state $S_{t+w} = S^M(S_t, a_t, W_{t+1})$ is encountered and a cost/contribution $C(S_t,a_t,W_{t+1})$ can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
+
+![Sequential decision loop](assets/sequential-decision-loop.png)
 
 ## Framework approach and example
 **enerflow** is about adopting a problem-centric approach that follows the "model first, then solve"-mantra. Concretely, this means that problems are solved through the following steps: 
