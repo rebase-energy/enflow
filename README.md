@@ -19,6 +19,8 @@
 * 🧪 Run parametrized experiments that generate reproducible results (code, data and parameters); and
 * ➿ Run sweeps for benchmarking, scenario analysis and parameter tuning.
 
+**⬇️ [Installation](#installation)**
+&ensp;|&ensp;
 **📖 [Documentation](https://docs.energydatamodel.org/en/latest/)**
 &ensp;|&ensp;
 **🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/heftcom2024/notebook.ipynb)**
@@ -46,7 +48,7 @@ $$
 
 | Module         | Concepts     |
 | :----          | :----            |
-| 🔋&nbsp;`energysystem` | All energy assets defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
+| 🔋&nbsp;`energysystem` | All energy assets and concepts defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
 | 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
 | 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
 | 🧩&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
