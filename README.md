@@ -130,6 +130,7 @@ This project uses [allcontributors.org](https://allcontributors.org/) to recogni
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sebaheg"><img src="https://avatars.githubusercontent.com/u/26311427?v=4?s=100" width="100px;" alt="Sebastian Haglund"/><br /><sub><b>Sebastian Haglund</b></sub></a><br /><a href="#code-sebaheg" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dimili"><img src="https://avatars.githubusercontent.com/u/13037448?v=4?s=100" width="100px;" alt="dimili"/><br /><sub><b>dimili</b></sub></a><br /><a href="#code-dimili" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rocipher"><img src="https://avatars.githubusercontent.com/u/4830171?v=4?s=100" width="100px;" alt="Mihai Chiru"/><br /><sub><b>Mihai Chiru</b></sub></a><br /><a href="#code-rocipher" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nelson-sommerfeldt"><img src="https://avatars.githubusercontent.com/u/95913116?v=4?s=100" width="100px;" alt="Nelson"/><br /><sub><b>Nelson</b></sub></a><br /><a href="#ideas-nelson-sommerfeldt" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
