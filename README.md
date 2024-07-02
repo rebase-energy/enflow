@@ -25,7 +25,7 @@
 &ensp;|&ensp;
 **🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/heftcom2024/notebook.ipynb)**
 &ensp;|&ensp;
-**👥 [Join Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA)**
+**👋 [Join Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA)**
 
 ## The Sequential Decision Loop
 **enerflow** allows to model sequential decison problems, where state information **$S_t$** is provided, an action **$a_t=A^{\pi}(S_t)$** is taken, exogenous information **$W_{t+1}$** is revealed, whereby a new state **$S_{t+1} = S^M(S_t, a_t, W_{t+1})$** is encountered and a cost/contribution **$C(S_t,a_t,W_{t+1})$** can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
@@ -51,14 +51,14 @@ $$
 | 🔋&nbsp;`energysystem` | All energy asset and concept components defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
 | 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
 | 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
-| 🤖&nbsp;`models` | [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
+| 🤖&nbsp;`models` | [`Model`](), [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
 | ➡️&nbsp;`experiment` | [`Experiment`]()| 
 
 Below is a diagram of the components' relation to each other and how they together enable creation of reproducible results from energy models. 
 
 ![enerflow Framework Structure](assets/enerflow-framework-structure.png)
 
-## Framework Stepwise Approach
+## Framework 6-Step Approach
 **enerflow** is about adopting a problem-centric, stepwise approach that follows the "model first, then solve"-mantra. The idea is to first gain a deep problem understanding before rushing to the solution. Or as Albert Einstien expressed it: 
 
 > **"If I had an hour to solve a problem I'd spend 55 minutes thinking about the problem and five minutes thinking about solutions."**
@@ -70,14 +70,26 @@ Concretely, this means that problems are solved through the following steps:
 3. Create the **environment** and the transition function;
 4. Define the **objective** (cost or contribution);
 5. Create the **model** (simulator, predictor, optimizer and/or agent) to operate in environment; and
-6. Run the **sequential decision loop** and model evaluate performance.
+6. Run the **sequential decision loop** and evaluate performance.
 
 Steps 1-4 are about understanding the **problem** and steps 5-6 are about creating and evaluating the **solution**. 
 
 ## Basic Usage
-Given a defined `env` (environment), `agent` (model) and `obj` (objective), the sequential decision loop is given by: 
+In **enerflow**, a reproducible experiment is represented by the following 4 components: 
+
+* [`Dataset`]()
+* [`Environment`]()
+* [`Agent`]()
+* [`Objective`]()
+
+Given a defined `dataset`, `env` (environment), `agent` (model) and `obj` (objective), the sequential decision loop is given by: 
 
 ```python
+# Create the env, agent and obj. Your code goes in defining these classes. 
+env = Environment(dataset=dataset)
+agent = Agent(dataset=dataset)
+obj = Objective(dataset=dataset)
+
 state = env.reset()
 done = False
 while done is not True:
