@@ -10,6 +10,7 @@ from .assets.heatpump import HeatPump
 from .assets.energysystem import Site, EnergyCommunity, Portfolio
 
 from .base import BaseVector, BaseState, BaseAction, BaseEnvironment, BaseObjective, BaseProblem
+from .spaces import DataFrameSpace
 
 from .models.agent import Agent
 from .models.optimizer import Optimizer
