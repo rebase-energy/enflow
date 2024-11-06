@@ -63,7 +63,7 @@ class BaseObjective:
 
 @dataclass
 class BaseProblem:
-    system: t.Union[edm.Site, edm.EnergySystem]
+    collection: edm.EnergyCollection
     state: BaseState
     action: BaseAction
     environment: BaseEnvironment

@@ -1,12 +1,13 @@
 from dataclasses import dataclass
 import typing as t
-import pandas as pd
 
 import energydatamodel as edm
+import gymnasium as gym
+from .objective import Objective
 
 @dataclass
-class Dataset:
+class Problem:
     name: str
+    environment: gym.Env
+    objective: Objective
     description: t.Optional[str] = None
-    collection: t.Optional[edm.EnergyCollection] = None
-    data: t.Optional[t.Dict[str, pd.DataFrame]] = None
