@@ -25,7 +25,7 @@
 &ensp;|&ensp;
 **🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/heftcom2024/notebook.ipynb)**
 &ensp;|&ensp;
-**👋 [Join Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA)**
+**👋 [Join Slack Community](https://dub.sh/k0xlzzl)**
 
 ## The Sequential Decision Loop
 **enerflow** allows to model sequential decison problems, where state information **$S_t$** is provided, an action **$a_t=A^{\pi}(S_t)$** is taken, exogenous information **$W_{t+1}$** is revealed, whereby a new state **$S_{t+1} = S^M(S_t, a_t, W_{t+1})$** is encountered and a cost/contribution **$C(S_t,a_t,W_{t+1})$** can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
@@ -128,7 +128,7 @@ We welcome contributions from anyone interested in this project! Here are some w
 * Create a new objective function; or
 * Create an integration with another energy modelling framework.
 
-If you are interested in contributing, then feel free to join our [Community Slack](https://join.slack.com/t/rebase-community/shared_invite/zt-1dtd0tdo6-sXuCEy~zPnvJw4uUe~tKeA) so that we can discuss it. 
+If you are interested in contributing, then feel free to join our [Slack Community](https://dub.sh/k0xlzzl) so that we can discuss it. 
 
 ## Contributors
 This project uses [allcontributors.org](https://allcontributors.org/) to recognize all contributors, including those that don't push code. 
