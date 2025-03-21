@@ -3,12 +3,6 @@ import pandas as pd
 from abc import ABC, abstractmethod
 
 class Objective(ABC):
-    @property
-    @abstractmethod
-    def name(self):
-        """Subclasses must define this attribute."""
-        pass
-
     @abstractmethod
     def calculate(self):
         """Subclasses must implement this method."""
