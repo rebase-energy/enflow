@@ -69,4 +69,4 @@ html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
 
 # Tell Jinja2 templates the build is running on Read the Docs
 if os.environ.get("READTHEDOCS", "") == "True":
-    html_context["READTHEDOCS"] = True
+    html_context = {"READTHEDOCS": True}

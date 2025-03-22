@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Predictor Class &mdash; emflow  documentation</title>
+  <title>Predictor Class &mdash; enerflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -35,7 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            emflow
+            enerflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,11 +69,20 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/heftcom2024.html">HEFTCom2024</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/geospatial.html">Geospatial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/timeseries.html">Timeseries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/solar.html">Solar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/battery.html">Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/hydro.html">Hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/heatpump.html">Heatpump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/powergrid.html">Power Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/energysystem.html">Energy System</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
@@ -81,7 +90,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../problem/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/checks.html">Checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../problem/problem.html">Problem</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul>
@@ -92,16 +100,7 @@
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Class</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#enerflow.models.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.load_data"><code class="docutils literal notranslate"><span class="pre">Predictor.load_data()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.create_features"><code class="docutils literal notranslate"><span class="pre">Predictor.create_features()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.train"><code class="docutils literal notranslate"><span class="pre">Predictor.train()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.predictor.Predictor.predict"><code class="docutils literal notranslate"><span class="pre">Predictor.predict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictor Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agent.html">Agent Class</a></li>
 </ul>
@@ -118,7 +117,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">emflow</a>
+          <a href="../index.html">enerflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -138,47 +137,6 @@
              
   <section id="predictor-class">
 <h1>Predictor Class<a class="headerlink" href="#predictor-class" title="Link to this heading"></a></h1>
-<dl class="py class" id="module-enerflow.models.predictor">
-<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.models.predictor.</span></span><span class="sig-name descname"><span class="pre">Predictor</span></span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.load_data">
-<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.load_data" title="Link to this definition"></a></dt>
-<dd><p>Load data used for training the predictor.</p>
-<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.create_features">
-<span class="sig-name descname"><span class="pre">create_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.create_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.create_features" title="Link to this definition"></a></dt>
-<dd><p>Create features from the loaded data used for training the predictor.
-Load data used for training sthe predictor.</p>
-<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.train">
-<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.train" title="Link to this definition"></a></dt>
-<dd><p>Train the predictor from the training data.</p>
-<p>This is a recommended method, but not mandatory. Subclasses may override it.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.predictor.Predictor.predict">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/predictor.html#Predictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.predictor.Predictor.predict" title="Link to this definition"></a></dt>
-<dd><p>Make a prediction based on the input data.</p>
-<p>This is a mandatory method that must be implemented by subclasses</p>
-<dl class="simple">
-<dt>Parameters:</dt><dd><p>input: Data on which prediction is to be made.</p>
-</dd>
-<dt>Returns:</dt><dd><p>prediction: The output of the model.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
 

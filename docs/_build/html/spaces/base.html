@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base Space &mdash; emflow  documentation</title>
+  <title>Base Space &mdash; enerflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Input Space" href="input.html" />
-    <link rel="prev" title="Problem" href="../problem/problem.html" /> 
+    <link rel="prev" title="Checks" href="../problem/checks.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            emflow
+            enerflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,11 +69,20 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/heftcom2024.html">HEFTCom2024</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/geospatial.html">Geospatial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/timeseries.html">Timeseries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/solar.html">Solar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/battery.html">Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/hydro.html">Hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/heatpump.html">Heatpump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/powergrid.html">Power Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/energysystem.html">Energy System</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
@@ -81,22 +90,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../problem/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/checks.html">Checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../problem/problem.html">Problem</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Base Space</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace"><code class="docutils literal notranslate"><span class="pre">BaseSpace</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.from_array"><code class="docutils literal notranslate"><span class="pre">BaseSpace.from_array()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.to_array"><code class="docutils literal notranslate"><span class="pre">BaseSpace.to_array()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.vector"><code class="docutils literal notranslate"><span class="pre">BaseSpace.vector</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.from_tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.from_tuple()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.to_tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.to_tuple()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace.tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.tuple</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Base Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input.html">Input Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="output.html">Output Space</a></li>
 </ul>
@@ -120,7 +117,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">emflow</a>
+          <a href="../index.html">enerflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -138,56 +135,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-enerflow.spaces.base">
-<span id="base-space"></span><h1>Base Space<a class="headerlink" href="#module-enerflow.spaces.base" title="Link to this heading"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.spaces.base.</span></span><span class="sig-name descname"><span class="pre">BaseSpace</span></span><a class="reference internal" href="../_modules/enerflow/spaces/base.html#BaseSpace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.spaces.base.BaseSpace" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A base space with methods for converting data formats.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.from_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#enerflow.spaces.base.BaseSpace" title="enerflow.spaces.base.BaseSpace"><span class="pre">BaseSpace</span></a></span></span><a class="reference internal" href="../_modules/enerflow/spaces/base.html#BaseSpace.from_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.from_array" title="Link to this definition"></a></dt>
-<dd><p>Create the action from a numpy array.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.to_array">
-<span class="sig-name descname"><span class="pre">to_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/enerflow/spaces/base.html#BaseSpace.to_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.to_array" title="Link to this definition"></a></dt>
-<dd><p>Convert the action to a numpy array.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.vector">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vector</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.vector" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.from_tuple">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_tuple</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/spaces/base.html#BaseSpace.from_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.from_tuple" title="Link to this definition"></a></dt>
-<dd><p>Create the action from a tuple.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.to_tuple">
-<span class="sig-name descname"><span class="pre">to_tuple</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/spaces/base.html#BaseSpace.to_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.to_tuple" title="Link to this definition"></a></dt>
-<dd><p>Convert the action to a tuple.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="enerflow.spaces.base.BaseSpace.tuple">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tuple</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><a class="headerlink" href="#enerflow.spaces.base.BaseSpace.tuple" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="base-space">
+<h1>Base Space<a class="headerlink" href="#base-space" title="Link to this heading"></a></h1>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../problem/problem.html" class="btn btn-neutral float-left" title="Problem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../problem/checks.html" class="btn btn-neutral float-left" title="Checks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="input.html" class="btn btn-neutral float-right" title="Input Space" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

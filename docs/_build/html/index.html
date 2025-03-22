@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>emflow: Open-source energy modelling framework &mdash; emflow  documentation</title>
+  <title>emflow: Open-source energy modelling framework &mdash; enerflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -34,7 +34,7 @@
           
           
           <a href="#" class="icon icon-home">
-            emflow
+            enerflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -68,7 +68,7 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/notebook.html">HEFTCom2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/heftcom2024.html">HEFTCom2024</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
@@ -116,7 +116,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">emflow</a>
+          <a href="#">enerflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -169,13 +169,13 @@
 <li class="toctree-l2"><a class="reference internal" href="notebooks/gefcom2014_solar.html#Create-data-classes">Create data classes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/notebook.html">HEFTCom2024</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Load-data"><strong>Load data</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Create-and-plot-energy-system"><strong>Create and plot energy system</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Create-Environment"><strong>Create Environment</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Create-Objective"><strong>Create Objective</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Create-Predictor"><strong>Create Predictor</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/notebook.html#Create-Agent"><strong>Create Agent</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/heftcom2024.html">HEFTCom2024</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Load-data"><strong>Load data</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Create-and-plot-energy-system"><strong>Create and plot energy system</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Create-Environment"><strong>Create Environment</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Create-Objective"><strong>Create Objective</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Create-Predictor"><strong>Create Predictor</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/heftcom2024.html#Create-Agent"><strong>Create Agent</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -198,77 +198,33 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="problem/dataset.html">Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="problem/dataset.html#enerflow.problems.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="problem/environments.html">Environments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="problem/environments.html#enerflow.problems.environments.MicroGridEnv"><code class="docutils literal notranslate"><span class="pre">MicroGridEnv</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/environments.html#enerflow.problems.environments.HybridPowerPlantEnv"><code class="docutils literal notranslate"><span class="pre">HybridPowerPlantEnv</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/environments.html#enerflow.problems.environments.EnergyCommunityEnv"><code class="docutils literal notranslate"><span class="pre">EnergyCommunityEnv</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="problem/objectives.html">Objectives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="problem/objectives.html#enerflow.problems.objectives.BaseScore"><code class="docutils literal notranslate"><span class="pre">BaseScore</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/objectives.html#enerflow.problems.objectives.MeanSquaredError"><code class="docutils literal notranslate"><span class="pre">MeanSquaredError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/objectives.html#enerflow.problems.objectives.MeanAbsoluteError"><code class="docutils literal notranslate"><span class="pre">MeanAbsoluteError</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/objectives.html#enerflow.problems.objectives.PinballLoss"><code class="docutils literal notranslate"><span class="pre">PinballLoss</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="problem/checks.html">Checks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="problem/checks.html#enerflow.problems.checks.EnergyBalanceCheck"><code class="docutils literal notranslate"><span class="pre">EnergyBalanceCheck</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="problem/checks.html#enerflow.problems.checks.MassBalanceCheck"><code class="docutils literal notranslate"><span class="pre">MassBalanceCheck</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="problem/dataset.html">Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problem/environments.html">Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problem/objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problem/checks.html">Checks</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="spaces/base.html">Base Space</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spaces/base.html#enerflow.spaces.base.BaseSpace"><code class="docutils literal notranslate"><span class="pre">BaseSpace</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="spaces/input.html">Input Space</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spaces/input.html#enerflow.spaces.input.InputSpace"><code class="docutils literal notranslate"><span class="pre">InputSpace</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="spaces/input.html#enerflow.spaces.input.StateSpace"><code class="docutils literal notranslate"><span class="pre">StateSpace</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="spaces/output.html">Output Space</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spaces/output.html#enerflow.spaces.output.OutputSpace"><code class="docutils literal notranslate"><span class="pre">OutputSpace</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="spaces/output.html#enerflow.spaces.output.ActionSpace"><code class="docutils literal notranslate"><span class="pre">ActionSpace</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="spaces/base.html">Base Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spaces/input.html">Input Space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spaces/output.html">Output Space</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="models/simulator.html">Simulator Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/simulator.html#enerflow.models.simulator.Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="models/predictor.html">Predictor Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/predictor.html#enerflow.models.predictor.Predictor"><code class="docutils literal notranslate"><span class="pre">Predictor</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="models/optimizer.html">Optimizer Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/optimizer.html#enerflow.models.optimizer.Optimizer"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="models/agent.html">Agent Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/agent.html#enerflow.models.agent.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="models/simulator.html">Simulator Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/predictor.html">Predictor Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/optimizer.html">Optimizer Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/agent.html">Agent Class</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="runners/experiment.html">Experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="runners/experiment.html#enerflow.runners.experiment.Experiment"><code class="docutils literal notranslate"><span class="pre">Experiment</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="runners/experiment.html">Experiment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runners/benchmark.html">Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runners/scenarios.html">Scenarios</a></li>
 </ul>

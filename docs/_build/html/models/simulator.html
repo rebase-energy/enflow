@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulator Class &mdash; emflow  documentation</title>
+  <title>Simulator Class &mdash; enerflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -35,7 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            emflow
+            enerflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,11 +69,20 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/heftcom2024.html">HEFTCom2024</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/geospatial.html">Geospatial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/timeseries.html">Timeseries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/solar.html">Solar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/battery.html">Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/hydro.html">Hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/heatpump.html">Heatpump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/powergrid.html">Power Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/energysystem.html">Energy System</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul>
@@ -81,7 +90,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../problem/environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../problem/checks.html">Checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../problem/problem.html">Problem</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul>
@@ -91,14 +99,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🤖 Energy Models</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulator Class</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#enerflow.models.simulator.Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.simulator.Simulator.reset"><code class="docutils literal notranslate"><span class="pre">Simulator.reset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.models.simulator.Simulator.step"><code class="docutils literal notranslate"><span class="pre">Simulator.step()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulator Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimizer.html">Optimizer Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agent.html">Agent Class</a></li>
@@ -116,7 +117,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">emflow</a>
+          <a href="../index.html">enerflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -136,37 +137,6 @@
              
   <section id="simulator-class">
 <h1>Simulator Class<a class="headerlink" href="#simulator-class" title="Link to this heading"></a></h1>
-<dl class="py class" id="module-enerflow.models.simulator">
-<dt class="sig sig-object py" id="enerflow.models.simulator.Simulator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.models.simulator.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/simulator.html#Simulator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.simulator.Simulator" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.simulator.Simulator.reset">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/models/simulator.html#Simulator.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.simulator.Simulator.reset" title="Link to this definition"></a></dt>
-<dd><p>Reset the simulator to the initial state or a new start state.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The reset state.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="enerflow.models.simulator.Simulator.step">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../spaces/input.html#enerflow.spaces.input.InputSpace" title="enerflow.spaces.input.InputSpace"><span class="pre">InputSpace</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/enerflow/models/simulator.html#Simulator.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.models.simulator.Simulator.step" title="Link to this definition"></a></dt>
-<dd><p>Update the simulator’s state based on an action.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>action</strong> – The action to be applied to the state.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A tuple containing the next state and any additional info.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
 

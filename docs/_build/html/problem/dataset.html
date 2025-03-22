@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dataset &mdash; emflow  documentation</title>
+  <title>Dataset &mdash; enerflow  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Environments" href="environments.html" />
-    <link rel="prev" title="Wind Assets" href="../assets/wind.html" /> 
+    <link rel="prev" title="Energy System" href="../assets/energysystem.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +35,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            emflow
+            enerflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,28 +69,27 @@
 <p class="caption" role="heading"><span class="caption-text">📝 Notebook Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/gefcom2014_solar.html">GEFCom2024 Solar Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/heftcom2024.html">HEFTCom2024</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🔋 Energy Assets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../assets/pv.html">PV Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/geospatial.html">Geospatial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/timeseries.html">Timeseries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/solar.html">Solar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/wind.html">Wind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/battery.html">Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/hydro.html">Hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/heatpump.html">Heatpump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/powergrid.html">Power Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assets/energysystem.html">Energy System</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🧩 Energy Problems</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#enerflow.problems.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.dataset.Dataset.name"><code class="docutils literal notranslate"><span class="pre">Dataset.name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.dataset.Dataset.description"><code class="docutils literal notranslate"><span class="pre">Dataset.description</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.dataset.Dataset.energy_system"><code class="docutils literal notranslate"><span class="pre">Dataset.energy_system</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enerflow.problems.dataset.Dataset.data"><code class="docutils literal notranslate"><span class="pre">Dataset.data</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dataset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environments.html">Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="objectives.html">Objectives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="checks.html">Checks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="problem.html">Problem</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul>
@@ -118,7 +117,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">emflow</a>
+          <a href="../index.html">enerflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -136,41 +135,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-enerflow.problems.dataset">
-<span id="dataset"></span><h1>Dataset<a class="headerlink" href="#module-enerflow.problems.dataset" title="Link to this heading"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="enerflow.problems.dataset.Dataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enerflow.problems.dataset.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">energydatamodel.container.EnergySystem</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">pandas.core.frame.DataFrame</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enerflow/problems/dataset.html#Dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enerflow.problems.dataset.Dataset" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="enerflow.problems.dataset.Dataset.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enerflow.problems.dataset.Dataset.name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="enerflow.problems.dataset.Dataset.description">
-<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#enerflow.problems.dataset.Dataset.description" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="enerflow.problems.dataset.Dataset.energy_system">
-<span class="sig-name descname"><span class="pre">energy_system</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.energydatamodel.org/en/latest/energydatamodel/container.html#energydatamodel.container.EnergySystem" title="(in EnergyDataModel)"><span class="pre">EnergySystem</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#enerflow.problems.dataset.Dataset.energy_system" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="enerflow.problems.dataset.Dataset.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.1)"><span class="pre">DataFrame</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#enerflow.problems.dataset.Dataset.data" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="dataset">
+<h1>Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h1>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../assets/wind.html" class="btn btn-neutral float-left" title="Wind Assets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../assets/energysystem.html" class="btn btn-neutral float-left" title="Energy System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="environments.html" class="btn btn-neutral float-right" title="Environments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
