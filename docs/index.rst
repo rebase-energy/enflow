@@ -63,11 +63,11 @@ enflow: Open-source energy modelling framework
 
 .. toctree::
    :maxdepth: 2
-   :caption: ♻️ Runners
+   :caption: ♻️ Experiments
 
-   runners/experiment
-   runners/benchmark
-   runners/scenarios
+   experiments/experiment
+   experiments/benchmark
+   experiments/scenarios
 
 Indices and tables
 ==================
