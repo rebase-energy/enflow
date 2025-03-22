@@ -1,7 +1,7 @@
 Checks
 ============
 
-.. automodule:: enerflow.problems.checks
+.. automodule:: enflow.problems.checks
     :members:
     :undoc-members:
     :show-inheritance:

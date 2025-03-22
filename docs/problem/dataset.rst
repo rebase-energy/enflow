@@ -1,7 +1,7 @@
 Dataset
 ============
 
-.. automodule:: enerflow.problems.dataset
+.. automodule:: enflow.problems.dataset
     :members:
     :undoc-members:
     :show-inheritance:

@@ -1,7 +1,7 @@
 Power Grid
 =============
 
-.. automodule:: enerflow.assets.powergrid
+.. automodule:: enflow.assets.powergrid
     :members:
     :undoc-members:
     :show-inheritance:

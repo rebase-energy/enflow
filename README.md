@@ -1,17 +1,17 @@
 <div align="center">
-	<img width="300" src="https://github.com/rebase-energy/enerflow/blob/main/assets/enerflow-logo.png?raw=true" alt="enerflow">
+	<img width="300" src="https://github.com/rebase-energy/enflow/blob/main/assets/enflow-logo.png?raw=true" alt="enflow">
 <h2 style="margin-top: 0px;">
     ⚡ Open-source Python framework for modelling sequential decision problems in the energy sector
 </h2>
 </div>
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![PyPI version](https://badge.fury.io/py/enerflow.svg)](https://badge.fury.io/py/enerflow) 
-[![All Contributors](https://img.shields.io/github/all-contributors/rebase-energy/enerflow?color=ee8449&style=flat-square)](#contributors)
+[![PyPI version](https://badge.fury.io/py/enflow.svg)](https://badge.fury.io/py/enflow) 
+[![All Contributors](https://img.shields.io/github/all-contributors/rebase-energy/enflow?color=ee8449&style=flat-square)](#contributors)
 [![Join us on Slack](https://img.shields.io/badge/Join%20us%20on%20Slack-%2362BEAF?style=flat&logo=slack&logoColor=white)](https://dub.sh/k0xlzzl) 
-[![GitHub Repo stars](https://img.shields.io/github/stars/rebase-energy/enerflow?style=social)](https://github.com/rebase-energy/enerflow)
+[![GitHub Repo stars](https://img.shields.io/github/stars/rebase-energy/enflow?style=social)](https://github.com/rebase-energy/enflow)
 
-**enerflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's universal sequential decision framework](https://castle.princeton.edu/rlso/). **enerflow** lets you: 
+**enflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's universal sequential decision framework](https://castle.princeton.edu/rlso/). **enflow** lets you: 
 
 * 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra;
 * 🌱 Forumate your problems with datasets, environments and objectives;
@@ -23,12 +23,12 @@
 &ensp;|&ensp;
 **📖 [Documentation](https://docs.energydatamodel.org/en/latest/)**
 &ensp;|&ensp;
-**🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/heftcom2024/notebook.ipynb)**
+**🚀 [Try out now in Colab](https://colab.research.google.com/github/rebase-energy/enflow/blob/main/enflow/examples/heftcom2024/notebook.ipynb)**
 &ensp;|&ensp;
 **👋 [Join Slack Community](https://dub.sh/k0xlzzl)**
 
 ## The Sequential Decision Loop
-**enerflow** allows to model sequential decison problems, where state information **$S_t$** is provided, an action **$a_t=A^{\pi}(S_t)$** is taken, exogenous information **$W_{t+1}$** is revealed, whereby a new state **$S_{t+1} = S^M(S_t, a_t, W_{t+1})$** is encountered and a cost/contribution **$C(S_t,a_t,W_{t+1})$** can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
+**enflow** allows to model sequential decison problems, where state information **$S_t$** is provided, an action **$a_t=A^{\pi}(S_t)$** is taken, exogenous information **$W_{t+1}$** is revealed, whereby a new state **$S_{t+1} = S^M(S_t, a_t, W_{t+1})$** is encountered and a cost/contribution **$C(S_t,a_t,W_{t+1})$** can be calculated. The sequential decision loop then repeats until the end of the evaluation/problem time. 
 
 ![Sequential decision loop](assets/sequential-decision-loop.png)
 
@@ -44,7 +44,7 @@ $$
 $$
 
 ## Modules and Components
-**enerflow** consists of a set of components that serve as building blocks to create modular and reusable energy models. One of the main dependencies is [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) that provides functionality to represent energy systems. The table below gives a summary of the available modules and concepts.
+**enflow** consists of a set of components that serve as building blocks to create modular and reusable energy models. One of the main dependencies is [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) that provides functionality to represent energy systems. The table below gives a summary of the available modules and concepts.
 
 | Module         | Components     |
 | :----          | :----            |
@@ -56,10 +56,10 @@ $$
 
 Below is a diagram of the components' relation to each other and how they together enable creation of reproducible results from energy models. 
 
-![enerflow Framework Structure](assets/enerflow-framework-structure.png)
+![enflow Framework Structure](assets/enflow-framework-structure.png)
 
 ## Framework 6-Step Approach
-**enerflow** is about adopting a problem-centric, stepwise approach that follows the "model first, then solve"-mantra. The idea is to first gain a deep problem understanding before rushing to the solution. Or as Albert Einstien expressed it: 
+**enflow** is about adopting a problem-centric, stepwise approach that follows the "model first, then solve"-mantra. The idea is to first gain a deep problem understanding before rushing to the solution. Or as Albert Einstien expressed it: 
 
 > **"If I had an hour to solve a problem I'd spend 55 minutes thinking about the problem and five minutes thinking about solutions."**
 
@@ -75,7 +75,7 @@ Concretely, this means that problems are solved through the following steps:
 Steps 1-4 are about understanding the **problem** and steps 5-6 are about creating and evaluating the **solution**. 
 
 ## Basic Usage
-In **enerflow**, a reproducible experiment is represented by the following 4 components: 
+In **enflow**, a reproducible experiment is represented by the following 4 components: 
 
 * [`Dataset`]()
 * [`Environment`]()
@@ -100,28 +100,28 @@ while done is not True:
 env.close()
 ```
 
-For a full walkthrough go to the [documentation](https://docs.enerflow.org/en/latest/walkthrough.html#) or open in [Colab](https://colab.research.google.com/github/rebase-energy/enerflow/blob/main/enerflow/examples/walkthrough/notebook.ipynb). 
+For a full walkthrough go to the [documentation](https://docs.enflow.org/en/latest/walkthrough.html#) or open in [Colab](https://colab.research.google.com/github/rebase-energy/enflow/blob/main/enflow/examples/walkthrough/notebook.ipynb). 
 
 ## Installation
 Install the **stable** release: 
 ```bash
-pip install enerflow
+pip install enflow
 ```
 
 Install the **latest** release: 
 ```bash
-pip install git+https://github.com/rebase-energy/enerflow
+pip install git+https://github.com/rebase-energy/enflow
 ```
 
 Install in editable mode for **development**: 
 ```bash
-git clone https://github.com/rebase-energy/enerflow.git
-cd enerflow
+git clone https://github.com/rebase-energy/enflow.git
+cd enflow
 pip install -e . 
 ```
 
 ## Ways to Contribute
-We welcome contributions from anyone interested in this project! Here are some ways to contribute to **enerflow**:
+We welcome contributions from anyone interested in this project! Here are some ways to contribute to **enflow**:
 
 * Create a new environment; 
 * Create a new energy model (simulator, predictor, optimizer or agent); 

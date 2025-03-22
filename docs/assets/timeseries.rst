@@ -1,7 +1,7 @@
 Timeseries
 =============
 
-.. automodule:: enerflow.assets.timeseries
+.. automodule:: enflow.assets.timeseries
     :members:
     :undoc-members:
     :show-inheritance:

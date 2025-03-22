@@ -1,9 +1,9 @@
-"""This example showcases how to use emflow for the solar forecasting task of GEFCom2014."""
+"""This example showcases how to use enflow for the solar forecasting task of GEFCom2014."""
 import sys, os
 sys.path.insert(0, os.path.abspath('../../../'))
 
-import emflow
-import emflow as emf
+import enflow
+import enflow as emf
 
 import gym
 from gym import spaces

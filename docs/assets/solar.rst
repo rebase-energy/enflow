@@ -1,7 +1,7 @@
 Solar
 =============
 
-.. automodule:: enerflow.assets.solar
+.. automodule:: enflow.assets.solar
     :members:
     :undoc-members:
     :show-inheritance:

@@ -1,4 +1,4 @@
-emflow: Open-source energy modelling framework
+enflow: Open-source energy modelling framework
 ===============================================
 
 .. toctree::

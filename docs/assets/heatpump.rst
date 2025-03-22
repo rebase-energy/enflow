@@ -1,7 +1,7 @@
 Heatpump
 =============
 
-.. automodule:: enerflow.assets.heatpump
+.. automodule:: enflow.assets.heatpump
     :members:
     :undoc-members:
     :show-inheritance:

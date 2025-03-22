@@ -1,7 +1,7 @@
-Experiment
+Scenarios
 ============
 
-.. automodule:: enerflow.runners.experiment
+.. automodule:: enflow.experiments.scenarios
    :members:
    :undoc-members:
    :show-inheritance:
