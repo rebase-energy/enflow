@@ -1,9 +1,10 @@
 import typing as t
 from abc import ABC, abstractmethod
 
-from ..spaces import StateSpace
+from enflow.spaces import StateSpace
+from enflow.models import Model
 
-class Simulator(ABC):
+class Simulator(Model, ABC):
     def __init__(self, initial_state):
         """
         Initialize the Simulator with a given initial state.

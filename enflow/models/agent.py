@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
+from enflow.models import Model
 
-class Agent(ABC):
+class Agent(Model, ABC):
     def __init__(self):
         # Initialize agent properties
         pass

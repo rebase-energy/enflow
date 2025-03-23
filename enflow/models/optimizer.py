@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
+from enflow.models import Model
 
-class Optimizer(ABC):
+class Optimizer(Model, ABC):
     def __init__(self):
         """
         Initialize the Optimizer.

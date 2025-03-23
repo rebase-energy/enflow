@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 import copy
 
-class Predictor(ABC):
+from enflow.models import Model
+
+class Predictor(Model, ABC):
     def __init__(self):
         """
         Initialize the predictor.
