@@ -98,7 +98,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">📦 Spaces</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Base Space</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Base Space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enflow.spaces.base.BaseSpace"><code class="docutils literal notranslate"><span class="pre">BaseSpace</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.from_array"><code class="docutils literal notranslate"><span class="pre">BaseSpace.from_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.to_array"><code class="docutils literal notranslate"><span class="pre">BaseSpace.to_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.vector"><code class="docutils literal notranslate"><span class="pre">BaseSpace.vector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.from_tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.from_tuple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.to_tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.to_tuple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.spaces.base.BaseSpace.tuple"><code class="docutils literal notranslate"><span class="pre">BaseSpace.tuple</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="input.html">Input Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="output.html">Output Space</a></li>
 </ul>
@@ -140,8 +151,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="base-space">
-<h1>Base Space<a class="headerlink" href="#base-space" title="Link to this heading"></a></h1>
+  <section id="module-enflow.spaces.base">
+<span id="base-space"></span><h1>Base Space<a class="headerlink" href="#module-enflow.spaces.base" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enflow.spaces.base.</span></span><span class="sig-name descname"><span class="pre">BaseSpace</span></span><a class="reference internal" href="../_modules/enflow/spaces/base.html#BaseSpace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.spaces.base.BaseSpace" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A base space with methods for converting data formats.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.from_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#enflow.spaces.base.BaseSpace" title="enflow.spaces.base.BaseSpace"><span class="pre">BaseSpace</span></a></span></span><a class="reference internal" href="../_modules/enflow/spaces/base.html#BaseSpace.from_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.spaces.base.BaseSpace.from_array" title="Link to this definition"></a></dt>
+<dd><p>Create the action from a numpy array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.to_array">
+<span class="sig-name descname"><span class="pre">to_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/enflow/spaces/base.html#BaseSpace.to_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.spaces.base.BaseSpace.to_array" title="Link to this definition"></a></dt>
+<dd><p>Convert the action to a numpy array.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.vector">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vector</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#enflow.spaces.base.BaseSpace.vector" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.from_tuple">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_tuple</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enflow/spaces/base.html#BaseSpace.from_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.spaces.base.BaseSpace.from_tuple" title="Link to this definition"></a></dt>
+<dd><p>Create the action from a tuple.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.to_tuple">
+<span class="sig-name descname"><span class="pre">to_tuple</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enflow/spaces/base.html#BaseSpace.to_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.spaces.base.BaseSpace.to_tuple" title="Link to this definition"></a></dt>
+<dd><p>Convert the action to a tuple.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enflow.spaces.base.BaseSpace.tuple">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tuple</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><a class="headerlink" href="#enflow.spaces.base.BaseSpace.tuple" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 

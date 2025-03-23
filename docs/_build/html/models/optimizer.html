@@ -106,7 +106,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulator Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="predictor.html">Predictor Class</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Optimizer Class</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Optimizer Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enflow.models.optimizer.Optimizer"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enflow.models.optimizer.Optimizer.optimize"><code class="docutils literal notranslate"><span class="pre">Optimizer.optimize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="agent.html">Agent Class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">♻️ Experiments</span></p>
@@ -142,6 +148,29 @@
              
   <section id="optimizer-class">
 <h1>Optimizer Class<a class="headerlink" href="#optimizer-class" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-enflow.models.optimizer">
+<dt class="sig sig-object py" id="enflow.models.optimizer.Optimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enflow.models.optimizer.</span></span><span class="sig-name descname"><span class="pre">Optimizer</span></span><a class="reference internal" href="../_modules/enflow/models/optimizer.html#Optimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.models.optimizer.Optimizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="enflow.models.optimizer.Optimizer.optimize">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/enflow/models/optimizer.html#Optimizer.optimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#enflow.models.optimizer.Optimizer.optimize" title="Link to this definition"></a></dt>
+<dd><p>Perform the optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objective_function</strong> – The objective function to be minimized or maximized.</p></li>
+<li><p><strong>constraints</strong> – (Optional) Constraints for the optimization problem.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The result of the optimization.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

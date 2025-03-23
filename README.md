@@ -115,6 +115,8 @@ env.close()
 For a full walkthrough go to the [documentation](https://docs.enflow.org/en/latest/walkthrough.html#) or open in [Colab](https://colab.research.google.com/github/rebase-energy/enflow/blob/main/enflow/examples/walkthrough/notebook.ipynb). 
 
 ## Installation
+We recommend installing using a virtual environment like [venv](https://docs.python.org/3/library/venv.html), [poetry](https://python-poetry.org/) or [uv](https://docs.astral.sh/uv/). 
+
 Install the **stable** release: 
 ```bash
 pip install enflow
