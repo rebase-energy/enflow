@@ -1,2 +1,2 @@
-git+https://github.com/rebase-energy/enflow.git[dev]
-git+https://github.com/rebase-energy/EnergyDataModel.git[dev]
+enflow[dev] @ git+https://github.com/rebase-energy/enflow.git@main
+energydatamodel[dev] @ git+https://github.com/rebase-energy/EnergyDataModel.git@main
