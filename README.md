@@ -5,11 +5,23 @@
 </h2>
 </div>
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![PyPI version](https://badge.fury.io/py/enflow.svg)](https://badge.fury.io/py/enflow) 
-[![All Contributors](https://img.shields.io/github/all-contributors/rebase-energy/enflow?color=ee8449&style=flat-square)](#contributors)
-[![Join us on Slack](https://img.shields.io/badge/Join%20us%20on%20Slack-%2362BEAF?style=flat&logo=slack&logoColor=white)](https://dub.sh/k0xlzzl) 
-[![GitHub Repo stars](https://img.shields.io/github/stars/rebase-energy/enflow?style=social)](https://github.com/rebase-energy/enflow)
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg">
+  </a>
+  <a href="https://pypi.org/project/enflow/">
+    <img alt="PyPI version" src="https://img.shields.io/pypi/v/energydatamodel.svg?color=blue">
+  </a>
+  <a href="https://dub.sh/yTqMriJ">
+    <img alt="Join us on Slack" src="https://img.shields.io/badge/Join%20us%20on%20Slack-%234A154B?style=flat&logo=slack&logoColor=white">
+  </a>
+  <a href="#contributors">
+    <img alt="All Contributors" src="https://img.shields.io/github/all-contributors/rebase-energy/enflow?color=2b2292&style=flat-square">
+  </a>
+  <a href="https://github.com/rebase-energy/enflow">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rebase-energy/enflow?style=social">
+  </a>
+</p>
 
 **enflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's universal sequential decision framework](https://castle.princeton.edu/rlso/). **enflow** lets you: 
 
