@@ -1,4 +1,4 @@
-Objectives
+Objective
 ============
 
 .. automodule:: enflow.problems.objective

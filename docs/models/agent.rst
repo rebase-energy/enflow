@@ -1,4 +1,4 @@
-Agent Class
+Agent
 ============
 
 .. automodule:: enflow.models.agent

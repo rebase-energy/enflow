@@ -1,4 +1,4 @@
-Simulator Class
+Simulator
 ============
 
 .. automodule:: enflow.models.simulator

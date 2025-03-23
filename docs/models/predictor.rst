@@ -1,4 +1,4 @@
-Predictor Class
+Predictor
 ============
 
 .. automodule:: enflow.models.predictor

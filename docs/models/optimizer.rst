@@ -1,4 +1,4 @@
-Optimizer Class
+Optimizer
 ============
 
 .. automodule:: enflow.models.optimizer

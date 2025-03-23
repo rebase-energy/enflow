@@ -1,4 +1,4 @@
-Environments
+Environment
 ============
 
 .. automodule:: enflow.problems.environment

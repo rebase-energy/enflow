@@ -61,10 +61,10 @@ $$
 | Module         | Components     |
 | :----          | :----            |
 | 🔋&nbsp;`energysystem` | All energy asset and concept components defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
-| 📦&nbsp;`spaces` | [`BaseSpace`](https://docs.enflow.org/en/latest/spaces/base.html), [`InputSpace`](https://docs.enflow.org/en/latest/spaces/input.html), [`OutputSpace`](https://docs.enflow.org/en/latest/spaces/output.html) [`StateSpace`]() [`ActionSpace`]() | 
-| 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
-| 🤖&nbsp;`models` | [`Model`](), [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
-| ➡️&nbsp;`experiment` | [`Experiment`]()| 
+| 📦&nbsp;`spaces` | [`BaseSpace`](https://docs.enflow.org/en/latest/spaces/base.html), [`InputSpace`](https://docs.enflow.org/en/latest/spaces/input.html), [`StateSpace`](https://docs.enflow.org/en/latest/spaces/input.html), [`OutputSpace`](https://docs.enflow.org/en/latest/spaces/output.html),[`ActionSpace`](https://docs.enflow.org/en/latest/spaces/output.html) | 
+| 🧩&nbsp;`problems` | [`Dataset`](https://docs.enflow.org/en/latest/problem/dataset.html), [`Environment`](https://docs.enflow.org/en/latest/problem/environment.html), [`Objective`](https://docs.enflow.org/en/latest/problem/objective.html) | 
+| 🤖&nbsp;`models` | [`Model`](), [`Simulator`](https://docs.enflow.org/en/latest/models/simulator.html), [`Predictor`](https://docs.enflow.org/en/latest/models/predictor.html), [`Optimizer`](https://docs.enflow.org/en/latest/models/optimizer.html), [`Agent`](https://docs.enflow.org/en/latest/models/agent.html) | 
+| ➡️&nbsp;`experiments` | [`Experiment`](https://docs.enflow.org/en/latest/experiments/experiment.html), [`Benchmark`](https://docs.enflow.org/en/latest/experiments/benchmark.html), [´Scenario´](https://docs.enflow.org/en/latest/experiments/scenario.html)| 
 
 Below is a diagram of the components' relation to each other and how they together enable creation of reproducible results from energy models. 
 
