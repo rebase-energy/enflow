@@ -1,5 +1,5 @@
 <div align="center">
-	<img width="300" src="https://github.com/rebase-energy/enflow/blob/main/assets/enflow-logo.png?raw=true" alt="enflow">
+	<img width="300" src="https://github.com/rebase-energy/enflow/blob/main/assets/logo-enflow.png?raw=true" alt="enflow">
 <h2 style="margin-top: 0px;">
     ⚡ Open-source Python framework for modelling sequential decision problems in the energy sector
 </h2>
