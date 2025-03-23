@@ -35,13 +35,17 @@ enflow: Open-source energy modelling framework
    assets/powergrid
    assets/energycollection
 
+.. _problems:
+
 .. toctree::
    :maxdepth: 2
    :caption: 🧩 Energy Problems
 
-   problem/dataset
-   problem/environment
-   problem/objective
+   problems/dataset
+   problems/environment
+   problems/objective
+
+.. _spaces:
 
 .. toctree::
    :maxdepth: 2
@@ -50,6 +54,8 @@ enflow: Open-source energy modelling framework
    spaces/base
    spaces/input
    spaces/output
+
+.. _models:
 
 .. toctree::
    :maxdepth: 2
@@ -60,6 +66,8 @@ enflow: Open-source energy modelling framework
    models/predictor
    models/optimizer
    models/agent
+
+.. _experiments:
 
 .. toctree::
    :maxdepth: 2
