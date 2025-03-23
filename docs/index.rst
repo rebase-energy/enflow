@@ -55,6 +55,7 @@ enflow: Open-source energy modelling framework
    :maxdepth: 2
    :caption: 🤖 Energy Models
 
+   models/model
    models/simulator
    models/predictor
    models/optimizer
