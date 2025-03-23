@@ -1,7 +1,7 @@
 Output Space
 ============
 
-.. automodule:: enerflow.spaces.output
+.. automodule:: enflow.spaces.output
    :members:
    :undoc-members:
    :show-inheritance:

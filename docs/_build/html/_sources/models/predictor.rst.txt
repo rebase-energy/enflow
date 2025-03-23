@@ -1,7 +1,7 @@
 Predictor Class
 ============
 
-.. automodule:: enerflow.models.predictor
+.. automodule:: enflow.models.predictor
    :members:
    :undoc-members:
    :show-inheritance:

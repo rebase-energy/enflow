@@ -1,7 +1,7 @@
 Base Space
 ============
 
-.. automodule:: enerflow.spaces.base
+.. automodule:: enflow.spaces.base
    :members:
    :undoc-members:
    :show-inheritance:

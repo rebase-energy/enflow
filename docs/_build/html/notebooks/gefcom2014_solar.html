@@ -1,32 +1,37 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GEFCom2024 Solar Example &mdash; enerflow  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+  <title>GEFCom2024 Solar Example &mdash; enflow  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="HEFTCom2024" href="heftcom2024.html" />
-    <link rel="prev" title="Walkthrough of the emflow framework" href="../walkthrough.html" /> 
+    <link rel="prev" title="Walkthrough of the enflow framework" href="../walkthrough.html" />
+   
+  <!-- Plausible Analytics -->
+  <script defer data-domain="rebase.energy" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <script defer data-domain="docs.enflow.org" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="1c1c2366-6819-42ef-ac7c-e08786de9a04"></script>
+  
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +43,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            enerflow
+            enflow
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -59,7 +64,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">🪜 Walkthrough</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html">Walkthrough of the <cite>emflow</cite> framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthrough.html">Walkthrough of the <cite>enflow</cite> framework</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-1-define-your-energy-assets">Step 1: Define Your Energy Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-2-specify-dynamic-state-variables">Step 2: Specify Dynamic State Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../walkthrough.html#step-3-define-action-variables">Step 3: Define Action Variables</a></li>
@@ -111,11 +116,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../models/optimizer.html">Optimizer Class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../models/agent.html">Agent Class</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">♻️ Runners</span></p>
+<p class="caption" role="heading"><span class="caption-text">♻️ Experiments</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../runners/experiment.html">Experiment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../runners/benchmark.html">Benchmark</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../runners/scenarios.html">Scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/experiment.html">Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/scenarios.html">Scenarios</a></li>
 </ul>
 
         </div>
@@ -124,7 +129,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">enerflow</a>
+          <a href="../index.html">enflow</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -144,18 +149,18 @@
              
   <section id="GEFCom2024-Solar-Example">
 <h1>GEFCom2024 Solar Example<a class="headerlink" href="#GEFCom2024-Solar-Example" title="Link to this heading"></a></h1>
-<p><a class="reference external" href="https://colab.research.google.com/github/rebase-energy/emflow/blob/main/emflow/examples/gefcom2014_solar/notebook.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/rebase-energy/enflow/blob/main/enflow/examples/gefcom2014_solar/notebook.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../&#39;</span><span class="p">))</span>
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">energydatamodel</span> <span class="k">as</span> <span class="nn">edm</span>
-<span class="kn">import</span> <span class="nn">emflow</span> <span class="k">as</span> <span class="nn">emf</span>
-<span class="kn">from</span> <span class="nn">emflow.examples.gefcom2014_solar</span> <span class="kn">import</span> <span class="n">GEFCom2014SolarEnv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">energydatamodel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">edm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">enflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">emf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enflow.examples.gefcom2014_solar</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEFCom2014SolarEnv</span>
 <br/></pre></div>
 </div>
 </div>
@@ -175,9 +180,9 @@
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ImportError</span>                               Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">emflow</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> GEFCom2014SolarEnv
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">enflow</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> GEFCom2014SolarEnv
 
-<span class="ansi-red-fg">ImportError</span>: cannot import name &#39;GEFCom2014SolarEnv&#39; from &#39;emflow&#39; (/Users/sebaheg/Documents/Github/emflow/emflow/__init__.py)
+<span class="ansi-red-fg">ImportError</span>: cannot import name &#39;GEFCom2014SolarEnv&#39; from &#39;enflow&#39; (/Users/sebaheg/Documents/Github/enflow/enflow/__init__.py)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -223,7 +228,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../emflow/examples/gefcom2014_solar/gefcom2014-solar-raw.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../enflow/examples/gefcom2014_solar/gefcom2014-solar-raw.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -390,7 +395,7 @@ Index([&#39;POWER&#39;, &#39;VAR134&#39;, &#39;VAR157&#39;, &#39;VAR164&#39;, &#
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">emflow.examples.gefcom2014_solar</span> <span class="kn">import</span> <span class="n">GEFCom2014SolarEnv</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">enflow.examples.gefcom2014_solar</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEFCom2014SolarEnv</span>
 </pre></div>
 </div>
 </div>
@@ -401,16 +406,16 @@ Index([&#39;POWER&#39;, &#39;VAR134&#39;, &#39;VAR157&#39;, &#39;VAR164&#39;, &#
 <div class="highlight"><pre>
 Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 
-  File <span class="ansi-green-intense-fg ansi-bold">~/Documents/Github/emflow/.venv_emflow/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3553</span> in <span class="ansi-magenta-intense-fg ansi-bold">run_code</span>
+  File <span class="ansi-green-intense-fg ansi-bold">~/Documents/Github/enflow/.venv_enflow/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3553</span> in <span class="ansi-magenta-intense-fg ansi-bold">run_code</span>
     exec(code_obj, self.user_global_ns, self.user_ns)
 
   Cell <span class="ansi-green-intense-fg ansi-bold">In[5], line 1</span>
-    from emflow.examples.gefcom2014_solar import GEFCom2014SolarEnv
+    from enflow.examples.gefcom2014_solar import GEFCom2014SolarEnv
 
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">~/Documents/Github/emflow/emflow/examples/gefcom2014_solar/__init__.py:1</span><span class="ansi-cyan-fg">
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">~/Documents/Github/enflow/enflow/examples/gefcom2014_solar/__init__.py:1</span><span class="ansi-cyan-fg">
 </span><span class="ansi-red-fg">    from .main import GEFCom2014SolarEnv</span><span class="ansi-cyan-fg">
 
-</span><span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">~/Documents/Github/emflow/emflow/examples/gefcom2014_solar/main.py:78</span>
+</span><span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">~/Documents/Github/enflow/enflow/examples/gefcom2014_solar/main.py:78</span>
 <span class="ansi-red-fg">    pv_production_2=spaces.Box(low=0, high=portfolio.assets[1].capacity, shape=(initial_datapoints, 1), dtype=np.float32),</span>
                    ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
@@ -453,11 +458,11 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
-<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">t</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
 
 <span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">BaseProblem</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BaseProblem</span><span class="p">:</span>
     <span class="n">system</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">edm</span><span class="o">.</span><span class="n">Site</span><span class="p">,</span> <span class="n">edm</span><span class="o">.</span><span class="n">EnergySystem</span><span class="p">,</span> <span class="n">edm</span><span class="o">.</span><span class="n">Portfolio</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -467,7 +472,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">System</span><span class="p">(</span><span class="n">edm</span><span class="o">.</span><span class="n">EnergySystem</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">System</span><span class="p">(</span><span class="n">edm</span><span class="o">.</span><span class="n">EnergySystem</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -504,7 +509,7 @@ BaseProblem(system=PVArray(module_type=&#39;glass_polymer&#39;))
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../walkthrough.html" class="btn btn-neutral float-left" title="Walkthrough of the emflow framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../walkthrough.html" class="btn btn-neutral float-left" title="Walkthrough of the enflow framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="heftcom2024.html" class="btn btn-neutral float-right" title="HEFTCom2024" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

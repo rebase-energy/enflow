@@ -1,7 +1,7 @@
 Agent Class
 ============
 
-.. automodule:: enerflow.models.agent
+.. automodule:: enflow.models.agent
    :members:
    :undoc-members:
    :show-inheritance:

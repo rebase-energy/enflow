@@ -23,7 +23,7 @@
   </a>
 </p>
 
-**enflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)) and [Warran Powell's universal sequential decision framework](https://castle.princeton.edu/rlso/). **enflow** lets you: 
+**enflow** is an open-source Python framework that enables energy data scientists and modellers to write modular and reproducible energy models that solves sequential decision problems. It is based on both OpenAI Gym (now [Gymnasium](https://dub.sh/Zk6l1b9)) and [Warran Powell's universal sequential decision framework](https://dub.sh/3RWwTXv). **enflow** lets you: 
 
 * 🛤️ Structure your code as modular and reusable components and adopt the "model first, then solve"-mantra;
 * 🌱 Forumate your problems with datasets, environments and objectives;
@@ -61,7 +61,7 @@ $$
 | Module         | Components     |
 | :----          | :----            |
 | 🔋&nbsp;`energysystem` | All energy asset and concept components defined by [EnergyDataModel](https://github.com/rebase-energy/EnergyDataModel) | 
-| 📦&nbsp;`spaces` | [`BaseSpace`](), [`InputSpace`](), [`OutputSpace`]() [`StateSpace`]() [`ActionSpace`]() | 
+| 📦&nbsp;`spaces` | [`BaseSpace`](https://docs.enflow.org/en/latest/spaces/base.html), [`InputSpace`](https://docs.enflow.org/en/latest/spaces/input.html), [`OutputSpace`](https://docs.enflow.org/en/latest/spaces/output.html) [`StateSpace`]() [`ActionSpace`]() | 
 | 🧩&nbsp;`problems` | [`Dataset`](), [`Environment`](), [`Objective`]() | 
 | 🤖&nbsp;`models` | [`Model`](), [`Simulator`](), [`Predictor`](), [`Optimizer`](), [`Agent`]() | 
 | ➡️&nbsp;`experiment` | [`Experiment`]()| 
@@ -122,14 +122,16 @@ pip install enflow
 
 Install the **latest** release: 
 ```bash
-pip install git+https://github.com/rebase-energy/enflow
+pip install git+https://github.com/rebase-energy/enflow.git
 ```
 
 Install in editable mode for **development**: 
 ```bash
+git clone https://github.com/rebase-energy/EnergyDataModel.git
 git clone https://github.com/rebase-energy/enflow.git
 cd enflow
-pip install -e . 
+pip install -e .[dev]
+pip install -e ../EnergyDataModel[dev]
 ```
 
 ## Ways to Contribute
