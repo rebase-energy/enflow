@@ -33,16 +33,15 @@ enflow: Open-source energy modelling framework
    assets/hydro
    assets/heatpump
    assets/powergrid
-   assets/energysystem
+   assets/energycollection
 
 .. toctree::
    :maxdepth: 2
    :caption: 🧩 Energy Problems
 
    problem/dataset
-   problem/environments
-   problem/objectives
-   problem/checks
+   problem/environment
+   problem/objective
 
 .. toctree::
    :maxdepth: 2
@@ -67,7 +66,7 @@ enflow: Open-source energy modelling framework
 
    experiments/experiment
    experiments/benchmark
-   experiments/scenarios
+   experiments/scenario
 
 Indices and tables
 ==================

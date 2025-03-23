@@ -1,7 +1,7 @@
 Benchmark
 ============
 
-.. automodule:: enflow.experiemnts.benchmark
+.. automodule:: enflow.experiments.benchmark
    :members:
    :undoc-members:
    :show-inheritance:
