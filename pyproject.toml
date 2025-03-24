@@ -17,9 +17,6 @@ dependencies = [
     "gymnasium>=1.1.1",
 ]
 
-[tool.setuptools.packages.find]
-where = ["."]
-
 [project.urls]
 Homepage = "https://enflow.org"
 Repository = "https://github.com/rebase-energy/enflow"
@@ -38,5 +35,5 @@ dev = [
     "twine>=6.1.0", 
 ]
 
-[tool.setuptools]
-packages = ["enflow"]
+[tool.setuptools.packages.find]
+where = ["."]
