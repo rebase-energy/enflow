@@ -22,7 +22,7 @@ enflow: Open-source energy modelling framework
 
 .. toctree::
    :maxdepth: 1
-   :caption: 🔋 Energy Assets
+   :caption: 🔋 Assets
 
    assets/base
    assets/geospatial
@@ -39,7 +39,7 @@ enflow: Open-source energy modelling framework
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🧩 Energy Problems
+   :caption: 🧩 Problems
 
    problems/dataset
    problems/environment
@@ -59,7 +59,7 @@ enflow: Open-source energy modelling framework
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🤖 Energy Models
+   :caption: 🤖 Models
 
    models/model
    models/simulator
