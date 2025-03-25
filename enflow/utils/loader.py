@@ -15,6 +15,10 @@ def list_problems():
         
         # Iterate through modules in the examples directory
         for finder, modname, ispkg in pkgutil.iter_modules(examples_path):
+            # Skip the data directory
+            if modname == 'data':
+                continue
+            
             if ispkg:
                 try:
                     module = importlib.import_module(f"{base}.{modname}.problem")
