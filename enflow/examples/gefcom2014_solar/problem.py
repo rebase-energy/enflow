@@ -1,4 +1,5 @@
 import os
+import importlib
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -11,10 +12,17 @@ import matplotlib.pyplot as plt
 #df_data = pd.read_csv("gefcom2014-solar.csv",index_col=[0, 1], parse_dates=True, header=[0, 1])
 #df_scores = pd.read_csv("gefcom2014-solar-scores.csv", index_col=0)
 parent_dir = Path.cwd().parent
-df_data = pd.read_csv(os.path.join(parent_dir, 'data', 'gefcom2014-solar.csv'),
-                index_col=[0, 1], parse_dates=True, header=[0, 1])
-df_scores = pd.read_csv(os.path.join(parent_dir, 'data', 'gefcom2014-solar-scores.csv'),
-                        index_col=0)
+
+with importlib.resources.path("enflow.examples.data", "gefcom2014-solar.csv") as path:
+    df_data = pd.read_csv(path, index_col=[0, 1], parse_dates=True, header=[0, 1])
+with importlib.resources.path("enflow.examples.data", "gefcom2014-solar-scores.csv") as path:
+    df_scores = pd.read_csv(path, index_col=0)
+
+
+#df_data = pd.read_csv(os.path.join(parent_dir, 'data', 'gefcom2014-solar.csv'),
+#                index_col=[0, 1], parse_dates=True, header=[0, 1])
+#df_scores = pd.read_csv(os.path.join(parent_dir, 'data', 'gefcom2014-solar-scores.csv'),
+#                        index_col=0)
 
 pvsystem_1 = ef.PVSystem(name="Site1",
                          capacity=1,
