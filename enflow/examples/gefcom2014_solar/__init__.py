@@ -1,1 +1,0 @@
-from .main import GEFCom2014SolarEnv

@@ -9,8 +9,10 @@ from .assets.battery import Battery
 from .assets.heatpump import HeatPump
 from .assets.energycollection import Site, EnergyCommunity, Portfolio
 
-from .base import BaseVector, BaseState, BaseAction, BaseEnvironment, BaseObjective, BaseProblem
-from .spaces import DataFrameSpace
+from .spaces.base import BaseSpace
+from .spaces.input import InputSpace, StateSpace
+from .spaces.output import OutputSpace, ActionSpace
+from .spaces.dataframe import DataFrameSpace
 
 from .models.agent import Agent
 from .models.optimizer import Optimizer
@@ -23,3 +25,7 @@ from .problems.problem import Problem
 
 from .problems.objective import PinballLoss
 #from energydatamodel.pv import PVArray
+
+from .utils.loader import list_problems, load_problem
+
+__all__ = ['list_problems', 'load_problem']
